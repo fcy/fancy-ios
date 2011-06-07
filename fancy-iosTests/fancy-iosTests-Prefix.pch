@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'fancy-iosTests' target in the 'fancy-iosTests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif

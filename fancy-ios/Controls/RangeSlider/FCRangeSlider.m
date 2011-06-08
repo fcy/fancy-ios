@@ -41,9 +41,21 @@
         
         minimumThumbView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 34, FIXED_HEIGHT)];
         [self addSubview:minimumThumbView];
+        UIPanGestureRecognizer *minPanGesture = [[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(draggingThumb:)] autorelease];
+        [minimumThumbView addGestureRecognizer:minPanGesture];
 
         maximumThumbView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 34, FIXED_HEIGHT)];
         [self addSubview:maximumThumbView];
+        UIPanGestureRecognizer *maxPanGesture = [[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(draggingThumb:)] autorelease];
+        [maximumThumbView addGestureRecognizer:maxPanGesture];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.frame = CGRectSetHeight(self.frame, FIXED_HEIGHT);
     }
     return self;
 }
@@ -53,6 +65,29 @@
     [inRangeTrackView release];
     [outRangeTrackView release];
     [super dealloc];
+}
+
+- (void)setFrame:(CGRect)newFrame {
+    [super setFrame:CGRectSetHeight(newFrame, FIXED_HEIGHT)];
+}
+
+#pragma mark -
+#pragma mark Drag handling
+
+- (void)draggingThumb:(UIPanGestureRecognizer *)gestureRecognizer {
+    if ([gestureRecognizer state] == UIGestureRecognizerStateBegan) {
+        thumbBeingDragged = [gestureRecognizer view];
+    }
+    
+    if ([gestureRecognizer state] == UIGestureRecognizerStateChanged || [gestureRecognizer state] == UIGestureRecognizerStateBegan) {
+        CGPoint translation = [gestureRecognizer translationInView:[thumbBeingDragged superview]];
+        
+        CGFloat xOffset = translation.x - thumbBeingDragged.frame.origin.x;
+        thumbBeingDragged.frame = CGRectOffset(thumbBeingDragged.frame, xOffset, 0);
+        
+    } else if ([gestureRecognizer state] == UIGestureRecognizerStateEnded) {
+        thumbBeingDragged = nil;
+    }
 }
 
 @end

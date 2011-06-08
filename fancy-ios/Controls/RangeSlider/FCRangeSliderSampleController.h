@@ -12,24 +12,11 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 
-@interface FCRangeSlider : UIControl {
-@private
-    UIImageView *outRangeTrackView;
-    UIImageView *inRangeTrackView;
-    UIImageView *minimumThumbView;
-    UIImageView *maximumThumbView;
-    UIView *thumbBeingDragged;
+@interface FCRangeSliderSampleController : UIViewController {
+    
 }
-
-@property (nonatomic, assign) CGFloat minimumValue;
-@property (nonatomic, assign) CGFloat maximumValue;
-
-- (void)setOutRangeTrackImage:(UIImage *)image forState:(UIControlState)state;
-- (void)setInRangeTrackImage:(UIImage *)image forState:(UIControlState)state;
-- (void)setThumbImage:(UIImage *)image forState:(UIControlState)state;
-
 
 @end

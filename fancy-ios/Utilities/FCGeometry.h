@@ -40,3 +40,8 @@ NS_INLINE CGRect CGRectSetPositionX(CGRect rect, CGFloat x) {
 NS_INLINE CGRect CGRectSetPositionY(CGRect rect, CGFloat y) {
     return CGRectMake(rect.origin.x, y, rect.size.width, rect.size.height);
 }
+
+// Returns the value for the end of the rect. That's x + width
+NS_INLINE CGFloat CGRectEndValue(CGRect rect) {
+    return rect.origin.x + rect.size.width;
+}

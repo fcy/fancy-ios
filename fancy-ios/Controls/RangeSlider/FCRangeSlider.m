@@ -16,17 +16,24 @@
 
 #define FIXED_HEIGHT 30.0f
 
+@interface FCRangeSlider (Private)
+- (void)clipThumbToBounds;
+- (void)updateInRangeTrackView;
+- (void)swtichThumbsPositionIfNecessary;
+- (void)updateRangeValue;
+@end
+
 @implementation FCRangeSlider
 
 @synthesize minimumValue;
 @synthesize maximumValue;
+@synthesize range;
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, FIXED_HEIGHT)];
     if (self) {
         minimumValue = 0.0f;
         maximumValue = 100.0f;
-        self.backgroundColor = [UIColor grayColor];
         
         outRangeTrackView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 10, frame.size.width, 10)];
         outRangeTrackView.contentMode = UIViewContentModeScaleToFill;
@@ -43,14 +50,10 @@
         minimumThumbView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"slider_thumb"]];
         minimumThumbView.frame = CGRectSetPosition(minimumThumbView.frame, 0, 3);
         [self addSubview:minimumThumbView];
-        UIPanGestureRecognizer *minPanGesture = [[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(draggingThumb:)] autorelease];
-        [minimumThumbView addGestureRecognizer:minPanGesture];
 
         maximumThumbView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"slider_thumb"]];
         maximumThumbView.frame = CGRectSetPosition(minimumThumbView.frame, frame.size.width - 24, 3);
         [self addSubview:maximumThumbView];
-        UIPanGestureRecognizer *maxPanGesture = [[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(draggingThumb:)] autorelease];
-        [maximumThumbView addGestureRecognizer:maxPanGesture];
     }
     return self;
 }
@@ -77,20 +80,71 @@
 #pragma mark -
 #pragma mark Drag handling
 
-- (void)draggingThumb:(UIPanGestureRecognizer *)gestureRecognizer {
-    if ([gestureRecognizer state] == UIGestureRecognizerStateBegan) {
-        thumbBeingDragged = [gestureRecognizer view];
+-(BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
+    CGPoint touchPoint = [touch locationInView:self];
+    if (CGRectContainsPoint(minimumThumbView.frame, touchPoint)) {
+        thumbBeingDragged = minimumThumbView;
+    } else if (CGRectContainsPoint(maximumThumbView.frame, touchPoint)) {
+        thumbBeingDragged = maximumThumbView;
+    } else {
+        [self cancelTrackingWithEvent:event];
+        thumbBeingDragged = nil;
+        return NO;
     }
     
-    if ([gestureRecognizer state] == UIGestureRecognizerStateChanged || [gestureRecognizer state] == UIGestureRecognizerStateBegan) {
-        CGPoint translation = [gestureRecognizer translationInView:[thumbBeingDragged superview]];
+    thumbBeingDragged.highlighted = YES;
+    return YES;
+}
+
+- (BOOL)continueTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
+    if (thumbBeingDragged) {
+        CGPoint touchPoint = [touch locationInView:self];
+        thumbBeingDragged.center = CGPointMake(touchPoint.x, thumbBeingDragged.center.y);
+        [self clipThumbToBounds];
+        [self swtichThumbsPositionIfNecessary];
+        [self updateInRangeTrackView];
         
-        CGFloat xOffset = translation.x - thumbBeingDragged.frame.origin.x;
-        thumbBeingDragged.frame = CGRectOffset(thumbBeingDragged.frame, xOffset, 0);
-        
-    } else if ([gestureRecognizer state] == UIGestureRecognizerStateEnded) {
-        thumbBeingDragged = nil;
+        [self sendActionsForControlEvents:UIControlEventValueChanged];
+        return YES;
+    } else {
+        return NO;
     }
+}
+
+-(void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
+    thumbBeingDragged.highlighted = NO;
+    thumbBeingDragged = nil;
+}
+
+#pragma mark -
+#pragma mark Private methods
+
+- (void)clipThumbToBounds {
+    if (thumbBeingDragged.frame.origin.x < 0) {
+        thumbBeingDragged.frame = CGRectSetPositionX(thumbBeingDragged.frame, 0);
+    } else if (thumbBeingDragged.frame.origin.x + thumbBeingDragged.bounds.size.width > self.bounds.size.width) {
+        thumbBeingDragged.frame = CGRectSetPositionX(thumbBeingDragged.frame, self.bounds.size.width - thumbBeingDragged.bounds.size.width);
+    }    
+}
+
+- (void)swtichThumbsPositionIfNecessary {
+    if (thumbBeingDragged == minimumThumbView && thumbBeingDragged.frame.origin.x >= CGRectEndValue(maximumThumbView.frame)) {
+        minimumThumbView = maximumThumbView;
+        maximumThumbView = thumbBeingDragged;
+    } else if (thumbBeingDragged == maximumThumbView && CGRectEndValue(thumbBeingDragged.frame) <= minimumThumbView.frame.origin.x) {
+        maximumThumbView = minimumThumbView;
+        minimumThumbView = thumbBeingDragged;
+    }
+}
+
+- (void)updateInRangeTrackView {
+    CGFloat newX = minimumThumbView.frame.origin.x;
+    CGFloat newWidth = maximumThumbView.frame.origin.x + maximumThumbView.bounds.size.width - newX;
+    inRangeTrackView.frame = CGRectMake(newX, inRangeTrackView.frame.origin.y, newWidth, inRangeTrackView.bounds.size.height);
+}
+
+- (void)updateRangeValue {
+    // TODO calculate range value
 }
 
 @end

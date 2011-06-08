@@ -12,6 +12,9 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
+// This component idea was based on Dimitris Doukas' DoubleSlider
+// You can find the original code here: https://github.com/doukasd/iOS-Components/tree/master/Controls/DoubleSlider [SHA1 de375a9e]
+
 #import <Foundation/Foundation.h>
 
 
@@ -21,11 +24,12 @@
     UIImageView *inRangeTrackView;
     UIImageView *minimumThumbView;
     UIImageView *maximumThumbView;
-    UIView *thumbBeingDragged;
+    UIImageView *thumbBeingDragged;
 }
 
 @property (nonatomic, assign) CGFloat minimumValue;
 @property (nonatomic, assign) CGFloat maximumValue;
+@property (nonatomic, assign) NSRange range;
 
 - (void)setOutRangeTrackImage:(UIImage *)image forState:(UIControlState)state;
 - (void)setInRangeTrackImage:(UIImage *)image forState:(UIControlState)state;

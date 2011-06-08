@@ -15,7 +15,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : NSObject <UIApplicationDelegate> {
-
+    UIViewController *mainController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

@@ -13,15 +13,17 @@
 //    limitations under the License.
 
 #import "AppDelegate.h"
+#import "FCRangeSliderSampleController.h"
 
 @implementation AppDelegate
 
 
 @synthesize window=_window;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    mainController = [[FCRangeSliderSampleController rangeSliderSampleController] retain];
+    [[self window] addSubview:[mainController view]];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

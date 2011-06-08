@@ -14,6 +14,7 @@
 
 #import <Foundation/NSObjCRuntime.h>
 
+// Just like CGRectOffset but changes the size
 NS_INLINE CGRect CGRectChangeSize(CGRect rect, CGFloat deltaWidth, CGFloat deltaHeight) {
     CGFloat width = rect.size.width + deltaWidth;
     CGFloat height = rect.size.height + deltaHeight;
@@ -26,4 +27,16 @@ NS_INLINE CGRect CGRectSetHeight(CGRect rect, CGFloat height) {
 
 NS_INLINE CGRect CGRectSetWidth(CGRect rect, CGFloat width) {
     return CGRectMake(rect.origin.x, rect.origin.y, width, rect.size.height);
+}
+
+NS_INLINE CGRect CGRectSetPosition(CGRect rect, CGFloat x, CGFloat y) {
+    return CGRectMake(x, y, rect.size.width, rect.size.height);
+}
+
+NS_INLINE CGRect CGRectSetPositionX(CGRect rect, CGFloat x) {
+    return CGRectMake(x, rect.origin.y, rect.size.width, rect.size.height);
+}
+
+NS_INLINE CGRect CGRectSetPositionY(CGRect rect, CGFloat y) {
+    return CGRectMake(rect.origin.x, y, rect.size.width, rect.size.height);
 }

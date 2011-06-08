@@ -19,4 +19,6 @@
     
 }
 
++ (FCRangeSliderSampleController *)rangeSliderSampleController;
+
 @end

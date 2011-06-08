@@ -26,25 +26,28 @@
     if (self) {
         minimumValue = 0.0f;
         maximumValue = 100.0f;
+        self.backgroundColor = [UIColor grayColor];
         
-        outRangeTrackView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 10)];
+        outRangeTrackView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 10, frame.size.width, 10)];
         outRangeTrackView.contentMode = UIViewContentModeScaleToFill;
         outRangeTrackView.backgroundColor = [UIColor darkGrayColor];
         outRangeTrackView.layer.cornerRadius = 5;
         [self addSubview:outRangeTrackView];
 
-        inRangeTrackView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 10)];
+        inRangeTrackView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 10, frame.size.width, 10)];
         inRangeTrackView.contentMode = UIViewContentModeScaleToFill;
         inRangeTrackView.backgroundColor = [UIColor blueColor];
         inRangeTrackView.layer.cornerRadius = 5;
         [self addSubview:inRangeTrackView];
         
-        minimumThumbView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 34, FIXED_HEIGHT)];
+        minimumThumbView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"slider_thumb"]];
+        minimumThumbView.frame = CGRectSetPosition(minimumThumbView.frame, 0, 3);
         [self addSubview:minimumThumbView];
         UIPanGestureRecognizer *minPanGesture = [[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(draggingThumb:)] autorelease];
         [minimumThumbView addGestureRecognizer:minPanGesture];
 
-        maximumThumbView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 34, FIXED_HEIGHT)];
+        maximumThumbView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"slider_thumb"]];
+        maximumThumbView.frame = CGRectSetPosition(minimumThumbView.frame, frame.size.width - 24, 3);
         [self addSubview:maximumThumbView];
         UIPanGestureRecognizer *maxPanGesture = [[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(draggingThumb:)] autorelease];
         [maximumThumbView addGestureRecognizer:maxPanGesture];

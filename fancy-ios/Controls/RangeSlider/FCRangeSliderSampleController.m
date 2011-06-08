@@ -13,9 +13,13 @@
 //    limitations under the License.
 
 #import "FCRangeSliderSampleController.h"
-
+#import "FCRangeSlider.h"
 
 @implementation FCRangeSliderSampleController
+
++ (FCRangeSliderSampleController *)rangeSliderSampleController {
+    return [[[FCRangeSliderSampleController alloc] init] autorelease];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,13 +52,16 @@
 }
 */
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
+    
+    FCRangeSlider *slider = [[FCRangeSlider alloc] initWithFrame:CGRectMake(50, 50, 250, 30)];
+    [[self view] addSubview:slider];
+    [slider release];
 }
-*/
+
 
 - (void)viewDidUnload
 {

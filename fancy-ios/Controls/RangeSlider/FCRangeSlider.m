@@ -28,6 +28,7 @@
 @synthesize minimumValue;
 @synthesize maximumValue;
 @synthesize range;
+@synthesize rangeValue;
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, FIXED_HEIGHT)];
@@ -35,25 +36,33 @@
         minimumValue = 0.0f;
         maximumValue = 100.0f;
         
-        outRangeTrackView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 10, frame.size.width, 10)];
+        UIImage *thumbImage = [UIImage imageNamed:@"slider_thumb"];
+        CGFloat thumbCenter = thumbImage.size.width / 2;
+        trackSliderWidth = frame.size.width - thumbImage.size.width;
+        
+        outRangeTrackView = [[UIImageView alloc] initWithFrame:CGRectMake(thumbCenter, 10, trackSliderWidth, 10)];
         outRangeTrackView.contentMode = UIViewContentModeScaleToFill;
         outRangeTrackView.backgroundColor = [UIColor darkGrayColor];
         outRangeTrackView.layer.cornerRadius = 5;
         [self addSubview:outRangeTrackView];
 
-        inRangeTrackView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 10, frame.size.width, 10)];
+        inRangeTrackView = [[UIImageView alloc] initWithFrame:CGRectMake(thumbCenter, 10, trackSliderWidth, 10)];
         inRangeTrackView.contentMode = UIViewContentModeScaleToFill;
         inRangeTrackView.backgroundColor = [UIColor blueColor];
         inRangeTrackView.layer.cornerRadius = 5;
         [self addSubview:inRangeTrackView];
         
-        minimumThumbView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"slider_thumb"]];
+        minimumThumbView = [[UIImageView alloc] initWithImage:thumbImage];
         minimumThumbView.frame = CGRectSetPosition(minimumThumbView.frame, 0, 3);
         [self addSubview:minimumThumbView];
 
-        maximumThumbView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"slider_thumb"]];
+        maximumThumbView = [[UIImageView alloc] initWithImage:thumbImage];
         maximumThumbView.frame = CGRectSetPosition(minimumThumbView.frame, frame.size.width - 24, 3);
         [self addSubview:maximumThumbView];
+        
+		roundFormatter = [[NSNumberFormatter alloc] init];
+		[roundFormatter setMaximumFractionDigits:0];
+		[roundFormatter setRoundingMode:NSNumberFormatterRoundHalfEven];
     }
     return self;
 }
@@ -104,7 +113,7 @@
         [self swtichThumbsPositionIfNecessary];
         [self updateInRangeTrackView];
         
-        [self sendActionsForControlEvents:UIControlEventValueChanged];
+        [self updateRangeValue];
         return YES;
     } else {
         return NO;
@@ -144,7 +153,20 @@
 }
 
 - (void)updateRangeValue {
-    // TODO calculate range value
+    CGFloat valueSpan = maximumValue - minimumValue;
+    CGPoint minPointInTrack = [self convertPoint:minimumThumbView.center toView:outRangeTrackView];
+    CGFloat min = minimumValue + minPointInTrack.x / trackSliderWidth * valueSpan;
+
+    CGPoint maxPointInTrack = [self convertPoint:maximumThumbView.center toView:outRangeTrackView];
+    CGFloat max = minimumValue + maxPointInTrack.x /trackSliderWidth * valueSpan;
+    
+    rangeValue = FCRangeSliderValueMake(min, max);
+
+    NSInteger minInt = [[roundFormatter numberFromString:[roundFormatter stringFromNumber:[NSNumber numberWithFloat:min]]] integerValue];
+    NSInteger maxInt = [[roundFormatter numberFromString:[roundFormatter stringFromNumber:[NSNumber numberWithFloat:max]]] integerValue];
+    range = NSMakeRange(minInt, maxInt - minInt);
+    
+    [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
 @end

@@ -12,10 +12,20 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
-// This component idea was based on Dimitris Doukas' DoubleSlider
-// You can find the original code here: https://github.com/doukasd/iOS-Components/tree/master/Controls/DoubleSlider [SHA1 de375a9e]
+/*
+ This component idea was based on Dimitris Doukas' DoubleSlider
+ You can find the original code here: https://github.com/doukasd/iOS-Components/tree/master/Controls/DoubleSlider [SHA1 de375a9e]
+
+ Dependencies:
+   - FCGeometry.h
+ */
 
 #import <Foundation/Foundation.h>
+
+typedef struct _FCRangeSliderValue {
+    CGFloat start;
+    CGFloat end;
+} FCRangeSliderValue;
 
 
 @interface FCRangeSlider : UIControl {
@@ -25,11 +35,14 @@
     UIImageView *minimumThumbView;
     UIImageView *maximumThumbView;
     UIImageView *thumbBeingDragged;
+    CGFloat trackSliderWidth;
+    NSNumberFormatter *roundFormatter;
 }
 
-@property (nonatomic, assign) CGFloat minimumValue;
-@property (nonatomic, assign) CGFloat maximumValue;
-@property (nonatomic, assign) NSRange range;
+@property (nonatomic) CGFloat minimumValue;
+@property (nonatomic) CGFloat maximumValue;
+@property (nonatomic) NSRange range;
+@property (nonatomic) FCRangeSliderValue rangeValue;
 
 - (void)setOutRangeTrackImage:(UIImage *)image forState:(UIControlState)state;
 - (void)setInRangeTrackImage:(UIImage *)image forState:(UIControlState)state;
@@ -37,3 +50,11 @@
 
 
 @end
+
+
+NS_INLINE FCRangeSliderValue FCRangeSliderValueMake(CGFloat start, CGFloat end) {
+    FCRangeSliderValue r;
+    r.start = start;
+    r.end = end;
+    return r;
+}

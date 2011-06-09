@@ -45,9 +45,13 @@ typedef struct _FCRangeSliderValue {
 @property (nonatomic) FCRangeSliderValue rangeValue;
 @property (nonatomic) BOOL acceptOnlyNonFractionValues;
 
+/*
+ You should correctly set the stretchableImageWithLeftCapWidth:topCapHeight: of the
+ images to get better visuals.
+ */
 - (void)setOutRangeTrackImage:(UIImage *)image;
 - (void)setInRangeTrackImage:(UIImage *)image;
-- (void)setThumbImage:(UIImage *)image;
+- (void)setThumbImage:(UIImage *)image forState:(UIControlState)state;
 
 
 @end

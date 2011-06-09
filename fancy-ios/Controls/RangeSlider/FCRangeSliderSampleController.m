@@ -58,6 +58,7 @@
     [super viewDidLoad];
     
     FCRangeSlider *slider = [[FCRangeSlider alloc] initWithFrame:CGRectMake(50, 50, 250, 30)];
+    [slider setThumbImage:[UIImage imageNamed:@"slider_thumb_highlighted"] forState:UIControlStateHighlighted];
     [[self view] addSubview:slider];
     [slider release];
 }

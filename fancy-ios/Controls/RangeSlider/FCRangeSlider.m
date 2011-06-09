@@ -89,6 +89,32 @@
     [super setFrame:CGRectSetHeight(newFrame, FIXED_HEIGHT)];
 }
 
+- (void)setThumbImage:(UIImage *)image forState:(UIControlState)state {
+    switch (state) {
+        case UIControlStateNormal:
+            minimumThumbView.image = image;
+            maximumThumbView.image = image;
+            break;
+        case UIControlStateHighlighted:
+            minimumThumbView.highlightedImage = image;
+            maximumThumbView.highlightedImage = image;
+        default:
+            break;
+    }
+}
+
+- (void)setOutRangeTrackImage:(UIImage *)image {
+    outRangeTrackView.backgroundColor = [UIColor clearColor];
+    outRangeTrackView.layer.cornerRadius = 0;
+    outRangeTrackView.image = image;
+}
+
+- (void)setInRangeTrackImage:(UIImage *)image {
+    inRangeTrackView.backgroundColor = [UIColor clearColor];
+    inRangeTrackView.layer.cornerRadius = 0;
+    inRangeTrackView.image = image;    
+}
+
 #pragma mark -
 #pragma mark Drag handling
 
@@ -173,7 +199,7 @@
     NSInteger minInt = [[roundFormatter numberFromString:[roundFormatter stringFromNumber:[NSNumber numberWithFloat:min]]] integerValue];
     NSInteger maxInt = [[roundFormatter numberFromString:[roundFormatter stringFromNumber:[NSNumber numberWithFloat:max]]] integerValue];
     range = NSMakeRange(minInt, maxInt - minInt);
-    NSLog(@"%f %f | %d %d", rangeValue.start, rangeValue.end, range.location, range.length);
+    //NSLog(@"%f %f | %d %d", rangeValue.start, rangeValue.end, range.location, range.length);
     
     [self sendActionsForControlEvents:UIControlEventValueChanged];
 }

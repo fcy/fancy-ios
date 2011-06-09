@@ -13,6 +13,7 @@
 		D40BAAAB13A015600080E188 /* AppDelegate_iPhone.h in Headers */ = {isa = PBXBuildFile; fileRef = D48F14DB139ED5B100257AE8 /* AppDelegate_iPhone.h */; };
 		D40BAAAC13A015600080E188 /* AppDelegate_iPad.h in Headers */ = {isa = PBXBuildFile; fileRef = D48F14B7139ED4ED00257AE8 /* AppDelegate_iPad.h */; };
 		D40BAAB213A01B8D0080E188 /* slider_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = D40BAAB113A01B8D0080E188 /* slider_thumb.png */; };
+		D43BD74713A159CA001D88D7 /* slider_thumb_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = D43BD74613A159CA001D88D7 /* slider_thumb_highlighted.png */; };
 		D46EB2D513A005F900F0D588 /* FCGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = D46EB2D313A002F600F0D588 /* FCGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D46EB2E413A00B1D00F0D588 /* FCRangeSliderSampleController.h in Headers */ = {isa = PBXBuildFile; fileRef = D46EB2E213A00B1D00F0D588 /* FCRangeSliderSampleController.h */; };
 		D46EB2E513A00B1D00F0D588 /* FCRangeSliderSampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = D46EB2E313A00B1D00F0D588 /* FCRangeSliderSampleController.m */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		D40BAAA613A014500080E188 /* FCRangeSliderSample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FCRangeSliderSample.xib; path = iPhone/Controls/FCRangeSliderSample.xib; sourceTree = "<group>"; };
 		D40BAAB113A01B8D0080E188 /* slider_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider_thumb.png; path = Resources/Images/slider_thumb.png; sourceTree = "<group>"; };
+		D43BD74613A159CA001D88D7 /* slider_thumb_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider_thumb_highlighted.png; path = Resources/Images/slider_thumb_highlighted.png; sourceTree = "<group>"; };
 		D46EB2D313A002F600F0D588 /* FCGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCGeometry.h; path = Utilities/FCGeometry.h; sourceTree = "<group>"; };
 		D46EB2E213A00B1D00F0D588 /* FCRangeSliderSampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCRangeSliderSampleController.h; path = Controls/RangeSlider/FCRangeSliderSampleController.h; sourceTree = "<group>"; };
 		D46EB2E313A00B1D00F0D588 /* FCRangeSliderSampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCRangeSliderSampleController.m; path = Controls/RangeSlider/FCRangeSliderSampleController.m; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		D40BAAAE13A01B610080E188 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D43BD74613A159CA001D88D7 /* slider_thumb_highlighted.png */,
 				D40BAAB113A01B8D0080E188 /* slider_thumb.png */,
 			);
 			name = Images;
@@ -349,6 +352,7 @@
 				D48F14BC139ED4ED00257AE8 /* MainWindow_iPad.xib in Resources */,
 				D40BAAA713A014500080E188 /* FCRangeSliderSample.xib in Resources */,
 				D40BAAB213A01B8D0080E188 /* slider_thumb.png in Resources */,
+				D43BD74713A159CA001D88D7 /* slider_thumb_highlighted.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

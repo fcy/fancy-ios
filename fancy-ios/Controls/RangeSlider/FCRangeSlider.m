@@ -21,6 +21,7 @@
 - (void)updateInRangeTrackView;
 - (void)swtichThumbsPositionIfNecessary;
 - (void)updateRangeValue;
+- (void)setThumbsPositionToNonFractionValues;
 @end
 
 @implementation FCRangeSlider
@@ -29,12 +30,14 @@
 @synthesize maximumValue;
 @synthesize range;
 @synthesize rangeValue;
+@synthesize acceptOnlyNonFractionValues;
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, FIXED_HEIGHT)];
     if (self) {
         minimumValue = 0.0f;
-        maximumValue = 100.0f;
+        maximumValue = 5.0f;
+        acceptOnlyNonFractionValues = NO;
         
         UIImage *thumbImage = [UIImage imageNamed:@"slider_thumb"];
         CGFloat thumbCenter = thumbImage.size.width / 2;
@@ -121,6 +124,11 @@
 }
 
 -(void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
+    if (acceptOnlyNonFractionValues) {
+        [self setThumbsPositionToNonFractionValues];
+        [self updateRangeValue];
+    }
+    
     thumbBeingDragged.highlighted = NO;
     thumbBeingDragged = nil;
 }
@@ -165,8 +173,26 @@
     NSInteger minInt = [[roundFormatter numberFromString:[roundFormatter stringFromNumber:[NSNumber numberWithFloat:min]]] integerValue];
     NSInteger maxInt = [[roundFormatter numberFromString:[roundFormatter stringFromNumber:[NSNumber numberWithFloat:max]]] integerValue];
     range = NSMakeRange(minInt, maxInt - minInt);
+    NSLog(@"%f %f | %d %d", rangeValue.start, rangeValue.end, range.location, range.length);
     
     [self sendActionsForControlEvents:UIControlEventValueChanged];
+}
+
+- (void)setThumbsPositionToNonFractionValues {
+    CGFloat valueSpan = maximumValue - minimumValue;
+    
+    CGFloat minPointXInTrack = trackSliderWidth / valueSpan * range.location - minimumValue;
+    CGPoint minCenter = [self convertPoint:CGPointMake(minPointXInTrack, 0) fromView:outRangeTrackView];
+    
+    CGFloat maxPoinXtInTrack = trackSliderWidth / valueSpan * (range.location + range.length) - minimumValue;
+    CGPoint maxCenter = [self convertPoint:CGPointMake(maxPoinXtInTrack, 0) fromView:outRangeTrackView];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        minimumThumbView.center = CGPointMake(minCenter.x, minimumThumbView.center.y);
+        maximumThumbView.center = CGPointMake(maxCenter.x, maximumThumbView.center.y);
+        
+        [self updateInRangeTrackView];
+    }];
 }
 
 @end

@@ -43,10 +43,11 @@ typedef struct _FCRangeSliderValue {
 @property (nonatomic) CGFloat maximumValue;
 @property (nonatomic) NSRange range;
 @property (nonatomic) FCRangeSliderValue rangeValue;
+@property (nonatomic) BOOL acceptOnlyNonFractionValues;
 
-- (void)setOutRangeTrackImage:(UIImage *)image forState:(UIControlState)state;
-- (void)setInRangeTrackImage:(UIImage *)image forState:(UIControlState)state;
-- (void)setThumbImage:(UIImage *)image forState:(UIControlState)state;
+- (void)setOutRangeTrackImage:(UIImage *)image;
+- (void)setInRangeTrackImage:(UIImage *)image;
+- (void)setThumbImage:(UIImage *)image;
 
 
 @end

@@ -215,12 +215,12 @@
     CGFloat maxPoinXtInTrack = trackSliderWidth / valueSpan * currentMaxValue;
     CGPoint maxCenter = [self convertPoint:CGPointMake(maxPoinXtInTrack, 0) fromView:outRangeTrackView];
     
-    [UIView beginAnimations:@"setThumbsPositionToNonFractionValues" context:nil];
-    minimumThumbView.center = CGPointMake(minCenter.x, minimumThumbView.center.y);
-    maximumThumbView.center = CGPointMake(maxCenter.x, maximumThumbView.center.y);
-    
-    [self updateInRangeTrackView];
-    [UIView commitAnimations];
+    [UIView animateWithDuration:0.3 animations:^{
+        minimumThumbView.center = CGPointMake(minCenter.x, minimumThumbView.center.y);
+        maximumThumbView.center = CGPointMake(maxCenter.x, maximumThumbView.center.y);
+        
+        [self updateInRangeTrackView];
+    }];
 }
 
 @end

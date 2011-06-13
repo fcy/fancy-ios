@@ -206,19 +206,21 @@
 
 - (void)setThumbsPositionToNonFractionValues {
     CGFloat valueSpan = maximumValue - minimumValue;
+    NSInteger currentMinValue = range.location - minimumValue;
+    NSInteger currentMaxValue = range.location + range.length - minimumValue;
     
-    CGFloat minPointXInTrack = trackSliderWidth / valueSpan * range.location - minimumValue;
+    CGFloat minPointXInTrack = trackSliderWidth / valueSpan * currentMinValue;
     CGPoint minCenter = [self convertPoint:CGPointMake(minPointXInTrack, 0) fromView:outRangeTrackView];
     
-    CGFloat maxPoinXtInTrack = trackSliderWidth / valueSpan * (range.location + range.length) - minimumValue;
+    CGFloat maxPoinXtInTrack = trackSliderWidth / valueSpan * currentMaxValue;
     CGPoint maxCenter = [self convertPoint:CGPointMake(maxPoinXtInTrack, 0) fromView:outRangeTrackView];
     
-    [UIView animateWithDuration:0.3 animations:^{
-        minimumThumbView.center = CGPointMake(minCenter.x, minimumThumbView.center.y);
-        maximumThumbView.center = CGPointMake(maxCenter.x, maximumThumbView.center.y);
-        
-        [self updateInRangeTrackView];
-    }];
+    [UIView beginAnimations:@"setThumbsPositionToNonFractionValues" context:nil];
+    minimumThumbView.center = CGPointMake(minCenter.x, minimumThumbView.center.y);
+    maximumThumbView.center = CGPointMake(maxCenter.x, maximumThumbView.center.y);
+    
+    [self updateInRangeTrackView];
+    [UIView commitAnimations];
 }
 
 @end

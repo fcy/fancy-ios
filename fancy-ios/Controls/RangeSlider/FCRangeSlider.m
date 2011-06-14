@@ -56,11 +56,14 @@
         [self addSubview:inRangeTrackView];
         
         minimumThumbView = [[UIImageView alloc] initWithImage:thumbImage];
-        minimumThumbView.frame = CGRectSetPosition(minimumThumbView.frame, 0, 3);
+        minimumThumbView.frame = CGRectSetHeight(minimumThumbView.frame, self.frame.size.height);
+        minimumThumbView.contentMode = UIViewContentModeCenter;
         [self addSubview:minimumThumbView];
 
         maximumThumbView = [[UIImageView alloc] initWithImage:thumbImage];
-        maximumThumbView.frame = CGRectSetPosition(minimumThumbView.frame, frame.size.width - 24, 3);
+        maximumThumbView.frame = CGRectSetPosition(minimumThumbView.frame, frame.size.width - thumbImage.size.width, 0);
+        maximumThumbView.frame = CGRectSetHeight(maximumThumbView.frame, self.frame.size.height);
+        maximumThumbView.contentMode = UIViewContentModeCenter;
         [self addSubview:maximumThumbView];
         
 		roundFormatter = [[NSNumberFormatter alloc] init];
@@ -181,8 +184,8 @@
 }
 
 - (void)updateInRangeTrackView {
-    CGFloat newX = minimumThumbView.frame.origin.x;
-    CGFloat newWidth = maximumThumbView.frame.origin.x + maximumThumbView.bounds.size.width - newX;
+    CGFloat newX = minimumThumbView.center.x;
+    CGFloat newWidth = maximumThumbView.frame.origin.x + (maximumThumbView.bounds.size.width / 2) - newX;
     inRangeTrackView.frame = CGRectMake(newX, inRangeTrackView.frame.origin.y, newWidth, inRangeTrackView.bounds.size.height);
 }
 

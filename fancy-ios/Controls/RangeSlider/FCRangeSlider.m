@@ -203,7 +203,7 @@
 
     NSInteger minInt = [[roundFormatter numberFromString:[roundFormatter stringFromNumber:[NSNumber numberWithFloat:min]]] integerValue];
     NSInteger maxInt = [[roundFormatter numberFromString:[roundFormatter stringFromNumber:[NSNumber numberWithFloat:max]]] integerValue];
-    range = NSMakeRange(minInt, maxInt - minInt);
+    range = NSMakeRange(minInt, maxInt - minInt + 1);
     
     [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
@@ -211,7 +211,7 @@
 - (void)setThumbsPositionToNonFractionValues {
     CGFloat valueSpan = maximumValue - minimumValue;
     NSInteger currentMinValue = range.location - minimumValue;
-    NSInteger currentMaxValue = range.location + range.length - minimumValue;
+    NSInteger currentMaxValue = range.location + range.length - minimumValue - 1;
     
     CGFloat minPointXInTrack = trackSliderWidth / valueSpan * currentMinValue;
     CGPoint minCenter = [self convertPoint:CGPointMake(minPointXInTrack, 0) fromView:outRangeTrackView];

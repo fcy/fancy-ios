@@ -35,6 +35,9 @@
 		D48F14D2139ED4ED00257AE8 /* fancy_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D48F14D1139ED4ED00257AE8 /* fancy_iosTests.m */; };
 		D48F14E0139ED6E100257AE8 /* FCRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = D48F14DF139ED6E100257AE8 /* FCRangeSlider.m */; };
 		D48F14E2139EE3F100257AE8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48F14E1139EE3F100257AE8 /* QuartzCore.framework */; };
+		D4A9518413ABE6D70088A658 /* project.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D4A9518313ABE6D70088A658 /* project.xcconfig */; };
+		D4A9518713ABE6FD0088A658 /* debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D4A9518613ABE6FD0088A658 /* debug.xcconfig */; };
+		D4A9518913ABE72B0088A658 /* release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D4A9518813ABE72B0088A658 /* release.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,9 @@
 		D48F14DE139ED6E100257AE8 /* FCRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCRangeSlider.h; path = Controls/RangeSlider/FCRangeSlider.h; sourceTree = "<group>"; };
 		D48F14DF139ED6E100257AE8 /* FCRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCRangeSlider.m; path = Controls/RangeSlider/FCRangeSlider.m; sourceTree = "<group>"; };
 		D48F14E1139EE3F100257AE8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D4A9518313ABE6D70088A658 /* project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = project.xcconfig; sourceTree = "<group>"; };
+		D4A9518613ABE6FD0088A658 /* debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
+		D4A9518813ABE72B0088A658 /* release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +204,9 @@
 				D48F14A6139ED4ED00257AE8 /* InfoPlist.strings */,
 				D48F14A9139ED4ED00257AE8 /* fancy-ios-Prefix.pch */,
 				D48F14AA139ED4ED00257AE8 /* main.m */,
+				D4A9518313ABE6D70088A658 /* project.xcconfig */,
+				D4A9518613ABE6FD0088A658 /* debug.xcconfig */,
+				D4A9518813ABE72B0088A658 /* release.xcconfig */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -353,6 +362,9 @@
 				D40BAAA713A014500080E188 /* FCRangeSliderSample.xib in Resources */,
 				D40BAAB213A01B8D0080E188 /* slider_thumb.png in Resources */,
 				D43BD74713A159CA001D88D7 /* slider_thumb_highlighted.png in Resources */,
+				D4A9518413ABE6D70088A658 /* project.xcconfig in Resources */,
+				D4A9518713ABE6FD0088A658 /* debug.xcconfig in Resources */,
+				D4A9518913ABE72B0088A658 /* release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +465,7 @@
 /* Begin XCBuildConfiguration section */
 		D48F14D3139ED4ED00257AE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4A9518313ABE6D70088A658 /* project.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -471,6 +484,7 @@
 		};
 		D48F14D4139ED4ED00257AE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4A9518313ABE6D70088A658 /* project.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -487,6 +501,7 @@
 		};
 		D48F14D6139ED4ED00257AE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4A9518613ABE6FD0088A658 /* debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
@@ -502,6 +517,7 @@
 		};
 		D48F14D7139ED4ED00257AE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4A9518813ABE72B0088A658 /* release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;

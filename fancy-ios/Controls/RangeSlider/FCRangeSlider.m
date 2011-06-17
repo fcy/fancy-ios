@@ -160,6 +160,8 @@
     
     thumbBeingDragged.highlighted = NO;
     thumbBeingDragged = nil;
+    
+    DLog(@"selected range %f %f | %d %d", rangeValue.start, rangeValue.end, range.location, range.length);
 }
 
 #pragma mark -
@@ -202,7 +204,6 @@
     NSInteger minInt = [[roundFormatter numberFromString:[roundFormatter stringFromNumber:[NSNumber numberWithFloat:min]]] integerValue];
     NSInteger maxInt = [[roundFormatter numberFromString:[roundFormatter stringFromNumber:[NSNumber numberWithFloat:max]]] integerValue];
     range = NSMakeRange(minInt, maxInt - minInt);
-    //NSLog(@"%f %f | %d %d", rangeValue.start, rangeValue.end, range.location, range.length);
     
     [self sendActionsForControlEvents:UIControlEventValueChanged];
 }

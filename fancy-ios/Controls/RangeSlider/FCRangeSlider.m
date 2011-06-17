@@ -36,7 +36,7 @@
     self = [super initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, FIXED_HEIGHT)];
     if (self) {
         minimumValue = 0.0f;
-        maximumValue = 5.0f;
+        maximumValue = 10.0f;
         acceptOnlyNonFractionValues = NO;
         
         UIImage *thumbImage = [UIImage imageNamed:@"slider_thumb"];

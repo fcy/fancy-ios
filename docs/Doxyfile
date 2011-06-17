@@ -660,8 +660,6 @@ FILE_PATTERNS          = *.c \
                          *.php \
                          *.php3 \
                          *.inc \
-                         *.m \
-                         *.mm \
                          *.dox \
                          *.py \
                          *.f90 \

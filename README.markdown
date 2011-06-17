@@ -14,6 +14,8 @@ The project ain't a static library or a framework that you add to your projects.
 
 The list of dependencies is listed as comments in the header files. 
 
+Requirements
+------------
 
 - Xcode: 4.0
 - Minumum iOS version: 4.0

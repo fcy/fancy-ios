@@ -14,7 +14,9 @@
 
 #import <UIKit/UIKit.h>
 
-
+/**
+ * @brief UIViewController to demonstrate how to use FCRangeSlider
+ */
 @interface FCRangeSliderSampleController : UIViewController {
     
 }

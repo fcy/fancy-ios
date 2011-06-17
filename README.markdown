@@ -22,19 +22,7 @@ Requirements
 - See the Xcode project to see the list of frameworks used. As of this moment there's no external frameworks or libraries in the project.
 
 
-Current List of Components
+More Information
 ==========================
 
-UI
---
-
-### FCRangeSlider (UIControl)
-
-A variation of UISlider specialized to select a range of values. In other words it's a slider with two thumbs/trackers, the values between them are the range selected.
-
-General Utilities
------------------
-
-### FCGeometry.h
-
-A collection of simple C functions to make the code less verbose when dealing with CGGeometry structures.
+For a list of available components and what Fancy iOS can do for you see the project's documentation: [fmcypriano.github.com/fancy-ios](http://fmcypriano.github.com/fancy-ios)

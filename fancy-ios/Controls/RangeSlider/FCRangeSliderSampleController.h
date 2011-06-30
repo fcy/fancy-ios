@@ -13,14 +13,29 @@
 //    limitations under the License.
 
 #import <UIKit/UIKit.h>
+#import "FCRangeSlider.h"
 
 /**
  * @brief UIViewController to demonstrate how to use FCRangeSlider
  */
 @interface FCRangeSliderSampleController : UIViewController {
     
+    UILabel *lblMinimumValue;
+    UILabel *lblMaximumValue;
 }
 
 + (FCRangeSliderSampleController *)rangeSliderSampleController;
+
+@property (nonatomic, retain) IBOutlet FCRangeSlider *slider;
+@property (nonatomic, retain) IBOutlet UILabel *lblRange;
+@property (nonatomic, retain) IBOutlet UILabel *lblRangeValue;
+@property (nonatomic, retain) IBOutlet UILabel *lblMinimumValue;
+@property (nonatomic, retain) IBOutlet UILabel *lblMaximumValue;
+
+- (IBAction)onlyNonFractionValueChanged:(id)sender;
+- (IBAction)sliderValueChanged:(id)sender;
+- (IBAction)minimumValueChanged:(id)sender;
+- (IBAction)maximumValueChanged:(id)sender;
+- (IBAction)resetSameValueTouched:(id)sender;
 
 @end

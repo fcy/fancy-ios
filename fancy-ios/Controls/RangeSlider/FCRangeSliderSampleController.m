@@ -13,16 +13,44 @@
 //    limitations under the License.
 
 #import "FCRangeSliderSampleController.h"
-#import "FCRangeSlider.h"
+
 
 @implementation FCRangeSliderSampleController
+
+@synthesize lblRangeValue;
+@synthesize lblMinimumValue;
+@synthesize lblMaximumValue;
+@synthesize slider;
+@synthesize lblRange;
 
 + (FCRangeSliderSampleController *)rangeSliderSampleController {
     return [[[FCRangeSliderSampleController alloc] init] autorelease];
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (IBAction)onlyNonFractionValueChanged:(id)sender {
+    slider.acceptOnlyNonFractionValues = [sender isOn];
+}
+
+- (IBAction)sliderValueChanged:(FCRangeSlider *)sender {
+    lblRangeValue.text = [NSString stringWithFormat:@"{%f, %f}", sender.rangeValue.start, sender.rangeValue.end];
+    lblRange.text = NSStringFromRange(sender.range);
+}
+
+- (IBAction)minimumValueChanged:(UISlider *)sender {
+    slider.minimumValue = [sender value];
+    lblMinimumValue.text = [NSString stringWithFormat:@"minimumValue %f", slider.minimumValue];
+}
+
+- (IBAction)maximumValueChanged:(UISlider *)sender {
+    slider.maximumValue = [sender value];
+    lblMaximumValue.text = [NSString stringWithFormat:@"maximumValue %f", slider.maximumValue];
+}
+
+- (IBAction)resetSameValueTouched:(id)sender {
+    slider.rangeValue = FCRangeSliderValueMake(3, 6);
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -30,8 +58,12 @@
     return self;
 }
 
-- (void)dealloc
-{
+- (void)dealloc {
+    [lblRange release];
+    [lblRangeValue release];
+    [slider release];
+    [lblMinimumValue release];
+    [lblMaximumValue release];
     [super dealloc];
 }
 
@@ -57,22 +89,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    FCRangeSlider *slider = [[FCRangeSlider alloc] initWithFrame:CGRectMake(50, 50, 250, 30)];
     [slider setThumbImage:[UIImage imageNamed:@"slider_thumb_highlighted"] forState:UIControlStateHighlighted];
-    [[self view] addSubview:slider];
-    [slider release];
+    [self sliderValueChanged:slider];
 }
 
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload {
+    [self setLblRange:nil];
+    [self setLblRangeValue:nil];
+    [self setSlider:nil];
+    [self setLblMinimumValue:nil];
+    [self setLblMaximumValue:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return YES;
 }

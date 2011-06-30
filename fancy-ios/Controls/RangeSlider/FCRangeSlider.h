@@ -52,34 +52,50 @@ typedef struct _FCRangeSliderValue {
     UIImageView *thumbBeingDragged;
     CGFloat trackSliderWidth;
     NSNumberFormatter *roundFormatter;
+    BOOL isTracking;
 }
 
 /**
  * @brief Contains the mininum allowed value
  *
+ * If the change causes the current rangeValue.start to be bellow the new minimum value,
+ * it will be adjusted to match the new minimum value automatically.
+ *
+ * If acceptOnlyNonFractionValues is set to YES the value will be rounded to its nearest
+ * integer automatically.
+ *
  * The default value is 0.0
  *
- * @todo Implement the setter
  */
 @property (nonatomic) CGFloat minimumValue;
 /**
  * @brief Contains the maximum allowed value
  *
+ * If the change causes the current rangeValue.end to be above the new maximum value,
+ * it will be adjusted to match the new maximum value automatically.
+ *
+ * If acceptOnlyNonFractionValues is set to YES the value will be rounded to its nearest
+ * integer automatically.
+ *
  * The default value is 10.0
  *
- * @todo Implement the setter
  */
 @property (nonatomic) CGFloat maximumValue;
 /**
  * @brief Contains the selected range represented by NSRange
  *
- * @todo Implement the setter
+ * Important this property is only completely reliable if acceptOnlyNonFractionValues is
+ * set to YES. Because of the difference between floats and integers. NSRange is always rounded.
+ *
  */
 @property (nonatomic) NSRange range;
 /**
- * @brief Contains the selected range
+ * @brief Contains the selected range with float values
  *
- * @todo Implement the setter
+ * This property contains the exact selected range expressed in float values.
+ *
+ * If acceptOnlyNonFractionValyes is set to YES the values will be rounded automatically.
+ *
  */
 @property (nonatomic) FCRangeSliderValue rangeValue;
 /**
@@ -112,6 +128,20 @@ typedef struct _FCRangeSliderValue {
  */
 - (void)setThumbImage:(UIImage *)image forState:(UIControlState)state;
 
+/**
+ * @brief Sets the receiver’s current rangeValue, allowing you to animate the change visually.
+ *
+ * @param newRangeValue The new rangeValue
+ * @param animated Specify whether the change will be animated or not
+ */
+- (void)setRangeValue:(FCRangeSliderValue)newRangeValue animated:(BOOL)animated;
+/**
+ * @brief Sets the receiver’s current range, allowing you to animate the change visually.
+ *
+ * @param newRange The new range
+ * @param animated Specify whether the change will be animated or not
+ */
+- (void)setRange:(NSRange)newRange animated:(BOOL)animated;
 
 @end
 

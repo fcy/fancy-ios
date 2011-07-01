@@ -27,7 +27,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Fancy iOS</div>
-   <div id="projectbrief">A useful (hope so) library of reusable code for iOS developers</div>
+   <div id="projectbrief">A useful library of reusable code for iOS developers</div>
   </td>
  </tr>
  </tbody>
@@ -36,7 +36,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li id="searchli">
@@ -104,6 +103,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">A image to represent the selected range. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_f_c_range_slider.html#a79cc31f3e31d21874d77ebce5bf92ff2">setThumbImage:forState:</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">A image to represent both thumbs, or indicators.  <a href="#a79cc31f3e31d21874d77ebce5bf92ff2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_f_c_range_slider.html#a6c7d1f82dd097ddca6a37787b9c96511">setRangeValue:animated:</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the receiver’s current rangeValue, allowing you to animate the change visually.  <a href="#a6c7d1f82dd097ddca6a37787b9c96511"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_f_c_range_slider.html#afa85f6d8f08e26679a8a1d2550f55b4a">setRange:animated:</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the receiver’s current range, allowing you to animate the change visually.  <a href="#afa85f6d8f08e26679a8a1d2550f55b4a"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="properties"></a>
 Properties</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">CGFloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_c_range_slider.html#a1d7a25ba796151e17842c944ea3fdfb4">minimumValue</a></td></tr>
@@ -113,7 +116,7 @@ Properties</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">NSRange&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_c_range_slider.html#ae6ff5ef81c38a4fd3673fa767ef20e79">range</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the selected range represented by NSRange.  <a href="#ae6ff5ef81c38a4fd3673fa767ef20e79"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct___f_c_range_slider_value.html">FCRangeSliderValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_c_range_slider.html#a2b41f2a8178c633c8882f2bb9cdbc056">rangeValue</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the selected range.  <a href="#a2b41f2a8178c633c8882f2bb9cdbc056"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the selected range with float values.  <a href="#a2b41f2a8178c633c8882f2bb9cdbc056"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_c_range_slider.html#a33071baf6506861e0d9669aebc1e2037">acceptOnlyNonFractionValues</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls if only integer values can be selected.  <a href="#a33071baf6506861e0d9669aebc1e2037"></a><br/></td></tr>
 </table>
@@ -138,6 +141,78 @@ Properties</h2></td></tr>
 
 <p>A image to represent the values outside the selected range. </p>
 <p>You should correctly set the UIImage's stretchableImageWithLeftCapWidth:topCapHeight: to get a perfect visual. </p>
+
+</div>
+</div>
+<a class="anchor" id="afa85f6d8f08e26679a8a1d2550f55b4a"></a><!-- doxytag: member="FCRangeSlider::setRange:animated:" ref="afa85f6d8f08e26679a8a1d2550f55b4a" args="(NSRange newRange,[animated] BOOL animated)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) setRange: </td>
+          <td></td>
+          <td class="paramtype">(NSRange)&#160;</td>
+          <td class="paramname"><em>newRange</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">animated:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>animated</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Sets the receiver’s current range, allowing you to animate the change visually. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newRange</td><td>The new range </td></tr>
+    <tr><td class="paramname">animated</td><td>Specify whether the change will be animated or not </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6c7d1f82dd097ddca6a37787b9c96511"></a><!-- doxytag: member="FCRangeSlider::setRangeValue:animated:" ref="a6c7d1f82dd097ddca6a37787b9c96511" args="(FCRangeSliderValue newRangeValue,[animated] BOOL animated)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) setRangeValue: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="struct___f_c_range_slider_value.html">FCRangeSliderValue</a>)&#160;</td>
+          <td class="paramname"><em>newRangeValue</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">animated:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>animated</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Sets the receiver’s current rangeValue, allowing you to animate the change visually. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newRangeValue</td><td>The new rangeValue </td></tr>
+    <tr><td class="paramname">animated</td><td>Specify whether the change will be animated or not </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -207,8 +282,9 @@ Properties</h2></td></tr>
 <div class="memdoc">
 
 <p>Contains the maximum allowed value. </p>
-<p>The default value is 10.0</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Implement the setter </dd></dl>
+<p>If the change causes the current rangeValue.end to be above the new maximum value, it will be adjusted to match the new maximum value automatically.</p>
+<p>If acceptOnlyNonFractionValues is set to YES the value will be rounded to its nearest integer automatically.</p>
+<p>The default value is 10.0 </p>
 
 </div>
 </div>
@@ -224,8 +300,9 @@ Properties</h2></td></tr>
 <div class="memdoc">
 
 <p>Contains the mininum allowed value. </p>
-<p>The default value is 0.0</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Implement the setter </dd></dl>
+<p>If the change causes the current rangeValue.start to be bellow the new minimum value, it will be adjusted to match the new minimum value automatically.</p>
+<p>If acceptOnlyNonFractionValues is set to YES the value will be rounded to its nearest integer automatically.</p>
+<p>The default value is 0.0 </p>
 
 </div>
 </div>
@@ -241,7 +318,7 @@ Properties</h2></td></tr>
 <div class="memdoc">
 
 <p>Contains the selected range represented by NSRange. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Implement the setter </dd></dl>
+<p>Important this property is only completely reliable if acceptOnlyNonFractionValues is set to YES. Because of the difference between floats and integers. NSRange is always rounded. </p>
 
 </div>
 </div>
@@ -256,8 +333,9 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Contains the selected range. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Implement the setter </dd></dl>
+<p>Contains the selected range with float values. </p>
+<p>This property contains the exact selected range expressed in float values.</p>
+<p>If acceptOnlyNonFractionValyes is set to YES the values will be rounded automatically. </p>
 
 </div>
 </div>
@@ -269,7 +347,7 @@ Properties</h2></td></tr>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="interface_f_c_range_slider.html">FCRangeSlider</a>      </li>
-      <li class="footer">Generated on Fri Jun 17 2011 18:24:49 for Fancy iOS by&#160;
+      <li class="footer">Generated on Fri Jul 1 2011 15:47:52 for Fancy iOS by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

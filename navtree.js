@@ -2,9 +2,6 @@ var NAVTREE =
 [
   [ "Fancy iOS", "index.html", [
     [ "Main Page", "index.html", null ],
-    [ "Related Pages", "pages.html", [
-      [ "Todo List", "todo.html", null ]
-    ] ],
     [ "Class List", "annotated.html", [
       [ "_FCRangeSliderValue", "struct___f_c_range_slider_value.html", null ],
       [ "AppDelegate", "interface_app_delegate.html", null ],

@@ -17,6 +17,8 @@
 
 /**
  * @brief UIViewController to demonstrate how to use FCRangeSlider
+ *
+ * @image html FCRangeSliderSampleController.png "Shows the FCRangeSlider in action"
  */
 @interface FCRangeSliderSampleController : UIViewController {
     

@@ -15,7 +15,11 @@
 #import <Foundation/NSObjCRuntime.h>
 
 /**
+ * @file FCGeometry.h
  * @brief A collection of C functions to make the code less verbose when dealing with CGGeometry structures.
+ *
+ * @author Felipe Cypriano
+ * @date 2011
  */
 
 /**

@@ -12,12 +12,12 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
-/*
- This component idea was based on Dimitris Doukas' DoubleSlider
- You can find the original code here: https://github.com/doukasd/iOS-Components/tree/master/Controls/DoubleSlider [SHA1 de375a9e]
-
- Dependencies:
-   - FCGeometry.h
+/**
+ * @file FCRangeSlider.h
+ * Range slider class
+ *
+ * @author Felipe Cypriano
+ * @date 2011
  */
 
 #import <Foundation/Foundation.h>
@@ -28,6 +28,9 @@
  * The values are absolute, so the start value corresponds to the exact 
  * location where the range start. Unline NSRange the end is where the 
  * range ends and not the length.
+ *
+ * This component idea was based on @link https://github.com/doukasd/iOS-Components/tree/master/Controls/DoubleSlider Dimitris Doukas' DoubleSlider @endlink
+ * @note Depends on FCGeometry.h
  */
 typedef struct _FCRangeSliderValue {
     CGFloat start;

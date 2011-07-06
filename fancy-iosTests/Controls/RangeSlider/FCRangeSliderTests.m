@@ -58,7 +58,7 @@
     STAssertTrue([rangeSlider range].location == 1, @"range.location should be >= minimumValue");
 }
 
-- (void)testSetMaximumValueBellowRangeValueEnd {
+- (void)testSetMaximumValueBelowRangeValueEnd {
     rangeSlider.maximumValue = 8.0f;
     STAssertEqualsWithAccuracy([rangeSlider maximumValue], [rangeSlider rangeValue].end, 0.00, @"rangeValue.end should be <= maximumValue");
     STAssertTrue([rangeSlider range].length == rangeSlider.rangeValue.start + rangeSlider.rangeValue.end + 1, @"range.length is wrong after changing maximumValue");

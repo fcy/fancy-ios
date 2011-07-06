@@ -58,7 +58,7 @@ typedef struct _FCRangeSliderValue {
 /**
  * @brief Contains the mininum allowed value
  *
- * If the change causes the current rangeValue.start to be bellow the new minimum value,
+ * If the change causes the current rangeValue.start to be below the new minimum value,
  * it will be adjusted to match the new minimum value automatically.
  *
  * If acceptOnlyNonFractionValues is set to YES the value will be rounded to its nearest

@@ -31,14 +31,14 @@
 		D48F14C4139ED4ED00257AE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48F149F139ED4ED00257AE8 /* Foundation.framework */; };
 		D48F14C5139ED4ED00257AE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48F14A1139ED4ED00257AE8 /* CoreGraphics.framework */; };
 		D48F14CD139ED4ED00257AE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D48F14CB139ED4ED00257AE8 /* InfoPlist.strings */; };
-		D48F14D0139ED4ED00257AE8 /* fancy_iosTests.h in Resources */ = {isa = PBXBuildFile; fileRef = D48F14CF139ED4ED00257AE8 /* fancy_iosTests.h */; };
-		D48F14D2139ED4ED00257AE8 /* fancy_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D48F14D1139ED4ED00257AE8 /* fancy_iosTests.m */; };
 		D48F14E0139ED6E100257AE8 /* FCRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = D48F14DF139ED6E100257AE8 /* FCRangeSlider.m */; };
 		D48F14E2139EE3F100257AE8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48F14E1139EE3F100257AE8 /* QuartzCore.framework */; };
 		D4A9518413ABE6D70088A658 /* project.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D4A9518313ABE6D70088A658 /* project.xcconfig */; };
 		D4A9518713ABE6FD0088A658 /* debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D4A9518613ABE6FD0088A658 /* debug.xcconfig */; };
 		D4A9518913ABE72B0088A658 /* release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D4A9518813ABE72B0088A658 /* release.xcconfig */; };
 		D4A9519113ABED830088A658 /* Doxygen.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A9519013ABED830088A658 /* Doxygen.h */; };
+		D4BC2F1513C3A06F0008D98E /* FCRangeSliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BC2F1413C3A06F0008D98E /* FCRangeSliderTests.m */; };
+		D4BC2F1913C3A55B0008D98E /* FCGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BC2F1813C3A55B0008D98E /* FCGeometryTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,8 +77,6 @@
 		D48F14CA139ED4ED00257AE8 /* fancy-iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fancy-iosTests-Info.plist"; sourceTree = "<group>"; };
 		D48F14CC139ED4ED00257AE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D48F14CE139ED4ED00257AE8 /* fancy-iosTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fancy-iosTests-Prefix.pch"; sourceTree = "<group>"; };
-		D48F14CF139ED4ED00257AE8 /* fancy_iosTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fancy_iosTests.h; sourceTree = "<group>"; };
-		D48F14D1139ED4ED00257AE8 /* fancy_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fancy_iosTests.m; sourceTree = "<group>"; };
 		D48F14DB139ED5B100257AE8 /* AppDelegate_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate_iPhone.h; path = iPhone/AppDelegate_iPhone.h; sourceTree = "<group>"; };
 		D48F14DE139ED6E100257AE8 /* FCRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCRangeSlider.h; path = Controls/RangeSlider/FCRangeSlider.h; sourceTree = "<group>"; };
 		D48F14DF139ED6E100257AE8 /* FCRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCRangeSlider.m; path = Controls/RangeSlider/FCRangeSlider.m; sourceTree = "<group>"; };
@@ -87,6 +85,8 @@
 		D4A9518613ABE6FD0088A658 /* debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
 		D4A9518813ABE72B0088A658 /* release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
 		D4A9519013ABED830088A658 /* Doxygen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doxygen.h; sourceTree = "<group>"; };
+		D4BC2F1413C3A06F0008D98E /* FCRangeSliderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCRangeSliderTests.m; path = Controls/RangeSlider/FCRangeSliderTests.m; sourceTree = "<group>"; };
+		D4BC2F1813C3A55B0008D98E /* FCGeometryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCGeometryTests.m; path = Utilities/FCGeometryTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +144,22 @@
 				D40BAAB113A01B8D0080E188 /* slider_thumb.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		D469289313C39AD200DB1F7E /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				D469289513C39AD900DB1F7E /* RangeSlider */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		D469289513C39AD900DB1F7E /* RangeSlider */ = {
+			isa = PBXGroup;
+			children = (
+				D4BC2F1413C3A06F0008D98E /* FCRangeSliderTests.m */,
+			);
+			name = RangeSlider;
 			sourceTree = "<group>";
 		};
 		D46EB2D113A0028400F0D588 /* Utilities */ = {
@@ -239,8 +255,8 @@
 		D48F14C8139ED4ED00257AE8 /* fancy-iosTests */ = {
 			isa = PBXGroup;
 			children = (
-				D48F14CF139ED4ED00257AE8 /* fancy_iosTests.h */,
-				D48F14D1139ED4ED00257AE8 /* fancy_iosTests.m */,
+				D469289313C39AD200DB1F7E /* Controls */,
+				D4BC2F1613C3A3800008D98E /* Utilities */,
 				D48F14C9139ED4ED00257AE8 /* Supporting Files */,
 			);
 			path = "fancy-iosTests";
@@ -273,6 +289,14 @@
 				D46EB2E313A00B1D00F0D588 /* FCRangeSliderSampleController.m */,
 			);
 			name = RangeSlider;
+			sourceTree = "<group>";
+		};
+		D4BC2F1613C3A3800008D98E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D4BC2F1813C3A55B0008D98E /* FCGeometryTests.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,7 +401,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D48F14CD139ED4ED00257AE8 /* InfoPlist.strings in Resources */,
-				D48F14D0139ED4ED00257AE8 /* fancy_iosTests.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +440,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D48F14D2139ED4ED00257AE8 /* fancy_iosTests.m in Sources */,
+				D4BC2F1513C3A06F0008D98E /* FCRangeSliderTests.m in Sources */,
+				D4BC2F1913C3A55B0008D98E /* FCGeometryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

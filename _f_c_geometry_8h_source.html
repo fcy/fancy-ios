@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Fancy iOS: /Volumes/fmc/fancy-ios/fancy-ios/Utilities/FCGeometry.h Source File</title>
+<title>Fancy iOS: /Users/felipecypriano/dev/GitHub/fancy-ios/fancy-ios/Utilities/FCGeometry.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -59,6 +59,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div>
@@ -77,10 +78,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">/Volumes/fmc/fancy-ios/fancy-ios/Utilities/FCGeometry.h</div>  </div>
+<div class="title">/Users/felipecypriano/dev/GitHub/fancy-ios/fancy-ios/Utilities/FCGeometry.h</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//    Copyright 2011 Felipe Cypriano</span>
+<a href="_f_c_geometry_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//    Copyright 2011 Felipe Cypriano</span>
 <a name="l00002"></a>00002 <span class="comment">// </span>
 <a name="l00003"></a>00003 <span class="comment">//    Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
 <a name="l00004"></a>00004 <span class="comment">//    you may not use this file except in compliance with the License.</span>
@@ -96,41 +97,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 <span class="preprocessor">#import &lt;Foundation/NSObjCRuntime.h&gt;</span>
 <a name="l00016"></a>00016 
-<a name="l00031"></a>00031 NS_INLINE CGRect CGRectChangeSize(CGRect rect, CGFloat deltaWidth, CGFloat deltaHeight) {
-<a name="l00032"></a>00032     CGFloat width = rect.size.width + deltaWidth;
-<a name="l00033"></a>00033     CGFloat height = rect.size.height + deltaHeight;
-<a name="l00034"></a>00034     <span class="keywordflow">return</span> CGRectMake(rect.origin.x, rect.origin.y, width, height);
-<a name="l00035"></a>00035 }
-<a name="l00036"></a>00036 
-<a name="l00043"></a>00043 NS_INLINE CGRect CGRectSetHeight(CGRect rect, CGFloat height) {
-<a name="l00044"></a>00044     <span class="keywordflow">return</span> CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, height);
-<a name="l00045"></a>00045 }
-<a name="l00046"></a>00046 
-<a name="l00053"></a>00053 NS_INLINE CGRect CGRectSetWidth(CGRect rect, CGFloat width) {
-<a name="l00054"></a>00054     <span class="keywordflow">return</span> CGRectMake(rect.origin.x, rect.origin.y, width, rect.size.height);
-<a name="l00055"></a>00055 }
-<a name="l00056"></a>00056 
-<a name="l00067"></a>00067 NS_INLINE CGRect CGRectSetPosition(CGRect rect, CGFloat x, CGFloat y) {
-<a name="l00068"></a>00068     <span class="keywordflow">return</span> CGRectMake(x, y, rect.size.width, rect.size.height);
-<a name="l00069"></a>00069 }
-<a name="l00070"></a>00070 
-<a name="l00077"></a>00077 NS_INLINE CGRect CGRectSetPositionX(CGRect rect, CGFloat x) {
-<a name="l00078"></a>00078     <span class="keywordflow">return</span> CGRectMake(x, rect.origin.y, rect.size.width, rect.size.height);
-<a name="l00079"></a>00079 }
-<a name="l00080"></a>00080 
-<a name="l00087"></a>00087 NS_INLINE CGRect CGRectSetPositionY(CGRect rect, CGFloat y) {
-<a name="l00088"></a>00088     <span class="keywordflow">return</span> CGRectMake(rect.origin.x, y, rect.size.width, rect.size.height);
-<a name="l00089"></a>00089 }
-<a name="l00090"></a>00090 
-<a name="l00094"></a>00094 NS_INLINE CGFloat CGRectEndValue(CGRect rect) {
-<a name="l00095"></a>00095     <span class="keywordflow">return</span> rect.origin.x + rect.size.width;
-<a name="l00096"></a>00096 }
+<a name="l00035"></a><a class="code" href="_f_c_geometry_8h.html#a6e5a2e883ef64786b54d758062c0f120">00035</a> NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#a6e5a2e883ef64786b54d758062c0f120" title="Changes the size of a CGRect by adding or subtracting width and height.">CGRectChangeSize</a>(CGRect rect, CGFloat deltaWidth, CGFloat deltaHeight) {
+<a name="l00036"></a>00036     CGFloat width = rect.size.width + deltaWidth;
+<a name="l00037"></a>00037     CGFloat height = rect.size.height + deltaHeight;
+<a name="l00038"></a>00038     <span class="keywordflow">return</span> CGRectMake(rect.origin.x, rect.origin.y, width, height);
+<a name="l00039"></a>00039 }
+<a name="l00040"></a>00040 
+<a name="l00047"></a><a class="code" href="_f_c_geometry_8h.html#a1b18e704b06dc42bedf82c50c2dd9832">00047</a> NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#a1b18e704b06dc42bedf82c50c2dd9832" title="Set a new height to a CGRect.">CGRectSetHeight</a>(CGRect rect, CGFloat height) {
+<a name="l00048"></a>00048     <span class="keywordflow">return</span> CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, height);
+<a name="l00049"></a>00049 }
+<a name="l00050"></a>00050 
+<a name="l00057"></a><a class="code" href="_f_c_geometry_8h.html#ad44c852eaeb914c5abc8942a7a2ed11b">00057</a> NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#ad44c852eaeb914c5abc8942a7a2ed11b" title="Set a new width to a CGRect.">CGRectSetWidth</a>(CGRect rect, CGFloat width) {
+<a name="l00058"></a>00058     <span class="keywordflow">return</span> CGRectMake(rect.origin.x, rect.origin.y, width, rect.size.height);
+<a name="l00059"></a>00059 }
+<a name="l00060"></a>00060 
+<a name="l00071"></a><a class="code" href="_f_c_geometry_8h.html#a4bfa6a5f185a0807b94aa889f392fc1c">00071</a> NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#a4bfa6a5f185a0807b94aa889f392fc1c" title="Set a new CGPoint as origin of a CGRect.">CGRectSetPosition</a>(CGRect rect, CGFloat x, CGFloat y) {
+<a name="l00072"></a>00072     <span class="keywordflow">return</span> CGRectMake(x, y, rect.size.width, rect.size.height);
+<a name="l00073"></a>00073 }
+<a name="l00074"></a>00074 
+<a name="l00081"></a><a class="code" href="_f_c_geometry_8h.html#a65a15c4431be5534237412dcf905b101">00081</a> NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#a65a15c4431be5534237412dcf905b101" title="Set a new origin.x to a CGRect.">CGRectSetPositionX</a>(CGRect rect, CGFloat x) {
+<a name="l00082"></a>00082     <span class="keywordflow">return</span> CGRectMake(x, rect.origin.y, rect.size.width, rect.size.height);
+<a name="l00083"></a>00083 }
+<a name="l00084"></a>00084 
+<a name="l00091"></a><a class="code" href="_f_c_geometry_8h.html#aa7e115b8b0488c137ee9028febb0ed84">00091</a> NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#aa7e115b8b0488c137ee9028febb0ed84" title="Set a new origin.y to a CGRect.">CGRectSetPositionY</a>(CGRect rect, CGFloat y) {
+<a name="l00092"></a>00092     <span class="keywordflow">return</span> CGRectMake(rect.origin.x, y, rect.size.width, rect.size.height);
+<a name="l00093"></a>00093 }
+<a name="l00094"></a>00094 
+<a name="l00098"></a><a class="code" href="_f_c_geometry_8h.html#a614b8d387996dd2dc4aedbd7dc0a600b">00098</a> NS_INLINE CGFloat <a class="code" href="_f_c_geometry_8h.html#a614b8d387996dd2dc4aedbd7dc0a600b">CGRectEndValue</a>(CGRect rect) {
+<a name="l00099"></a>00099     <span class="keywordflow">return</span> rect.origin.x + rect.size.width;
+<a name="l00100"></a>00100 }
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><b>FCGeometry.h</b>      </li>
-      <li class="footer">Generated on Fri Jul 1 2011 15:47:52 for Fancy iOS by&#160;
+      <li class="navelem"><a class="el" href="_f_c_geometry_8h.html">FCGeometry.h</a>      </li>
+      <li class="footer">Generated on Sat Jul 23 2011 00:58:41 for Fancy iOS by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>
@@ -140,7 +141,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">

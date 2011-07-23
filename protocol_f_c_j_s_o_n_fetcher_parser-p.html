@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Fancy iOS: Member List</title>
+<title>Fancy iOS: &lt;FCJSONFetcherParser&gt; Protocol Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -75,30 +75,78 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('interface_f_c_range_slider.html','');
+  initNavTree('protocol_f_c_j_s_o_n_fetcher_parser-p.html','');
 </script>
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
-<div class="title">FCRangeSlider Member List</div>  </div>
+<div class="title">&lt;FCJSONFetcherParser&gt; Protocol Reference</div>  </div>
 </div>
 <div class="contents">
-This is the complete list of members for <a class="el" href="interface_f_c_range_slider.html">FCRangeSlider</a>, including all inherited members.<table>
-  <tr class="memlist"><td></td><td><a class="el" href="interface_f_c_range_slider.html#a33071baf6506861e0d9669aebc1e2037">acceptOnlyNonFractionValues</a></td><td><a class="el" href="interface_f_c_range_slider.html">FCRangeSlider</a></td><td></td></tr>
-  <tr class="memlist"><td></td><td><a class="el" href="interface_f_c_range_slider.html#a474718d194238ff85ec8d6f833282a27">maximumValue</a></td><td><a class="el" href="interface_f_c_range_slider.html">FCRangeSlider</a></td><td></td></tr>
-  <tr class="memlist"><td></td><td><a class="el" href="interface_f_c_range_slider.html#a1d7a25ba796151e17842c944ea3fdfb4">minimumValue</a></td><td><a class="el" href="interface_f_c_range_slider.html">FCRangeSlider</a></td><td></td></tr>
-  <tr class="memlist"><td></td><td><a class="el" href="interface_f_c_range_slider.html#ae6ff5ef81c38a4fd3673fa767ef20e79">range</a></td><td><a class="el" href="interface_f_c_range_slider.html">FCRangeSlider</a></td><td></td></tr>
-  <tr class="memlist"><td></td><td><a class="el" href="interface_f_c_range_slider.html#a2b41f2a8178c633c8882f2bb9cdbc056">rangeValue</a></td><td><a class="el" href="interface_f_c_range_slider.html">FCRangeSlider</a></td><td></td></tr>
-  <tr class="memlist"><td>-&#160;</td><td><a class="el" href="interface_f_c_range_slider.html#a6a139b56a55f41b38b2bb7e70d37fd60">setInRangeTrackImage:</a></td><td><a class="el" href="interface_f_c_range_slider.html">FCRangeSlider</a></td><td></td></tr>
-  <tr class="memlist"><td>-&#160;</td><td><a class="el" href="interface_f_c_range_slider.html#a1b0e611736a6811aa47e5f5d3e60c2a8">setOutRangeTrackImage:</a></td><td><a class="el" href="interface_f_c_range_slider.html">FCRangeSlider</a></td><td></td></tr>
-  <tr class="memlist"><td>-&#160;</td><td><a class="el" href="interface_f_c_range_slider.html#afa85f6d8f08e26679a8a1d2550f55b4a">setRange:animated:</a></td><td><a class="el" href="interface_f_c_range_slider.html">FCRangeSlider</a></td><td></td></tr>
-  <tr class="memlist"><td>-&#160;</td><td><a class="el" href="interface_f_c_range_slider.html#a6c7d1f82dd097ddca6a37787b9c96511">setRangeValue:animated:</a></td><td><a class="el" href="interface_f_c_range_slider.html">FCRangeSlider</a></td><td></td></tr>
-  <tr class="memlist"><td>-&#160;</td><td><a class="el" href="interface_f_c_range_slider.html#a79cc31f3e31d21874d77ebce5bf92ff2">setThumbImage:forState:</a></td><td><a class="el" href="interface_f_c_range_slider.html">FCRangeSlider</a></td><td></td></tr>
-</table></div>
+<!-- doxytag: class="FCJSONFetcherParser-p" -->
+<p>JSON Fetcher parser protocol to give the possibility to choose which parser framework to use.  
+ <a href="protocol_f_c_j_s_o_n_fetcher_parser-p.html#details">More...</a></p>
+
+<p><code>#import &lt;<a class="el" href="_f_c_j_s_o_n_fetcher_8h_source.html">FCJSONFetcher.h</a>&gt;</code></p>
+
+<p><a href="protocol_f_c_j_s_o_n_fetcher_parser-p-members.html">List of all members.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_f_c_j_s_o_n_fetcher_parser-p.html#a3fc93c01844a9a51e5d0a930747ef2d8">jsonFetcher:parseData:</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a NSString returns the JSON Representation (NSArray or NSDictionary)  <a href="#a3fc93c01844a9a51e5d0a930747ef2d8"></a><br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>JSON Fetcher parser protocol to give the possibility to choose which parser framework to use. </p>
+</div><hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a3fc93c01844a9a51e5d0a930747ef2d8"></a><!-- doxytag: member="FCJSONFetcherParser&#45;p::jsonFetcher:parseData:" ref="a3fc93c01844a9a51e5d0a930747ef2d8" args="(FCJSONFetcher *fetcher,[parseData] NSData *jsonRawData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) jsonFetcher: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_f_c_j_s_o_n_fetcher.html">FCJSONFetcher</a> *)&#160;</td>
+          <td class="paramname"><em>fetcher</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">parseData:</td>
+          <td></td>
+          <td class="paramtype">(NSData *)&#160;</td>
+          <td class="paramname"><em>jsonRawData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Given a NSString returns the JSON Representation (NSArray or NSDictionary) </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fetcher</td><td>The <a class="el" href="interface_f_c_j_s_o_n_fetcher.html" title="A reusable class to obtain JSON data from a request.">FCJSONFetcher</a> that is requesting the parsed object </td></tr>
+    <tr><td class="paramname">jsonRawData</td><td>The NSData to be parsed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The JSON Representation. A NSArray or NSDictionary. <b>If any errors the return value should be a NSError.</b> </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this protocol was generated from the following file:<ul>
+<li>/Users/felipecypriano/dev/GitHub/fancy-ios/fancy-ios/Utilities/HTTP/<a class="el" href="_f_c_j_s_o_n_fetcher_8h_source.html">FCJSONFetcher.h</a></li>
+</ul>
+</div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="footer">Generated on Sat Jul 23 2011 00:58:42 for Fancy iOS by&#160;
+      <li class="navelem"><a class="el" href="protocol_f_c_j_s_o_n_fetcher_parser-p.html">FCJSONFetcherParser</a>      </li>
+      <li class="footer">Generated on Sat Jul 23 2011 00:58:41 for Fancy iOS by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

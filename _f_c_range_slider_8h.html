@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Fancy iOS: /Users/felipecypriano/dev/GitHub/fancy-ios/fancy-ios/Controls/RangeSlider/FCRangeSliderSampleController.h Source File</title>
+<title>Fancy iOS: /Users/felipecypriano/dev/GitHub/fancy-ios/fancy-ios/Controls/RangeSlider/FCRangeSlider.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -73,57 +73,66 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-  initNavTree('_f_c_range_slider_sample_controller_8h.html','');
+  initNavTree('_f_c_range_slider_8h.html','');
 </script>
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">/Users/felipecypriano/dev/GitHub/fancy-ios/fancy-ios/Controls/RangeSlider/FCRangeSliderSampleController.h</div>  </div>
+<div class="title">/Users/felipecypriano/dev/GitHub/fancy-ios/fancy-ios/Controls/RangeSlider/FCRangeSlider.h File Reference</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//    Copyright 2011 Felipe Cypriano</span>
-<a name="l00002"></a>00002 <span class="comment">// </span>
-<a name="l00003"></a>00003 <span class="comment">//    Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
-<a name="l00004"></a>00004 <span class="comment">//    you may not use this file except in compliance with the License.</span>
-<a name="l00005"></a>00005 <span class="comment">//    You may obtain a copy of the License at</span>
-<a name="l00006"></a>00006 <span class="comment">// </span>
-<a name="l00007"></a>00007 <span class="comment">//        http://www.apache.org/licenses/LICENSE-2.0</span>
-<a name="l00008"></a>00008 <span class="comment">// </span>
-<a name="l00009"></a>00009 <span class="comment">//    Unless required by applicable law or agreed to in writing, software</span>
-<a name="l00010"></a>00010 <span class="comment">//    distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
-<a name="l00011"></a>00011 <span class="comment">//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
-<a name="l00012"></a>00012 <span class="comment">//    See the License for the specific language governing permissions and</span>
-<a name="l00013"></a>00013 <span class="comment">//    limitations under the License.</span>
-<a name="l00014"></a>00014 
-<a name="l00015"></a>00015 <span class="preprocessor">#import &lt;UIKit/UIKit.h&gt;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#import &quot;<a class="code" href="_f_c_range_slider_8h.html">FCRangeSlider.h</a>&quot;</span>
-<a name="l00017"></a>00017 
-<a name="l00023"></a><a class="code" href="interface_f_c_range_slider_sample_controller.html">00023</a> <span class="keyword">@interface </span><a class="code" href="interface_f_c_range_slider_sample_controller.html" title="UIViewController to demonstrate how to use FCRangeSlider.">FCRangeSliderSampleController</a> : UIViewController {
-<a name="l00024"></a>00024     
-<a name="l00025"></a>00025     UILabel *lblMinimumValue;
-<a name="l00026"></a>00026     UILabel *lblMaximumValue;
-<a name="l00027"></a>00027 }
-<a name="l00028"></a>00028 
-<a name="l00029"></a>00029 + (<a class="code" href="interface_f_c_range_slider_sample_controller.html" title="UIViewController to demonstrate how to use FCRangeSlider.">FCRangeSliderSampleController</a> *)rangeSliderSampleController;
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031 <span class="keyword">@property</span> (nonatomic, retain) IBOutlet <a class="code" href="interface_f_c_range_slider.html" title="A slider to select ranges. It&#39;s like UISlider but with two thumbs.">FCRangeSlider</a> *slider;
-<a name="l00032"></a>00032 <span class="keyword">@property</span> (nonatomic, retain) IBOutlet UILabel *lblRange;
-<a name="l00033"></a>00033 <span class="keyword">@property</span> (nonatomic, retain) IBOutlet UILabel *lblRangeValue;
-<a name="l00034"></a>00034 <span class="keyword">@property</span> (nonatomic, retain) IBOutlet UILabel *lblMinimumValue;
-<a name="l00035"></a>00035 <span class="keyword">@property</span> (nonatomic, retain) IBOutlet UILabel *lblMaximumValue;
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037 - (IBAction)onlyNonFractionValueChanged:(<span class="keywordtype">id</span>)sender;
-<a name="l00038"></a>00038 - (IBAction)sliderValueChanged:(<span class="keywordtype">id</span>)sender;
-<a name="l00039"></a>00039 - (IBAction)minimumValueChanged:(<span class="keywordtype">id</span>)sender;
-<a name="l00040"></a>00040 - (IBAction)maximumValueChanged:(<span class="keywordtype">id</span>)sender;
-<a name="l00041"></a>00041 - (IBAction)resetSameValueTouched:(<span class="keywordtype">id</span>)sender;
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <span class="keyword">@end</span>
-</pre></div></div>
+<div class="textblock"><code>#import &lt;Foundation/Foundation.h&gt;</code><br/>
+</div>
+<p><a href="_f_c_range_slider_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct___f_c_range_slider_value.html">_FCRangeSliderValue</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the selected range using CGFloat values.  <a href="struct___f_c_range_slider_value.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_c_range_slider.html">FCRangeSlider</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">A slider to select ranges. It's like UISlider but with two thumbs.  <a href="interface_f_c_range_slider.html#details">More...</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct___f_c_range_slider_value.html">_FCRangeSliderValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_f_c_range_slider_8h.html#a7ff7647379a92bf1afeef5284fc98eaa">FCRangeSliderValue</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the selected range using CGFloat values.  <a href="#a7ff7647379a92bf1afeef5284fc98eaa"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb4013e7200be41c247d90d1073a0cdc"></a><!-- doxytag: member="FCRangeSlider.h::FCRangeSliderValueMake" ref="adb4013e7200be41c247d90d1073a0cdc" args="(CGFloat start, CGFloat end)" -->
+NS_INLINE <a class="el" href="struct___f_c_range_slider_value.html">FCRangeSliderValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_f_c_range_slider_8h.html#adb4013e7200be41c247d90d1073a0cdc">FCRangeSliderValueMake</a> (CGFloat start, CGFloat end)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new FCRangeSliderValue. <br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Range slider class</p>
+<dl class="author"><dt><b>Author:</b></dt><dd>Felipe Cypriano </dd></dl>
+<dl class="date"><dt><b>Date:</b></dt><dd>2011 </dd></dl>
+</div><hr/><h2>Typedef Documentation</h2>
+<a class="anchor" id="a7ff7647379a92bf1afeef5284fc98eaa"></a><!-- doxytag: member="FCRangeSlider.h::FCRangeSliderValue" ref="a7ff7647379a92bf1afeef5284fc98eaa" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct___f_c_range_slider_value.html">_FCRangeSliderValue</a>  <a class="el" href="struct___f_c_range_slider_value.html">FCRangeSliderValue</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Represents the selected range using CGFloat values. </p>
+<p>The values are absolute, so the start value corresponds to the exact location where the range start. Unline NSRange the end is where the range ends and not the length.</p>
+<p>This component idea was based on <a class="el" href="">Dimitris Doukas' DoubleSlider </a> </p>
+<dl class="note"><dt><b>Note:</b></dt><dd>Depends on <a class="el" href="_f_c_geometry_8h.html" title="A collection of C functions to make the code less verbose when dealing with CGGeometry structures...">FCGeometry.h</a> </dd></dl>
+
+</div>
+</div>
+</div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><b>FCRangeSliderSampleController.h</b>      </li>
+      <li class="navelem"><a class="el" href="_f_c_range_slider_8h.html">FCRangeSlider.h</a>      </li>
       <li class="footer">Generated on Sat Jul 23 2011 00:58:41 for Fancy iOS by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>

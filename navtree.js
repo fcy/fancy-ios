@@ -7,6 +7,9 @@ var NAVTREE =
       [ "AppDelegate", "interface_app_delegate.html", null ],
       [ "AppDelegate_iPad", "interface_app_delegate__i_pad.html", null ],
       [ "AppDelegate_iPhone", "interface_app_delegate__i_phone.html", null ],
+      [ "FCHTTPFetcher", "interface_f_c_h_t_t_p_fetcher.html", null ],
+      [ "FCJSONFetcher", "interface_f_c_j_s_o_n_fetcher.html", null ],
+      [ "<FCJSONFetcherParser>", "protocol_f_c_j_s_o_n_fetcher_parser-p.html", null ],
       [ "FCRangeSlider", "interface_f_c_range_slider.html", null ],
       [ "FCRangeSliderSampleController", "interface_f_c_range_slider_sample_controller.html", null ]
     ] ],
@@ -17,19 +20,25 @@ var NAVTREE =
         [ "AppDelegate_iPad", "interface_app_delegate__i_pad.html", null ],
         [ "AppDelegate_iPhone", "interface_app_delegate__i_phone.html", null ]
       ] ],
+      [ "FCHTTPFetcher", "interface_f_c_h_t_t_p_fetcher.html", null ],
+      [ "FCJSONFetcher", "interface_f_c_j_s_o_n_fetcher.html", null ],
+      [ "<FCJSONFetcherParser>", "protocol_f_c_j_s_o_n_fetcher_parser-p.html", null ],
       [ "FCRangeSlider", "interface_f_c_range_slider.html", null ],
       [ "FCRangeSliderSampleController", "interface_f_c_range_slider_sample_controller.html", null ]
     ] ],
     [ "Class Members", "functions.html", null ],
     [ "File List", "files.html", [
-      [ "/Volumes/fmc/fancy-ios/fancy-ios/AppDelegate.h", null, null ],
-      [ "/Volumes/fmc/fancy-ios/fancy-ios/Doxygen.h", null, null ],
-      [ "/Volumes/fmc/fancy-ios/fancy-ios/Controls/RangeSlider/FCRangeSlider.h", null, null ],
-      [ "/Volumes/fmc/fancy-ios/fancy-ios/Controls/RangeSlider/FCRangeSliderSampleController.h", null, null ],
-      [ "/Volumes/fmc/fancy-ios/fancy-ios/iPad/AppDelegate_iPad.h", null, null ],
-      [ "/Volumes/fmc/fancy-ios/fancy-ios/iPhone/AppDelegate_iPhone.h", null, null ],
-      [ "/Volumes/fmc/fancy-ios/fancy-ios/Utilities/FCGeometry.h", null, null ]
-    ] ]
+      [ "/Users/felipecypriano/dev/GitHub/fancy-ios/fancy-ios/AppDelegate.h", null, null ],
+      [ "/Users/felipecypriano/dev/GitHub/fancy-ios/fancy-ios/Doxygen.h", null, null ],
+      [ "/Users/felipecypriano/dev/GitHub/fancy-ios/fancy-ios/Controls/RangeSlider/FCRangeSlider.h", "_f_c_range_slider_8h.html", null ],
+      [ "/Users/felipecypriano/dev/GitHub/fancy-ios/fancy-ios/Controls/RangeSlider/FCRangeSliderSampleController.h", null, null ],
+      [ "/Users/felipecypriano/dev/GitHub/fancy-ios/fancy-ios/iPad/AppDelegate_iPad.h", null, null ],
+      [ "/Users/felipecypriano/dev/GitHub/fancy-ios/fancy-ios/iPhone/AppDelegate_iPhone.h", null, null ],
+      [ "/Users/felipecypriano/dev/GitHub/fancy-ios/fancy-ios/Utilities/FCGeometry.h", "_f_c_geometry_8h.html", null ],
+      [ "/Users/felipecypriano/dev/GitHub/fancy-ios/fancy-ios/Utilities/HTTP/FCHTTPFetcher.h", "_f_c_h_t_t_p_fetcher_8h.html", null ],
+      [ "/Users/felipecypriano/dev/GitHub/fancy-ios/fancy-ios/Utilities/HTTP/FCJSONFetcher.h", "_f_c_j_s_o_n_fetcher_8h.html", null ]
+    ] ],
+    [ "File Members", "globals.html", null ]
   ] ]
 ];
 

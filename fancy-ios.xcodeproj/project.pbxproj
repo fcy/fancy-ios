@@ -15,6 +15,8 @@
 		D40BAAB213A01B8D0080E188 /* slider_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = D40BAAB113A01B8D0080E188 /* slider_thumb.png */; };
 		D42EA43813D5193E00F7AE4D /* FCHTTPFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = D42EA43613D5193E00F7AE4D /* FCHTTPFetcher.h */; };
 		D42EA43913D5193E00F7AE4D /* FCHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D42EA43713D5193E00F7AE4D /* FCHTTPFetcher.m */; };
+		D42EA43D13D5313100F7AE4D /* FCJSONFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = D42EA43B13D5313100F7AE4D /* FCJSONFetcher.h */; };
+		D42EA43E13D5313100F7AE4D /* FCJSONFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D42EA43C13D5313100F7AE4D /* FCJSONFetcher.m */; };
 		D43BD74713A159CA001D88D7 /* slider_thumb_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = D43BD74613A159CA001D88D7 /* slider_thumb_highlighted.png */; };
 		D46EB2D513A005F900F0D588 /* FCGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = D46EB2D313A002F600F0D588 /* FCGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D46EB2E413A00B1D00F0D588 /* FCRangeSliderSampleController.h in Headers */ = {isa = PBXBuildFile; fileRef = D46EB2E213A00B1D00F0D588 /* FCRangeSliderSampleController.h */; };
@@ -58,6 +60,8 @@
 		D40BAAB113A01B8D0080E188 /* slider_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider_thumb.png; path = Resources/Images/slider_thumb.png; sourceTree = "<group>"; };
 		D42EA43613D5193E00F7AE4D /* FCHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCHTTPFetcher.h; sourceTree = "<group>"; };
 		D42EA43713D5193E00F7AE4D /* FCHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCHTTPFetcher.m; sourceTree = "<group>"; };
+		D42EA43B13D5313100F7AE4D /* FCJSONFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCJSONFetcher.h; sourceTree = "<group>"; };
+		D42EA43C13D5313100F7AE4D /* FCJSONFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCJSONFetcher.m; sourceTree = "<group>"; };
 		D43BD74613A159CA001D88D7 /* slider_thumb_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider_thumb_highlighted.png; path = Resources/Images/slider_thumb_highlighted.png; sourceTree = "<group>"; };
 		D46EB2D313A002F600F0D588 /* FCGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCGeometry.h; path = Utilities/FCGeometry.h; sourceTree = "<group>"; };
 		D46EB2E213A00B1D00F0D588 /* FCRangeSliderSampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCRangeSliderSampleController.h; path = Controls/RangeSlider/FCRangeSliderSampleController.h; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 			children = (
 				D42EA43613D5193E00F7AE4D /* FCHTTPFetcher.h */,
 				D42EA43713D5193E00F7AE4D /* FCHTTPFetcher.m */,
+				D42EA43B13D5313100F7AE4D /* FCJSONFetcher.h */,
+				D42EA43C13D5313100F7AE4D /* FCJSONFetcher.m */,
 			);
 			name = HTTP;
 			path = Utilities/HTTP;
@@ -329,6 +335,7 @@
 				D46EB2E413A00B1D00F0D588 /* FCRangeSliderSampleController.h in Headers */,
 				D4A9519113ABED830088A658 /* Doxygen.h in Headers */,
 				D42EA43813D5193E00F7AE4D /* FCHTTPFetcher.h in Headers */,
+				D42EA43D13D5313100F7AE4D /* FCJSONFetcher.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +457,7 @@
 				D48F14E0139ED6E100257AE8 /* FCRangeSlider.m in Sources */,
 				D46EB2E513A00B1D00F0D588 /* FCRangeSliderSampleController.m in Sources */,
 				D42EA43913D5193E00F7AE4D /* FCHTTPFetcher.m in Sources */,
+				D42EA43E13D5313100F7AE4D /* FCJSONFetcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

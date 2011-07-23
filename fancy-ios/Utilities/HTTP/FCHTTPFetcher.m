@@ -45,6 +45,7 @@ static NSUInteger numberOfActiveConnections = 0;
 - (void)dealloc {
     [self cancel];
     
+    [error release];
     [data release];
     [request release];
     [responseHeaderFields release];
@@ -55,6 +56,11 @@ static NSUInteger numberOfActiveConnections = 0;
     if (connection) {
         [self cancel];
     }
+    
+    [data release];
+    data = nil;
+    [error release];
+    error = nil;
     
     connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:NO];
     @synchronized([FCHTTPFetcher class]) {

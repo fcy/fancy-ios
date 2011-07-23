@@ -29,10 +29,11 @@ typedef void (^FCHTTPActionBlock)(FCHTTPFetcher *httpFetcher); //< Block to exec
 /**
  * @brief Reusable NSURLConnection delegate using blocks
  *
- * @warning You should maintain ownership of the object. The class doesn't retain itself.
+ * @warning You must maintain ownership of the object. The class doesn't retain itself.
  * @note Based on @link http://cocoawithlove.com/2011/05/classes-for-fetching-and-parsing-xml-or.html Matt Gallagher's HTTPFetcher @endlink
  */
 @interface FCHTTPFetcher : NSObject {
+    @private
     FCHTTPActionBlock completionBlock;
     FCHTTPActionBlock failBlock;
     NSURLConnection *connection;
@@ -57,7 +58,7 @@ typedef void (^FCHTTPActionBlock)(FCHTTPFetcher *httpFetcher); //< Block to exec
  */
 - (id)initWithURLRequest:(NSURLRequest *)urlRequest completionBlock:(FCHTTPActionBlock)completionBlock failBlock:(FCHTTPActionBlock)failBlock;
 /**
- * @brief Initialize the receiber with a NSString representing the URL to be called
+ * @brief Initialize the receiver with a NSString representing the URL to be called
  *
  * A NSURLRequest will be created with the URL passed in urlString using the HTTP method GET.
  *

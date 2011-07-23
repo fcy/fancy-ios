@@ -29,6 +29,8 @@ typedef void (^FCJSONActionBlock)(FCJSONFetcher *jsonFetcher); //< Block to exec
 
 /**
  * @brief JSON Fetcher parser protocol to give the possibility to choose which parser framework to use
+ *
+ * @note See the fc-json-parsers project for examples of how to implement this protocal using some popular JSON frameworks
  */
 @protocol FCJSONFetcherParser <NSObject>
 

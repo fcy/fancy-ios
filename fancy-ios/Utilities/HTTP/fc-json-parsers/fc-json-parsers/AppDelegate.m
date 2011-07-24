@@ -6,7 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "fc_json_parsersAppDelegate.h"
+#import "AppDelegate.h"
 
 @implementation AppDelegate
 

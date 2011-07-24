@@ -49,7 +49,7 @@ static NSUInteger numberOfActiveConnections = 0;
     [data release];
     [request release];
     [responseHeaderFields release];
-    [self dealloc];
+    [super dealloc];
 }
 
 - (void)start {

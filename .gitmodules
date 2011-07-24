@@ -4,3 +4,6 @@
 [submodule "fancy-ios/Utilities/HTTP/fc-json-parsers/lib/JSONKit"]
 	path = fancy-ios/Utilities/HTTP/fc-json-parsers/lib/JSONKit
 	url = https://github.com/johnezang/JSONKit.git
+[submodule "fancy-ios/Utilities/HTTP/fc-json-parsers/lib/NextiveJson"]
+	path = fancy-ios/Utilities/HTTP/fc-json-parsers/lib/NextiveJson
+	url = https://github.com/nextive/NextiveJson.git

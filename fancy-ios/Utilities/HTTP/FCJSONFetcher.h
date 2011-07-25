@@ -22,7 +22,6 @@
 
 #import <Foundation/Foundation.h>
 #import "FCHTTPFetcher.h"
-
 @class FCJSONFetcher;
 
 typedef void (^FCJSONActionBlock)(FCJSONFetcher *jsonFetcher); //< Block to execute when the request and parsing is complete
@@ -58,19 +57,6 @@ typedef void (^FCJSONActionBlock)(FCJSONFetcher *jsonFetcher); //< Block to exec
     NSURLRequest *urlRequest;
 }
 
-/**
- * @brief Sets a default FCJSONFetcherParser
- *
- * If you don't want to set the parser to every instance of FCJSONFetcher
- * you can use this method to set a parser to be used in all instances of
- * FCJSONFetcher.
- *
- * The parser property has precedence over the default parser.
- *
- * @param newDefaultParser An instance of FCJSONFetcherParser to be shared among FCJSONFetcher instances. The parser is <b>retained</b>.
- */
-+ (void)setDefaultParser:(id<FCJSONFetcherParser>)newDefaultParser;
-
 @property (nonatomic, readonly) id data; ///< The parsed JSON data
 @property (nonatomic, assign) id<FCJSONFetcherParser> parser;
 @property (nonatomic, readonly) FCHTTPFetcher *httpFetcher;
@@ -82,11 +68,11 @@ typedef void (^FCJSONActionBlock)(FCJSONFetcher *jsonFetcher); //< Block to exec
  * The receiver doesn't start the connection automatcally you need to explicity call start.
  *
  * @param urlRequest The configured NSURLRequest that will be used on the call
- * @param completionBlock A FCJSONActionBlock to be executed when the call completes successfully
- * @param failBlock A FCJSONActionBlock to be executed when the call fails
+ * @param jsonParsedBlock A FCJSONActionBlock to be executed when the call completes successfully
+ * @param requestFailedBlock A FCJSONActionBlock to be executed when the call fails
  * @return The initialized FCHTTPFetcher
  */
-- (id)initWithURLRequest:(NSURLRequest *)urlRequest completionBlock:(FCJSONActionBlock)completionBlock failBlock:(FCJSONActionBlock)failBlock;
+- (id)initWithURLRequest:(NSURLRequest *)urlRequest jsonParsedBlock:(FCJSONActionBlock)jsonParsedBlock requestFailedBlock:(FCJSONActionBlock)requestFailedBlock;
 /**
  * @brief Initialize the receiver with a NSString representing the URL to be called
  *
@@ -95,11 +81,11 @@ typedef void (^FCJSONActionBlock)(FCJSONFetcher *jsonFetcher); //< Block to exec
  * The receiver doesn't start the connection automatcally you need to explicity call start.
  *
  * @param urlString A correctly formated URL
- * @param completionBlock A FCJSONActionBlock to be executed when the call completes successfully
- * @param failBlock A FCJSONActionBlock to be executed when the call fails
+ * @param jsonParsedBlock A FCJSONActionBlock to be executed when the call completes successfully
+ * @param requestFailedBlock A FCJSONActionBlock to be executed when the call fails
  * @return The initialized FCHTTPFetcher
  */
-- (id)initWithURLString:(NSString *)urlString completionBlock:(FCJSONActionBlock)completionBlock failBlock:(FCJSONActionBlock)failBlock;
+- (id)initWithURLString:(NSString *)urlString jsonReceivedBlock:(FCJSONActionBlock)completionBlock requestFailedBlock:(FCJSONActionBlock)requestFailedBlock;
 
 /**
  * @brief Start the request

@@ -14,8 +14,6 @@
 
 #import "FCJSONFetcher.h"
 
-static id<FCJSONFetcherParser> staticDefaultParser;
-
 @implementation FCJSONFetcher
 
 @synthesize data;
@@ -23,14 +21,7 @@ static id<FCJSONFetcherParser> staticDefaultParser;
 @synthesize httpFetcher;
 @synthesize error;
 
-+ (void)setDefaultParser:(id<FCJSONFetcherParser>)newDefaultParser {
-    if (staticDefaultParser != newDefaultParser) {
-        [staticDefaultParser release];
-        staticDefaultParser = [newDefaultParser retain];
-    }
-}
-
-- (id)initWithURLRequest:(NSURLRequest *)newURLRequest completionBlock:(FCJSONActionBlock)newCompletionBlock failBlock:(FCJSONActionBlock)newFailBlock {
+- (id)initWithURLRequest:(NSURLRequest *)newURLRequest jsonParsedBlock:(FCJSONActionBlock)newCompletionBlock requestFailedBlock:(FCJSONActionBlock)newFailBlock {
     self = [super init];
     if (self) {
         completionBlock = newCompletionBlock;
@@ -40,10 +31,10 @@ static id<FCJSONFetcherParser> staticDefaultParser;
     return self;
 }
 
-- (id)initWithURLString:(NSString *)urlString completionBlock:(FCJSONActionBlock)newCompletionBlock failBlock:(FCJSONActionBlock)newFailBlock {
+- (id)initWithURLString:(NSString *)urlString jsonReceivedBlock:(FCJSONActionBlock)newCompletionBlock requestFailedBlock:(FCJSONActionBlock)newFailBlock {
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
-    return [self initWithURLRequest:req completionBlock:newCompletionBlock failBlock:newFailBlock];    
+    return [self initWithURLRequest:req jsonParsedBlock:newCompletionBlock requestFailedBlock:newFailBlock];    
 }
 
 - (void)dealloc {
@@ -67,20 +58,19 @@ static id<FCJSONFetcherParser> staticDefaultParser;
 
     void (^httpCompletionBlock)(FCHTTPFetcher *) = ^(FCHTTPFetcher *fetcher){ 
         NSData *rawJson = [fetcher data];
-        id<FCJSONFetcherParser> currentParser = parser == nil ? staticDefaultParser : parser;
-        id parsed = [currentParser jsonFetcher:self parseData:rawJson];
+        id json = [parser jsonFetcher:self parseData:rawJson];
         if ([parser isKindOfClass:[NSError class]]) {
-            error = [parsed retain];
+            error = [json retain];
             failBlock(self);
         } else {
-            data = [parsed retain];
+            data = [json retain];
             completionBlock(self);
         }
     }; 
     
     httpFetcher = [[FCHTTPFetcher alloc] initWithURLRequest:urlRequest 
-                            completionBlock:httpCompletionBlock 
-                            failBlock:^(FCHTTPFetcher *fetcher){ 
+                            responseReceivedBlock:httpCompletionBlock 
+                            requestFailedBlock:^(FCHTTPFetcher *fetcher){ 
                                 error = [[fetcher error] retain];
                                 failBlock(self);
                             }];

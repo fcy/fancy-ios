@@ -13,6 +13,8 @@
 		D40BAAAB13A015600080E188 /* AppDelegate_iPhone.h in Headers */ = {isa = PBXBuildFile; fileRef = D48F14DB139ED5B100257AE8 /* AppDelegate_iPhone.h */; };
 		D40BAAAC13A015600080E188 /* AppDelegate_iPad.h in Headers */ = {isa = PBXBuildFile; fileRef = D48F14B7139ED4ED00257AE8 /* AppDelegate_iPad.h */; };
 		D40BAAB213A01B8D0080E188 /* slider_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = D40BAAB113A01B8D0080E188 /* slider_thumb.png */; };
+		D413C9A013DCC5640093F577 /* FCJSONFetcherFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D413C99E13DCC5640093F577 /* FCJSONFetcherFactory.h */; };
+		D413C9A113DCC5640093F577 /* FCJSONFetcherFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D413C99F13DCC5640093F577 /* FCJSONFetcherFactory.m */; };
 		D42EA43813D5193E00F7AE4D /* FCHTTPFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = D42EA43613D5193E00F7AE4D /* FCHTTPFetcher.h */; };
 		D42EA43913D5193E00F7AE4D /* FCHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D42EA43713D5193E00F7AE4D /* FCHTTPFetcher.m */; };
 		D42EA43D13D5313100F7AE4D /* FCJSONFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = D42EA43B13D5313100F7AE4D /* FCJSONFetcher.h */; };
@@ -58,6 +60,8 @@
 /* Begin PBXFileReference section */
 		D40BAAA613A014500080E188 /* FCRangeSliderSample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FCRangeSliderSample.xib; path = iPhone/Controls/FCRangeSliderSample.xib; sourceTree = "<group>"; };
 		D40BAAB113A01B8D0080E188 /* slider_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider_thumb.png; path = Resources/Images/slider_thumb.png; sourceTree = "<group>"; };
+		D413C99E13DCC5640093F577 /* FCJSONFetcherFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCJSONFetcherFactory.h; sourceTree = "<group>"; };
+		D413C99F13DCC5640093F577 /* FCJSONFetcherFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCJSONFetcherFactory.m; sourceTree = "<group>"; };
 		D42EA43613D5193E00F7AE4D /* FCHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCHTTPFetcher.h; sourceTree = "<group>"; };
 		D42EA43713D5193E00F7AE4D /* FCHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCHTTPFetcher.m; sourceTree = "<group>"; };
 		D42EA43B13D5313100F7AE4D /* FCJSONFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCJSONFetcher.h; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				D42EA43713D5193E00F7AE4D /* FCHTTPFetcher.m */,
 				D42EA43B13D5313100F7AE4D /* FCJSONFetcher.h */,
 				D42EA43C13D5313100F7AE4D /* FCJSONFetcher.m */,
+				D413C99E13DCC5640093F577 /* FCJSONFetcherFactory.h */,
+				D413C99F13DCC5640093F577 /* FCJSONFetcherFactory.m */,
 			);
 			name = HTTP;
 			path = Utilities/HTTP;
@@ -336,6 +342,7 @@
 				D4A9519113ABED830088A658 /* Doxygen.h in Headers */,
 				D42EA43813D5193E00F7AE4D /* FCHTTPFetcher.h in Headers */,
 				D42EA43D13D5313100F7AE4D /* FCJSONFetcher.h in Headers */,
+				D413C9A013DCC5640093F577 /* FCJSONFetcherFactory.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +465,7 @@
 				D46EB2E513A00B1D00F0D588 /* FCRangeSliderSampleController.m in Sources */,
 				D42EA43913D5193E00F7AE4D /* FCHTTPFetcher.m in Sources */,
 				D42EA43E13D5313100F7AE4D /* FCJSONFetcher.m in Sources */,
+				D413C9A113DCC5640093F577 /* FCJSONFetcherFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

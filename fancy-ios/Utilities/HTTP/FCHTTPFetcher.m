@@ -16,7 +16,7 @@
 
 #define LOCALIZATION_TABLE @"HTTPFetcher"
 
-static NSUInteger numberOfActiveConnections = 0;
+static NSInteger numberOfActiveConnections = 0;
 
 @implementation FCHTTPFetcher
 
@@ -26,13 +26,13 @@ static NSUInteger numberOfActiveConnections = 0;
 @synthesize error;
 @synthesize HTTPStatusCode;
 
-- (id)initWithURLString:(NSString *)urlString completionBlock:(FCHTTPActionBlock)newCompletionBlock failBlock:(FCHTTPActionBlock)newFailBlock {
+- (id)initWithURLString:(NSString *)urlString responseReceivedBlock:(FCHTTPActionBlock)newCompletionBlock requestFailedBlock:(FCHTTPActionBlock)newFailBlock {
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
-    return [self initWithURLRequest:req completionBlock:newCompletionBlock failBlock:newFailBlock];
+    return [self initWithURLRequest:req responseReceivedBlock:newCompletionBlock requestFailedBlock:newFailBlock];
 }
 
-- (id)initWithURLRequest:(NSURLRequest *)urlRequest completionBlock:(FCHTTPActionBlock)newCompletionBlock failBlock:(FCHTTPActionBlock)newFailBlock {
+- (id)initWithURLRequest:(NSURLRequest *)urlRequest responseReceivedBlock:(FCHTTPActionBlock)newCompletionBlock requestFailedBlock:(FCHTTPActionBlock)newFailBlock {
     self = [super init];
     if (self) {
         request = [urlRequest retain];
@@ -145,7 +145,7 @@ static NSUInteger numberOfActiveConnections = 0;
         }
         
         NSDictionary *userInfo = [NSDictionary dictionaryWithObject:message forKey:NSLocalizedDescriptionKey];
-        NSError *theError = [[NSError alloc] initWithDomain:NSURLErrorDomain code:HTTPStatusCode userInfo:userInfo];
+        NSError *theError = [[[NSError alloc] initWithDomain:NSURLErrorDomain code:HTTPStatusCode userInfo:userInfo] autorelease];
         [self connection:aConnection didFailWithError:theError];
     } else {
         [self decrementNumberOfActiveConnections];

@@ -52,11 +52,11 @@ typedef void (^FCHTTPActionBlock)(FCHTTPFetcher *httpFetcher); //< Block to exec
  * The receiver doesn't start the connection automatcally you need to explicity call start.
  *
  * @param urlRequest The configured NSURLRequest that will be used on the call
- * @param completionBlock A FCHTTPActionBlock to be executed when the call completes successfully
- * @param failBlock A FCHTTPActionBlock to be executed when the call fails
+ * @param responseReceivedBlock A FCHTTPActionBlock to be executed when the call completes successfully
+ * @param requestFailedBlock A FCHTTPActionBlock to be executed when the call fails
  * @return The initialized FCHTTPFetcher
  */
-- (id)initWithURLRequest:(NSURLRequest *)urlRequest completionBlock:(FCHTTPActionBlock)completionBlock failBlock:(FCHTTPActionBlock)failBlock;
+- (id)initWithURLRequest:(NSURLRequest *)urlRequest responseReceivedBlock:(FCHTTPActionBlock)responseReceivedBlock requestFailedBlock:(FCHTTPActionBlock)requestFailedBlock;
 /**
  * @brief Initialize the receiver with a NSString representing the URL to be called
  *
@@ -65,11 +65,11 @@ typedef void (^FCHTTPActionBlock)(FCHTTPFetcher *httpFetcher); //< Block to exec
  * The receiver doesn't start the connection automatcally you need to explicity call start.
  *
  * @param urlString A correctly formated URL
- * @param completionBlock A FCHTTPActionBlock to be executed when the call completes successfully
- * @param failBlock A FCHTTPActionBlock to be executed when the call fails
+ * @param responseReceivedBlock A FCHTTPActionBlock to be executed when the call completes successfully
+ * @param requestFailedBlock A FCHTTPActionBlock to be executed when the call fails
  * @return The initialized FCHTTPFetcher
  */
-- (id)initWithURLString:(NSString *)urlString completionBlock:(FCHTTPActionBlock)completionBlock failBlock:(FCHTTPActionBlock)failBlock;
+- (id)initWithURLString:(NSString *)urlString responseReceivedBlock:(FCHTTPActionBlock)responseReceivedBlock requestFailedBlock:(FCHTTPActionBlock)requestFailedBlock;
 
 /**
  * @brief Start the connection

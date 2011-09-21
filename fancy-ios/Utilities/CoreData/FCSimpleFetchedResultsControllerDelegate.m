@@ -18,6 +18,7 @@
 
 @synthesize tableView;
 @synthesize insertAnimation;
+@synthesize updateAnimation;
 @synthesize deleteAnimation;
 
 - (id)initWithTableView:(UITableView *)newTableView {
@@ -26,6 +27,7 @@
         tableView = newTableView;
         insertAnimation = UITableViewRowAnimationTop;
         deleteAnimation = insertAnimation;
+        updateAnimation = UITableViewRowAnimationFade;        
     }
     
     return self;
@@ -48,6 +50,8 @@
         case NSFetchedResultsChangeDelete:
             [[self tableView] deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:deleteAnimation];
             break;
+        case NSFetchedResultsChangeUpdate:
+            [[self tableView] reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:updateAnimation];
         case NSFetchedResultsChangeMove:
             [[self tableView] deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:deleteAnimation];
             [[self tableView] insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:insertAnimation];

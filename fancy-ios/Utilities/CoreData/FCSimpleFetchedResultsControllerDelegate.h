@@ -24,10 +24,10 @@
 
 
 /**
- * @brief A delegate to handle NSFetchedResultsChangeInsert, NSFetchedResultsChangeDelete and NSFetchedResultsChangeMove
+ * @brief A delegate to handle NSFetchedResultsChangeInsert, NSFetchedResultsChangeDelete, NSFetchedResultsChangeUpdate and NSFetchedResultsChangeMove
  *
  * <p>A implementation of NSFetchedResultsControllerDelegate that handles
- * the basics operations insert, delete and move. This class doesn't retain itself, you should maintain ownership on your calling code.</p>
+ * the basics operations insert, update, delete and move. This class doesn't retain itself, you should maintain ownership on your calling code.</p>
  *
  * <p>Use it when you don't need any special cases to handle
  * changes from NSManagedObjectContext. Example:</p>
@@ -43,6 +43,7 @@
 @property (nonatomic, assign, readonly) UITableView *tableView; 
 @property (nonatomic) UITableViewRowAnimation insertAnimation;
 @property (nonatomic) UITableViewRowAnimation deleteAnimation;
+@property (nonatomic) UITableViewRowAnimation updateAnimation;
 
 - (id)initWithTableView:(UITableView *)tableView;
 

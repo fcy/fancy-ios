@@ -25,6 +25,9 @@
 		D46EB2D513A005F900F0D588 /* FCGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = D46EB2D313A002F600F0D588 /* FCGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D46EB2E413A00B1D00F0D588 /* FCRangeSliderSampleController.h in Headers */ = {isa = PBXBuildFile; fileRef = D46EB2E213A00B1D00F0D588 /* FCRangeSliderSampleController.h */; };
 		D46EB2E513A00B1D00F0D588 /* FCRangeSliderSampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = D46EB2E313A00B1D00F0D588 /* FCRangeSliderSampleController.m */; };
+		D48EB09A142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D48EB098142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.h */; };
+		D48EB09B142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EB099142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.m */; };
+		D48EB09D142A52F400449AC1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48EB09C142A52F400449AC1 /* CoreData.framework */; };
 		D48F149E139ED4ED00257AE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48F149D139ED4ED00257AE8 /* UIKit.framework */; };
 		D48F14A0139ED4ED00257AE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48F149F139ED4ED00257AE8 /* Foundation.framework */; };
 		D48F14A2139ED4ED00257AE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48F14A1139ED4ED00257AE8 /* CoreGraphics.framework */; };
@@ -74,6 +77,9 @@
 		D46EB2D313A002F600F0D588 /* FCGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCGeometry.h; path = Utilities/FCGeometry.h; sourceTree = "<group>"; };
 		D46EB2E213A00B1D00F0D588 /* FCRangeSliderSampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCRangeSliderSampleController.h; path = Controls/RangeSlider/FCRangeSliderSampleController.h; sourceTree = "<group>"; };
 		D46EB2E313A00B1D00F0D588 /* FCRangeSliderSampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCRangeSliderSampleController.m; path = Controls/RangeSlider/FCRangeSliderSampleController.m; sourceTree = "<group>"; };
+		D48EB098142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCSimpleFetchedResultsControllerDelegate.h; path = Utilities/CoreData/FCSimpleFetchedResultsControllerDelegate.h; sourceTree = "<group>"; };
+		D48EB099142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCSimpleFetchedResultsControllerDelegate.m; path = Utilities/CoreData/FCSimpleFetchedResultsControllerDelegate.m; sourceTree = "<group>"; };
+		D48EB09C142A52F400449AC1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D48F1499139ED4ED00257AE8 /* fancy-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fancy-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48F149D139ED4ED00257AE8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D48F149F139ED4ED00257AE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -110,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D48EB09D142A52F400449AC1 /* CoreData.framework in Frameworks */,
 				D48F14E2139EE3F100257AE8 /* QuartzCore.framework in Frameworks */,
 				D48F149E139ED4ED00257AE8 /* UIKit.framework in Frameworks */,
 				D48F14A0139ED4ED00257AE8 /* Foundation.framework in Frameworks */,
@@ -195,6 +202,7 @@
 		D46EB2D113A0028400F0D588 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				D4A04D87142A3743001D5115 /* Core Data */,
 				D42EA43513D5193E00F7AE4D /* HTTP */,
 				D46EB2D313A002F600F0D588 /* FCGeometry.h */,
 				D44DCE6E13FC3BCE006B2BAE /* FCDevice.h */,
@@ -225,6 +233,7 @@
 		D48F149C139ED4ED00257AE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D48EB09C142A52F400449AC1 /* CoreData.framework */,
 				D48F14E1139EE3F100257AE8 /* QuartzCore.framework */,
 				D48F149D139ED4ED00257AE8 /* UIKit.framework */,
 				D48F149F139ED4ED00257AE8 /* Foundation.framework */,
@@ -324,6 +333,15 @@
 			name = RangeSlider;
 			sourceTree = "<group>";
 		};
+		D4A04D87142A3743001D5115 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				D48EB098142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.h */,
+				D48EB099142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.m */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
 		D4BC2F1613C3A3800008D98E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +368,7 @@
 				D42EA43D13D5313100F7AE4D /* FCJSONFetcher.h in Headers */,
 				D413C9A013DCC5640093F577 /* FCJSONFetcherFactory.h in Headers */,
 				D44DCE7013FC3BCE006B2BAE /* FCDevice.h in Headers */,
+				D48EB09A142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +493,7 @@
 				D42EA43E13D5313100F7AE4D /* FCJSONFetcher.m in Sources */,
 				D413C9A113DCC5640093F577 /* FCJSONFetcherFactory.m in Sources */,
 				D44DCE7113FC3BCE006B2BAE /* FCDevice.m in Sources */,
+				D48EB09B142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -46,12 +46,12 @@
         case NSFetchedResultsChangeInsert:
             [[self tableView] insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:insertAnimation];
             break;
-            
         case NSFetchedResultsChangeDelete:
             [[self tableView] deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:deleteAnimation];
             break;
         case NSFetchedResultsChangeUpdate:
             [[self tableView] reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:updateAnimation];
+            break;
         case NSFetchedResultsChangeMove:
             [[self tableView] deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:deleteAnimation];
             [[self tableView] insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:insertAnimation];

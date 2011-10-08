@@ -36,6 +36,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li id="searchli">
@@ -117,8 +118,12 @@ Properties</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the selected range represented by NSRange.  <a href="#ae6ff5ef81c38a4fd3673fa767ef20e79"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct___f_c_range_slider_value.html">FCRangeSliderValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_c_range_slider.html#a2b41f2a8178c633c8882f2bb9cdbc056">rangeValue</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the selected range with float values.  <a href="#a2b41f2a8178c633c8882f2bb9cdbc056"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">CGFloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_c_range_slider.html#a859145c8d3216257071bbef10ab0e048">minimumRangeLength</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the minimum accepted range length.  <a href="#a859145c8d3216257071bbef10ab0e048"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_c_range_slider.html#a33071baf6506861e0d9669aebc1e2037">acceptOnlyNonFractionValues</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls if only integer values can be selected.  <a href="#a33071baf6506861e0d9669aebc1e2037"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_c_range_slider.html#afdc0665e72f2e6aab0378fa9ceb7e155">acceptOnlyPositiveRanges</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls if only positive ranges (start &gt;= end) can be selected.  <a href="#afdc0665e72f2e6aab0378fa9ceb7e155"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A slider to select ranges. It's like UISlider but with two thumbs. </p>
@@ -270,6 +275,23 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="afdc0665e72f2e6aab0378fa9ceb7e155"></a><!-- doxytag: member="FCRangeSlider::acceptOnlyPositiveRanges" ref="afdc0665e72f2e6aab0378fa9ceb7e155" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) acceptOnlyPositiveRanges<code> [read, write, assign]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Controls if only positive ranges (start &gt;= end) can be selected. </p>
+<p>If this property is set to YES slider will not allow for setting end thumb before the start thumb.</p>
+<p>The default value is NO </p>
+
+</div>
+</div>
 <a class="anchor" id="a474718d194238ff85ec8d6f833282a27"></a><!-- doxytag: member="FCRangeSlider::maximumValue" ref="a474718d194238ff85ec8d6f833282a27" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -285,6 +307,29 @@ Properties</h2></td></tr>
 <p>If the change causes the current rangeValue.end to be above the new maximum value, it will be adjusted to match the new maximum value automatically.</p>
 <p>If acceptOnlyNonFractionValues is set to YES the value will be rounded to its nearest integer automatically.</p>
 <p>The default value is 10.0 </p>
+
+</div>
+</div>
+<a class="anchor" id="a859145c8d3216257071bbef10ab0e048"></a><!-- doxytag: member="FCRangeSlider::minimumRangeLength" ref="a859145c8d3216257071bbef10ab0e048" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (CGFloat) minimumRangeLength<code> [read, write, assign]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Contains the minimum accepted range length. </p>
+<p>This property contains the minimum length of a range. Setting it to positive value ensures that selected range is at least of a given length. Applies to both positive and negative ranges.</p>
+<p>If the requested range is smaller than minimumRangeLength, the algorithm is as follows:</p>
+<ul>
+<li>only range end is adjusted if it fits within slider scale</li>
+<li>only range start is adjusted if range end doesn't fit within slider scale with respect to given minimumRangeLength</li>
+<li>range start is adjusted as little as possible, and then range end is adjusted as needed when both range ends need to be adjusted</li>
+</ul>
+<p>The default value is 0.0 </p>
 
 </div>
 </div>
@@ -347,7 +392,7 @@ Properties</h2></td></tr>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="interface_f_c_range_slider.html">FCRangeSlider</a>      </li>
-      <li class="footer">Generated on Sat Jul 23 2011 00:58:42 for Fancy iOS by&#160;
+      <li class="footer">Generated on Sat Oct 8 2011 14:57:28 for Fancy iOS by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

@@ -36,6 +36,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li id="searchli">
@@ -111,20 +112,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00033"></a>00033 <span class="keyword">@property</span> (nonatomic, retain) IBOutlet UILabel *lblRangeValue;
 <a name="l00034"></a>00034 <span class="keyword">@property</span> (nonatomic, retain) IBOutlet UILabel *lblMinimumValue;
 <a name="l00035"></a>00035 <span class="keyword">@property</span> (nonatomic, retain) IBOutlet UILabel *lblMaximumValue;
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037 - (IBAction)onlyNonFractionValueChanged:(<span class="keywordtype">id</span>)sender;
-<a name="l00038"></a>00038 - (IBAction)sliderValueChanged:(<span class="keywordtype">id</span>)sender;
-<a name="l00039"></a>00039 - (IBAction)minimumValueChanged:(<span class="keywordtype">id</span>)sender;
-<a name="l00040"></a>00040 - (IBAction)maximumValueChanged:(<span class="keywordtype">id</span>)sender;
-<a name="l00041"></a>00041 - (IBAction)resetSameValueTouched:(<span class="keywordtype">id</span>)sender;
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <span class="keyword">@end</span>
+<a name="l00036"></a>00036 <span class="keyword">@property</span> (nonatomic, retain) IBOutlet UILabel *lblMinimumRangeLength;
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 - (IBAction)onlyNonFractionValueChanged:(<span class="keywordtype">id</span>)sender;
+<a name="l00039"></a>00039 - (IBAction)onlyPositiveRangeValueChanged:(<span class="keywordtype">id</span>)sender;
+<a name="l00040"></a>00040 - (IBAction)sliderValueChanged:(<span class="keywordtype">id</span>)sender;
+<a name="l00041"></a>00041 - (IBAction)minimumValueChanged:(<span class="keywordtype">id</span>)sender;
+<a name="l00042"></a>00042 - (IBAction)maximumValueChanged:(<span class="keywordtype">id</span>)sender;
+<a name="l00043"></a>00043 - (IBAction)minimumRangeLengthChanged:(<span class="keywordtype">id</span>)sender;
+<a name="l00044"></a>00044 - (IBAction)resetSameValueTouched:(<span class="keywordtype">id</span>)sender;
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 <span class="keyword">@end</span>
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><b>FCRangeSliderSampleController.h</b>      </li>
-      <li class="footer">Generated on Sat Jul 23 2011 00:58:41 for Fancy iOS by&#160;
+      <li class="footer">Generated on Sat Oct 8 2011 14:57:28 for Fancy iOS by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

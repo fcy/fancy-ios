@@ -36,6 +36,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li id="searchli">
@@ -81,7 +82,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#properties">Properties</a>  </div>
   <div class="headertitle">
 <div class="title">FCJSONFetcher Class Reference</div>  </div>
@@ -97,20 +97,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_f_c_j_s_o_n_fetcher.html#a8fe46efe3ce82b45ddd8cf174b6c5501">initWithURLRequest:completionBlock:failBlock:</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Init the receiver with NSURLRequest and a finish block.  <a href="#a8fe46efe3ce82b45ddd8cf174b6c5501"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_f_c_j_s_o_n_fetcher.html#a84ac5351af7b74ad0d66a7a0383acd46">initWithURLString:completionBlock:failBlock:</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the receiver with a NSString representing the URL to be called.  <a href="#a84ac5351af7b74ad0d66a7a0383acd46"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_f_c_j_s_o_n_fetcher.html#a6b43e9b8ef0fabc4e435d56748963cca">initWithURLRequest:jsonParsedBlock:requestFailedBlock:</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Init the receiver with NSURLRequest and a finish block.  <a href="#a6b43e9b8ef0fabc4e435d56748963cca"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_f_c_j_s_o_n_fetcher.html#a1ec30c9effbad1546dff2a1e0054252c">initWithURLString:jsonReceivedBlock:requestFailedBlock:</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the receiver with a NSString representing the URL to be called.  <a href="#a1ec30c9effbad1546dff2a1e0054252c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb51a38683b2c9d17eee7c8e2a0d4b18"></a><!-- doxytag: member="FCJSONFetcher::start" ref="acb51a38683b2c9d17eee7c8e2a0d4b18" args="()" -->
 (void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_f_c_j_s_o_n_fetcher.html#acb51a38683b2c9d17eee7c8e2a0d4b18">start</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the request. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31c8bf34f7ed124db17f6e3d60db570e"></a><!-- doxytag: member="FCJSONFetcher::cancel" ref="a31c8bf34f7ed124db17f6e3d60db570e" args="()" -->
 (void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_f_c_j_s_o_n_fetcher.html#a31c8bf34f7ed124db17f6e3d60db570e">cancel</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel the request. <br/></td></tr>
-<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_f_c_j_s_o_n_fetcher.html#a2f6575538a430871c1928383bf12beb8">setDefaultParser:</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a default <a class="el" href="protocol_f_c_j_s_o_n_fetcher_parser-p.html" title="JSON Fetcher parser protocol to give the possibility to choose which parser framework to use...">FCJSONFetcherParser</a>.  <a href="#a2f6575538a430871c1928383bf12beb8"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="properties"></a>
 Properties</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d3a663daab2515371532166bce25dec"></a><!-- doxytag: member="FCJSONFetcher::data" ref="a5d3a663daab2515371532166bce25dec" args="" -->
@@ -128,7 +124,7 @@ NSError *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <div class="textblock"><p>A reusable class to obtain JSON data from a request. </p>
 <dl class="warning"><dt><b>Warning:</b></dt><dd>You must maintain ownership of the object. The class doesn't retain itself. </dd></dl>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a8fe46efe3ce82b45ddd8cf174b6c5501"></a><!-- doxytag: member="FCJSONFetcher::initWithURLRequest:completionBlock:failBlock:" ref="a8fe46efe3ce82b45ddd8cf174b6c5501" args="(NSURLRequest *urlRequest,[completionBlock] FCJSONActionBlock completionBlock,[failBlock] FCJSONActionBlock failBlock)" -->
+<a class="anchor" id="a6b43e9b8ef0fabc4e435d56748963cca"></a><!-- doxytag: member="FCJSONFetcher::initWithURLRequest:jsonParsedBlock:requestFailedBlock:" ref="a6b43e9b8ef0fabc4e435d56748963cca" args="(NSURLRequest *urlRequest,[jsonParsedBlock] FCJSONActionBlock jsonParsedBlock,[requestFailedBlock] FCJSONActionBlock requestFailedBlock)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -139,16 +135,16 @@ NSError *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
           <td class="paramname"><em>urlRequest</em></td>
         </tr>
         <tr>
-          <td class="paramkey">completionBlock:</td>
+          <td class="paramkey">jsonParsedBlock:</td>
           <td></td>
           <td class="paramtype">(FCJSONActionBlock)&#160;</td>
-          <td class="paramname"><em>completionBlock</em></td>
+          <td class="paramname"><em>jsonParsedBlock</em></td>
         </tr>
         <tr>
-          <td class="paramkey">failBlock:</td>
+          <td class="paramkey">requestFailedBlock:</td>
           <td></td>
           <td class="paramtype">(FCJSONActionBlock)&#160;</td>
-          <td class="paramname"><em>failBlock</em>&#160;</td>
+          <td class="paramname"><em>requestFailedBlock</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -164,8 +160,8 @@ NSError *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">urlRequest</td><td>The configured NSURLRequest that will be used on the call </td></tr>
-    <tr><td class="paramname">completionBlock</td><td>A FCJSONActionBlock to be executed when the call completes successfully </td></tr>
-    <tr><td class="paramname">failBlock</td><td>A FCJSONActionBlock to be executed when the call fails </td></tr>
+    <tr><td class="paramname">jsonParsedBlock</td><td>A FCJSONActionBlock to be executed when the call completes successfully </td></tr>
+    <tr><td class="paramname">requestFailedBlock</td><td>A FCJSONActionBlock to be executed when the call fails </td></tr>
   </table>
   </dd>
 </dl>
@@ -173,7 +169,7 @@ NSError *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 
 </div>
 </div>
-<a class="anchor" id="a84ac5351af7b74ad0d66a7a0383acd46"></a><!-- doxytag: member="FCJSONFetcher::initWithURLString:completionBlock:failBlock:" ref="a84ac5351af7b74ad0d66a7a0383acd46" args="(NSString *urlString,[completionBlock] FCJSONActionBlock completionBlock,[failBlock] FCJSONActionBlock failBlock)" -->
+<a class="anchor" id="a1ec30c9effbad1546dff2a1e0054252c"></a><!-- doxytag: member="FCJSONFetcher::initWithURLString:jsonReceivedBlock:requestFailedBlock:" ref="a1ec30c9effbad1546dff2a1e0054252c" args="(NSString *urlString,[jsonReceivedBlock] FCJSONActionBlock completionBlock,[requestFailedBlock] FCJSONActionBlock requestFailedBlock)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -184,16 +180,16 @@ NSError *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
           <td class="paramname"><em>urlString</em></td>
         </tr>
         <tr>
-          <td class="paramkey">completionBlock:</td>
+          <td class="paramkey">jsonReceivedBlock:</td>
           <td></td>
           <td class="paramtype">(FCJSONActionBlock)&#160;</td>
           <td class="paramname"><em>completionBlock</em></td>
         </tr>
         <tr>
-          <td class="paramkey">failBlock:</td>
+          <td class="paramkey">requestFailedBlock:</td>
           <td></td>
           <td class="paramtype">(FCJSONActionBlock)&#160;</td>
-          <td class="paramname"><em>failBlock</em>&#160;</td>
+          <td class="paramname"><em>requestFailedBlock</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -210,39 +206,12 @@ NSError *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">urlString</td><td>A correctly formated URL </td></tr>
-    <tr><td class="paramname">completionBlock</td><td>A FCJSONActionBlock to be executed when the call completes successfully </td></tr>
-    <tr><td class="paramname">failBlock</td><td>A FCJSONActionBlock to be executed when the call fails </td></tr>
+    <tr><td class="paramname">jsonParsedBlock</td><td>A FCJSONActionBlock to be executed when the call completes successfully </td></tr>
+    <tr><td class="paramname">requestFailedBlock</td><td>A FCJSONActionBlock to be executed when the call fails </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The initialized <a class="el" href="interface_f_c_h_t_t_p_fetcher.html" title="Reusable NSURLConnection delegate using blocks.">FCHTTPFetcher</a> </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a2f6575538a430871c1928383bf12beb8"></a><!-- doxytag: member="FCJSONFetcher::setDefaultParser:" ref="a2f6575538a430871c1928383bf12beb8" args="(id&lt; FCJSONFetcherParser &gt; newDefaultParser)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">+ (void) setDefaultParser: </td>
-          <td></td>
-          <td class="paramtype">(id&lt; <a class="el" href="protocol_f_c_j_s_o_n_fetcher_parser-p.html">FCJSONFetcherParser</a> &gt;)&#160;</td>
-          <td class="paramname"><em>newDefaultParser</em></td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Sets a default <a class="el" href="protocol_f_c_j_s_o_n_fetcher_parser-p.html" title="JSON Fetcher parser protocol to give the possibility to choose which parser framework to use...">FCJSONFetcherParser</a>. </p>
-<p>If you don't want to set the parser to every instance of <a class="el" href="interface_f_c_j_s_o_n_fetcher.html" title="A reusable class to obtain JSON data from a request.">FCJSONFetcher</a> you can use this method to set a parser to be used in all instances of <a class="el" href="interface_f_c_j_s_o_n_fetcher.html" title="A reusable class to obtain JSON data from a request.">FCJSONFetcher</a>.</p>
-<p>The parser property has precedence over the default parser.</p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">newDefaultParser</td><td>An instance of <a class="el" href="protocol_f_c_j_s_o_n_fetcher_parser-p.html" title="JSON Fetcher parser protocol to give the possibility to choose which parser framework to use...">FCJSONFetcherParser</a> to be shared among <a class="el" href="interface_f_c_j_s_o_n_fetcher.html" title="A reusable class to obtain JSON data from a request.">FCJSONFetcher</a> instances. The parser is <b>retained</b>. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -254,7 +223,7 @@ NSError *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="interface_f_c_j_s_o_n_fetcher.html">FCJSONFetcher</a>      </li>
-      <li class="footer">Generated on Sat Jul 23 2011 00:58:41 for Fancy iOS by&#160;
+      <li class="footer">Generated on Sat Oct 8 2011 14:57:28 for Fancy iOS by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
     </ul>

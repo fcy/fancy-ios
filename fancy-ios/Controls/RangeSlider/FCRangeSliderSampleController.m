@@ -20,6 +20,7 @@
 @synthesize lblRangeValue;
 @synthesize lblMinimumValue;
 @synthesize lblMaximumValue;
+@synthesize lblMinimumRangeLength;
 @synthesize slider;
 @synthesize lblRange;
 
@@ -29,6 +30,10 @@
 
 - (IBAction)onlyNonFractionValueChanged:(id)sender {
     slider.acceptOnlyNonFractionValues = [sender isOn];
+}
+
+- (IBAction)onlyPositiveRangeValueChanged:(id)sender {
+    slider.acceptOnlyPositiveRanges = [sender isOn];
 }
 
 - (IBAction)sliderValueChanged:(FCRangeSlider *)sender {
@@ -44,6 +49,11 @@
 - (IBAction)maximumValueChanged:(UISlider *)sender {
     slider.maximumValue = [sender value];
     lblMaximumValue.text = [NSString stringWithFormat:@"maximumValue %f", slider.maximumValue];
+}
+
+- (IBAction)minimumRangeLengthChanged:(UISlider *)sender {
+    slider.minimumRangeLength = [sender value];
+    lblMinimumRangeLength.text = [NSString stringWithFormat:@"minimumRangeLength %f", slider.minimumRangeLength];
 }
 
 - (IBAction)resetSameValueTouched:(id)sender {

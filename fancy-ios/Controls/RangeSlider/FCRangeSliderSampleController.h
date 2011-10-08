@@ -33,11 +33,14 @@
 @property (nonatomic, retain) IBOutlet UILabel *lblRangeValue;
 @property (nonatomic, retain) IBOutlet UILabel *lblMinimumValue;
 @property (nonatomic, retain) IBOutlet UILabel *lblMaximumValue;
+@property (nonatomic, retain) IBOutlet UILabel *lblMinimumRangeLength;
 
 - (IBAction)onlyNonFractionValueChanged:(id)sender;
+- (IBAction)onlyPositiveRangeValueChanged:(id)sender;
 - (IBAction)sliderValueChanged:(id)sender;
 - (IBAction)minimumValueChanged:(id)sender;
 - (IBAction)maximumValueChanged:(id)sender;
+- (IBAction)minimumRangeLengthChanged:(id)sender;
 - (IBAction)resetSameValueTouched:(id)sender;
 
 @end

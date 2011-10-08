@@ -33,12 +33,16 @@
 @synthesize maximumValue;
 @synthesize range;
 @synthesize rangeValue;
+@synthesize minimumRangeLength;
 @synthesize acceptOnlyNonFractionValues;
+@synthesize acceptOnlyPositiveRanges;
 
 - (void)initialize {
     minimumValue = 0.0f;
     maximumValue = 10.0f;
     acceptOnlyNonFractionValues = NO;
+    acceptOnlyPositiveRanges = NO;
+    minimumRangeLength = 0.0f;
     self.clipsToBounds = YES;
     
     UIImage *thumbImage = [UIImage imageNamed:@"slider_thumb"];
@@ -165,6 +169,14 @@
     }
 }
 
+- (void)setMinimumRangeLength:(CGFloat)newMinimumRangeLength {
+    minimumRangeLength = newMinimumRangeLength;
+
+    if (fabs(rangeValue.end - rangeValue.start) < minimumRangeLength) {
+        [self setRangeValue:self.rangeValue animated:YES];
+    }
+}
+
 - (void)setRangeValue:(FCRangeSliderValue)newRangeValue {
     [self setRangeValue:newRangeValue animated:NO];
 }
@@ -176,12 +188,36 @@
 - (void)setRangeValue:(FCRangeSliderValue)newRangeValue animated:(BOOL)animated {
     CGFloat safeStart = MAX(newRangeValue.start, minimumValue);
     CGFloat safeEnd = MIN(newRangeValue.end, maximumValue);
+
+    if (acceptOnlyPositiveRanges && safeEnd < safeStart) {
+        return;
+    }
     
     if (acceptOnlyNonFractionValues) {
         safeStart = [[self roundValueFloat:safeStart] floatValue];
         safeEnd = [[self roundValueFloat:safeEnd] floatValue];
     }
     
+    void (^adjustForMinimumRangeLength)(CGFloat *, CGFloat *) =
+    ^(CGFloat *start, CGFloat *end) {
+        if (*start + minimumRangeLength < maximumValue) {
+            *end = *start + minimumRangeLength;
+        } else if (*end - minimumRangeLength > minimumValue) {
+            *start = *end - minimumRangeLength;
+        } else {
+            *end = maximumValue;
+            *start = MAX(minimumValue, *end - minimumRangeLength);
+        }
+    };
+
+    if (minimumRangeLength > fabs(safeStart-safeEnd)) {
+        if (safeEnd > safeStart) {
+            adjustForMinimumRangeLength(&safeStart, &safeEnd);
+        } else {
+            adjustForMinimumRangeLength(&safeEnd, &safeStart);
+        }
+    }
+
     rangeValue = FCRangeSliderValueMake(safeStart, safeEnd);
     
     NSInteger minInt = [[self roundValueFloat:safeStart] integerValue];
@@ -236,12 +272,26 @@
 - (BOOL)continueTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
     if (thumbBeingDragged) {
         CGPoint touchPoint = [touch locationInView:self];
-        thumbBeingDragged.center = CGPointMake(touchPoint.x, thumbBeingDragged.center.y);
-        [self clipThumbToBounds];
-        [self swtichThumbsPositionIfNecessary];
-        [self updateInRangeTrackView];
-        
-        [self updateRangeValue];
+        UIImageView *otherThumb = (thumbBeingDragged == minimumThumbView) ? maximumThumbView : minimumThumbView;
+        CGFloat otherxpos = otherThumb.center.x;
+        CGFloat xpos = touchPoint.x;
+        CGFloat minimumRangeLengthInPixels = trackSliderWidth * minimumRangeLength/(maximumValue-minimumValue);
+        BOOL updatePosition = YES;
+        if (acceptOnlyPositiveRanges) {
+            if (thumbBeingDragged == maximumThumbView && xpos <= otherxpos ||
+                thumbBeingDragged == minimumThumbView && xpos >= otherxpos)
+            {
+                updatePosition = NO;
+            }
+        }
+        if (updatePosition && minimumRangeLengthInPixels <= fabs(xpos-otherThumb.center.x)) {
+            thumbBeingDragged.center = CGPointMake(touchPoint.x, thumbBeingDragged.center.y);
+            [self clipThumbToBounds];
+            [self swtichThumbsPositionIfNecessary];
+            [self updateInRangeTrackView];
+
+            [self updateRangeValue];
+        }
         return YES;
     } else {
         return NO;

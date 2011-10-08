@@ -102,6 +102,23 @@ typedef struct _FCRangeSliderValue {
  */
 @property (nonatomic) FCRangeSliderValue rangeValue;
 /**
+ * @brief Contains the minimum accepted range length
+ *
+ * This property contains the minimum length of a range. Setting it to positive value
+ * ensures that selected range is at least of a given length. Applies to both
+ * positive and negative ranges.
+ *
+ * If the requested range is smaller than minimumRangeLength, the algorithm is as follows:
+ * - only range end is adjusted if it fits within slider scale
+ * - only range start is adjusted if range end doesn't fit within slider scale with respect
+ *   to given minimumRangeLength
+ * - range start is adjusted as little as possible, and then range end is adjusted as needed
+ *   when both range ends need to be adjusted
+ *
+ * The default value is 0.0
+ */
+@property (nonatomic) CGFloat minimumRangeLength;
+/**
  * @brief Controls if only integer values can be selected
  *
  * If this property is set to YES both thumbs will be automatically anchored to it's
@@ -110,7 +127,15 @@ typedef struct _FCRangeSliderValue {
  * The default value is NO
  */
 @property (nonatomic) BOOL acceptOnlyNonFractionValues;
-
+/**
+ * @brief Controls if only positive ranges (start >= end) can be selected
+ *
+ * If this property is set to YES slider will not allow for setting end thumb before
+ * the start thumb.
+ *
+ * The default value is NO
+ */
+@property (nonatomic) BOOL acceptOnlyPositiveRanges;
 /**
  * @brief A image to represent the values outside the selected range
  *

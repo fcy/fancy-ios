@@ -163,7 +163,11 @@
     [self safelySetMinMaxValues];
 
     if (rangeValue.end > maximumValue) {
-        self.rangeValue = FCRangeSliderValueMake(rangeValue.start, maximumValue);
+        if (rangeValue.start < maximumValue){
+            self.rangeValue = FCRangeSliderValueMake(rangeValue.start, maximumValue);
+        } else {
+            self.rangeValue = FCRangeSliderValueMake(minimumValue, maximumValue);
+        }
     } else {
         [self updateThumbsPositionAnimated:YES];
     }

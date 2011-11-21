@@ -278,8 +278,8 @@
         CGFloat minimumRangeLengthInPixels = trackSliderWidth * minimumRangeLength/(maximumValue-minimumValue);
         BOOL updatePosition = YES;
         if (acceptOnlyPositiveRanges) {
-            if (thumbBeingDragged == maximumThumbView && xpos <= otherxpos ||
-                thumbBeingDragged == minimumThumbView && xpos >= otherxpos)
+            if ((thumbBeingDragged == maximumThumbView && xpos <= otherxpos) ||
+                (thumbBeingDragged == minimumThumbView && xpos >= otherxpos))
             {
                 updatePosition = NO;
             }

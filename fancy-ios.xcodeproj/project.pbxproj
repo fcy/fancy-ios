@@ -44,9 +44,6 @@
 		D48F14CD139ED4ED00257AE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D48F14CB139ED4ED00257AE8 /* InfoPlist.strings */; };
 		D48F14E0139ED6E100257AE8 /* FCRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = D48F14DF139ED6E100257AE8 /* FCRangeSlider.m */; };
 		D48F14E2139EE3F100257AE8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48F14E1139EE3F100257AE8 /* QuartzCore.framework */; };
-		D4A9518413ABE6D70088A658 /* project.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D4A9518313ABE6D70088A658 /* project.xcconfig */; };
-		D4A9518713ABE6FD0088A658 /* debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D4A9518613ABE6FD0088A658 /* debug.xcconfig */; };
-		D4A9518913ABE72B0088A658 /* release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D4A9518813ABE72B0088A658 /* release.xcconfig */; };
 		D4A9519113ABED830088A658 /* Doxygen.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A9519013ABED830088A658 /* Doxygen.h */; };
 		D4BC2F1513C3A06F0008D98E /* FCRangeSliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BC2F1413C3A06F0008D98E /* FCRangeSliderTests.m */; };
 		D4BC2F1913C3A55B0008D98E /* FCGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BC2F1813C3A55B0008D98E /* FCGeometryTests.m */; };
@@ -417,6 +414,9 @@
 /* Begin PBXProject section */
 		D48F1490139ED4ED00257AE8 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = D48F1493139ED4ED00257AE8 /* Build configuration list for PBXProject "fancy-ios" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -446,9 +446,6 @@
 				D40BAAA713A014500080E188 /* FCRangeSliderSample.xib in Resources */,
 				D40BAAB213A01B8D0080E188 /* slider_thumb.png in Resources */,
 				D43BD74713A159CA001D88D7 /* slider_thumb_highlighted.png in Resources */,
-				D4A9518413ABE6D70088A658 /* project.xcconfig in Resources */,
-				D4A9518713ABE6FD0088A658 /* debug.xcconfig in Resources */,
-				D4A9518913ABE72B0088A658 /* release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

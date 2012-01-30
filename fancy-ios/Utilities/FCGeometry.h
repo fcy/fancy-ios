@@ -1,11 +1,11 @@
 //    Copyright 2011 Felipe Cypriano
-// 
+//
 //    Licensed under the Apache License, Version 2.0 (the "License");
 //    you may not use this file except in compliance with the License.
 //    You may obtain a copy of the License at
-// 
+//
 //        http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 //    Unless required by applicable law or agreed to in writing, software
 //    distributed under the License is distributed on an "AS IS" BASIS,
 //    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -27,7 +27,7 @@
  *
  * This function works like CGRectOffset, but instead of changing the position
  * it changes the size.
- * 
+ *
  * @param rect The base rect
  * @param deltaWidth This number is added to the rect's width. It can be negative
  * @param deltaHeight This number is added to the rect's height. It can be negative
@@ -56,6 +56,17 @@ NS_INLINE CGRect CGRectSetHeight(CGRect rect, CGFloat height) {
  */
 NS_INLINE CGRect CGRectSetWidth(CGRect rect, CGFloat width) {
     return CGRectMake(rect.origin.x, rect.origin.y, width, rect.size.height);
+}
+
+/**
+ * @brief Changes the size of a CGRect to the width and height.
+ *
+ * @param rect The base rect
+ * @param width The new width
+ * @param height The new height
+ */
+NS_INLINE CGRect CGRectSetSize(CGRect rect, CGFloat width, CGFloat height) {
+    return CGRectMake(rect.origin.x, rect.origin.y, width, height);
 }
 
 /**

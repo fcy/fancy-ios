@@ -12,7 +12,9 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
+#import <QuartzCore/QuartzCore.h>
 #import "FCRangeSlider.h"
+#import "FCGeometry.h"
 
 #define FIXED_HEIGHT 30.0f
 
@@ -277,18 +279,17 @@
     if (thumbBeingDragged) {
         CGPoint touchPoint = [touch locationInView:self];
         UIImageView *otherThumb = (thumbBeingDragged == minimumThumbView) ? maximumThumbView : minimumThumbView;
-        CGFloat otherxpos = otherThumb.center.x;
-        CGFloat xpos = touchPoint.x;
-        CGFloat minimumRangeLengthInPixels = trackSliderWidth * minimumRangeLength/(maximumValue-minimumValue);
+        CGFloat otherXCenter = otherThumb.center.x;
+        CGFloat xCenter = touchPoint.x;
+        CGFloat minimumRangeLengthInPixels = trackSliderWidth * minimumRangeLength / (maximumValue - minimumValue);
         BOOL updatePosition = YES;
         if (acceptOnlyPositiveRanges) {
-            if ((thumbBeingDragged == maximumThumbView && xpos <= otherxpos) ||
-                (thumbBeingDragged == minimumThumbView && xpos >= otherxpos))
-            {
+            if ((thumbBeingDragged == maximumThumbView && xCenter <= otherXCenter) ||
+                (thumbBeingDragged == minimumThumbView && xCenter >= otherXCenter)) {
                 updatePosition = NO;
             }
         }
-        if (updatePosition && minimumRangeLengthInPixels <= fabs(xpos-otherThumb.center.x)) {
+        if (updatePosition && minimumRangeLengthInPixels <= fabs(xCenter - otherThumb.center.x)) {
             thumbBeingDragged.center = CGPointMake(touchPoint.x, thumbBeingDragged.center.y);
             [self clipThumbToBounds];
             [self swtichThumbsPositionIfNecessary];

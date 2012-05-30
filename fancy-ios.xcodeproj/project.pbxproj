@@ -7,460 +7,388 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D40BAAA713A014500080E188 /* FCRangeSliderSample.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40BAAA613A014500080E188 /* FCRangeSliderSample.xib */; };
-		D40BAAA913A015600080E188 /* FCRangeSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = D48F14DE139ED6E100257AE8 /* FCRangeSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D40BAAAA13A015600080E188 /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D48F14AC139ED4ED00257AE8 /* AppDelegate.h */; };
-		D40BAAAB13A015600080E188 /* AppDelegate_iPhone.h in Headers */ = {isa = PBXBuildFile; fileRef = D48F14DB139ED5B100257AE8 /* AppDelegate_iPhone.h */; };
-		D40BAAAC13A015600080E188 /* AppDelegate_iPad.h in Headers */ = {isa = PBXBuildFile; fileRef = D48F14B7139ED4ED00257AE8 /* AppDelegate_iPad.h */; };
-		D40BAAB213A01B8D0080E188 /* slider_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = D40BAAB113A01B8D0080E188 /* slider_thumb.png */; };
-		D413C9A013DCC5640093F577 /* FCJSONFetcherFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D413C99E13DCC5640093F577 /* FCJSONFetcherFactory.h */; };
-		D413C9A113DCC5640093F577 /* FCJSONFetcherFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D413C99F13DCC5640093F577 /* FCJSONFetcherFactory.m */; };
-		D42EA43813D5193E00F7AE4D /* FCHTTPFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = D42EA43613D5193E00F7AE4D /* FCHTTPFetcher.h */; };
-		D42EA43913D5193E00F7AE4D /* FCHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D42EA43713D5193E00F7AE4D /* FCHTTPFetcher.m */; };
-		D42EA43D13D5313100F7AE4D /* FCJSONFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = D42EA43B13D5313100F7AE4D /* FCJSONFetcher.h */; };
-		D42EA43E13D5313100F7AE4D /* FCJSONFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D42EA43C13D5313100F7AE4D /* FCJSONFetcher.m */; };
-		D43BD74713A159CA001D88D7 /* slider_thumb_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = D43BD74613A159CA001D88D7 /* slider_thumb_highlighted.png */; };
-		D44DCE7013FC3BCE006B2BAE /* FCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = D44DCE6E13FC3BCE006B2BAE /* FCDevice.h */; };
-		D44DCE7113FC3BCE006B2BAE /* FCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = D44DCE6F13FC3BCE006B2BAE /* FCDevice.m */; };
-		D46EB2D513A005F900F0D588 /* FCGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = D46EB2D313A002F600F0D588 /* FCGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D46EB2E413A00B1D00F0D588 /* FCRangeSliderSampleController.h in Headers */ = {isa = PBXBuildFile; fileRef = D46EB2E213A00B1D00F0D588 /* FCRangeSliderSampleController.h */; };
-		D46EB2E513A00B1D00F0D588 /* FCRangeSliderSampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = D46EB2E313A00B1D00F0D588 /* FCRangeSliderSampleController.m */; };
-		D48EB09A142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D48EB098142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.h */; };
-		D48EB09B142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D48EB099142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.m */; };
-		D48EB09D142A52F400449AC1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48EB09C142A52F400449AC1 /* CoreData.framework */; };
-		D48F149E139ED4ED00257AE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48F149D139ED4ED00257AE8 /* UIKit.framework */; };
-		D48F14A0139ED4ED00257AE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48F149F139ED4ED00257AE8 /* Foundation.framework */; };
-		D48F14A2139ED4ED00257AE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48F14A1139ED4ED00257AE8 /* CoreGraphics.framework */; };
-		D48F14A8139ED4ED00257AE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D48F14A6139ED4ED00257AE8 /* InfoPlist.strings */; };
-		D48F14AB139ED4ED00257AE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D48F14AA139ED4ED00257AE8 /* main.m */; };
-		D48F14AE139ED4ED00257AE8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D48F14AD139ED4ED00257AE8 /* AppDelegate.m */; };
-		D48F14B2139ED4ED00257AE8 /* AppDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = D48F14B1139ED4ED00257AE8 /* AppDelegate_iPhone.m */; };
-		D48F14B5139ED4ED00257AE8 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D48F14B3139ED4ED00257AE8 /* MainWindow_iPhone.xib */; };
-		D48F14B9139ED4ED00257AE8 /* AppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = D48F14B8139ED4ED00257AE8 /* AppDelegate_iPad.m */; };
-		D48F14BC139ED4ED00257AE8 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D48F14BA139ED4ED00257AE8 /* MainWindow_iPad.xib */; };
-		D48F14C3139ED4ED00257AE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48F149D139ED4ED00257AE8 /* UIKit.framework */; };
-		D48F14C4139ED4ED00257AE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48F149F139ED4ED00257AE8 /* Foundation.framework */; };
-		D48F14C5139ED4ED00257AE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48F14A1139ED4ED00257AE8 /* CoreGraphics.framework */; };
-		D48F14CD139ED4ED00257AE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D48F14CB139ED4ED00257AE8 /* InfoPlist.strings */; };
-		D48F14E0139ED6E100257AE8 /* FCRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = D48F14DF139ED6E100257AE8 /* FCRangeSlider.m */; };
-		D48F14E2139EE3F100257AE8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48F14E1139EE3F100257AE8 /* QuartzCore.framework */; };
-		D4A9519113ABED830088A658 /* Doxygen.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A9519013ABED830088A658 /* Doxygen.h */; };
-		D4BC2F1513C3A06F0008D98E /* FCRangeSliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BC2F1413C3A06F0008D98E /* FCRangeSliderTests.m */; };
-		D4BC2F1913C3A55B0008D98E /* FCGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BC2F1813C3A55B0008D98E /* FCGeometryTests.m */; };
+		5501F144157697F800303930 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F143157697F800303930 /* Foundation.framework */; };
+		5501F15E157699E800303930 /* FCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 5501F152157698D300303930 /* FCDevice.m */; };
+		5501F15F157699FC00303930 /* FCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 5501F151157698D300303930 /* FCDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5501F160157699FE00303930 /* FCGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 5501F153157698D300303930 /* FCGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5501F16215769A7F00303930 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F16115769A7F00303930 /* UIKit.framework */; };
+		5501F16A15769B2F00303930 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F16915769B2F00303930 /* SenTestingKit.framework */; };
+		5501F16B15769B2F00303930 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F16115769A7F00303930 /* UIKit.framework */; };
+		5501F16C15769B2F00303930 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F143157697F800303930 /* Foundation.framework */; };
+		5501F18015769B5A00303930 /* FCGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5501F17C15769B5A00303930 /* FCGeometryTests.m */; };
+		5501F18215769C2900303930 /* libFancyCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F140157697F800303930 /* libFancyCore.a */; };
+		5501F18815769FDA00303930 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F18715769FDA00303930 /* CoreGraphics.framework */; };
+		5501F18915769FEF00303930 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F18715769FDA00303930 /* CoreGraphics.framework */; };
+		5501F1911576A0B700303930 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F143157697F800303930 /* Foundation.framework */; };
+		5501F19B1576A0F000303930 /* FCRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5501F15D157698D300303930 /* FCRangeSlider.m */; };
+		5501F19C1576A0F300303930 /* FCRangeSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 5501F15C157698D300303930 /* FCRangeSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5501F19D1576A0FD00303930 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F16115769A7F00303930 /* UIKit.framework */; };
+		5501F19E1576A10100303930 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F18715769FDA00303930 /* CoreGraphics.framework */; };
+		5501F19F1576A10500303930 /* libFancyCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F140157697F800303930 /* libFancyCore.a */; };
+		5501F1A61576A17100303930 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F16915769B2F00303930 /* SenTestingKit.framework */; };
+		5501F1A71576A17100303930 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F16115769A7F00303930 /* UIKit.framework */; };
+		5501F1A81576A17100303930 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F143157697F800303930 /* Foundation.framework */; };
+		5501F1B61576A20600303930 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F18715769FDA00303930 /* CoreGraphics.framework */; };
+		5501F1B71576A20C00303930 /* libFancyUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F1901576A0B700303930 /* libFancyUI.a */; };
+		5501F1B81576A28100303930 /* FCRangeSliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5501F17F15769B5A00303930 /* FCRangeSliderTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D48F14C6139ED4ED00257AE8 /* PBXContainerItemProxy */ = {
+		55A825F11576B06B0011226E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D48F1490139ED4ED00257AE8 /* Project object */;
+			containerPortal = 5501F12F157680A200303930 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D48F1498139ED4ED00257AE8;
-			remoteInfo = "fancy-ios";
+			remoteGlobalIDString = 5501F13F157697F800303930;
+			remoteInfo = FancyCore;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D40BAAA613A014500080E188 /* FCRangeSliderSample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FCRangeSliderSample.xib; path = iPhone/Controls/FCRangeSliderSample.xib; sourceTree = "<group>"; };
-		D40BAAB113A01B8D0080E188 /* slider_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider_thumb.png; path = Resources/Images/slider_thumb.png; sourceTree = "<group>"; };
-		D413C99E13DCC5640093F577 /* FCJSONFetcherFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCJSONFetcherFactory.h; sourceTree = "<group>"; };
-		D413C99F13DCC5640093F577 /* FCJSONFetcherFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCJSONFetcherFactory.m; sourceTree = "<group>"; };
-		D42EA43613D5193E00F7AE4D /* FCHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCHTTPFetcher.h; sourceTree = "<group>"; };
-		D42EA43713D5193E00F7AE4D /* FCHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCHTTPFetcher.m; sourceTree = "<group>"; };
-		D42EA43B13D5313100F7AE4D /* FCJSONFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCJSONFetcher.h; sourceTree = "<group>"; };
-		D42EA43C13D5313100F7AE4D /* FCJSONFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCJSONFetcher.m; sourceTree = "<group>"; };
-		D43BD74613A159CA001D88D7 /* slider_thumb_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider_thumb_highlighted.png; path = Resources/Images/slider_thumb_highlighted.png; sourceTree = "<group>"; };
-		D44DCE6E13FC3BCE006B2BAE /* FCDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCDevice.h; path = Utilities/FCDevice.h; sourceTree = "<group>"; };
-		D44DCE6F13FC3BCE006B2BAE /* FCDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCDevice.m; path = Utilities/FCDevice.m; sourceTree = "<group>"; };
-		D46EB2D313A002F600F0D588 /* FCGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCGeometry.h; path = Utilities/FCGeometry.h; sourceTree = "<group>"; };
-		D46EB2E213A00B1D00F0D588 /* FCRangeSliderSampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCRangeSliderSampleController.h; path = Controls/RangeSlider/FCRangeSliderSampleController.h; sourceTree = "<group>"; };
-		D46EB2E313A00B1D00F0D588 /* FCRangeSliderSampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCRangeSliderSampleController.m; path = Controls/RangeSlider/FCRangeSliderSampleController.m; sourceTree = "<group>"; };
-		D48EB098142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCSimpleFetchedResultsControllerDelegate.h; path = Utilities/CoreData/FCSimpleFetchedResultsControllerDelegate.h; sourceTree = "<group>"; };
-		D48EB099142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCSimpleFetchedResultsControllerDelegate.m; path = Utilities/CoreData/FCSimpleFetchedResultsControllerDelegate.m; sourceTree = "<group>"; };
-		D48EB09C142A52F400449AC1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		D48F1499139ED4ED00257AE8 /* fancy-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fancy-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D48F149D139ED4ED00257AE8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		D48F149F139ED4ED00257AE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D48F14A1139ED4ED00257AE8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D48F14A5139ED4ED00257AE8 /* fancy-ios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fancy-ios-Info.plist"; sourceTree = "<group>"; };
-		D48F14A7139ED4ED00257AE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D48F14A9139ED4ED00257AE8 /* fancy-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fancy-ios-Prefix.pch"; sourceTree = "<group>"; };
-		D48F14AA139ED4ED00257AE8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D48F14AC139ED4ED00257AE8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D48F14AD139ED4ED00257AE8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D48F14B1139ED4ED00257AE8 /* AppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate_iPhone.m; path = iPhone/AppDelegate_iPhone.m; sourceTree = "<group>"; };
-		D48F14B4139ED4ED00257AE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
-		D48F14B7139ED4ED00257AE8 /* AppDelegate_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate_iPad.h; path = iPad/AppDelegate_iPad.h; sourceTree = "<group>"; };
-		D48F14B8139ED4ED00257AE8 /* AppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate_iPad.m; path = iPad/AppDelegate_iPad.m; sourceTree = "<group>"; };
-		D48F14BB139ED4ED00257AE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
-		D48F14C2139ED4ED00257AE8 /* fancy-iosTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fancy-iosTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D48F14CA139ED4ED00257AE8 /* fancy-iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fancy-iosTests-Info.plist"; sourceTree = "<group>"; };
-		D48F14CC139ED4ED00257AE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D48F14CE139ED4ED00257AE8 /* fancy-iosTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fancy-iosTests-Prefix.pch"; sourceTree = "<group>"; };
-		D48F14DB139ED5B100257AE8 /* AppDelegate_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate_iPhone.h; path = iPhone/AppDelegate_iPhone.h; sourceTree = "<group>"; };
-		D48F14DE139ED6E100257AE8 /* FCRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCRangeSlider.h; path = Controls/RangeSlider/FCRangeSlider.h; sourceTree = "<group>"; };
-		D48F14DF139ED6E100257AE8 /* FCRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCRangeSlider.m; path = Controls/RangeSlider/FCRangeSlider.m; sourceTree = "<group>"; };
-		D48F14E1139EE3F100257AE8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		D4A9518313ABE6D70088A658 /* project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = project.xcconfig; sourceTree = "<group>"; };
-		D4A9518613ABE6FD0088A658 /* debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
-		D4A9518813ABE72B0088A658 /* release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
-		D4A9519013ABED830088A658 /* Doxygen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doxygen.h; sourceTree = "<group>"; };
-		D4BC2F1413C3A06F0008D98E /* FCRangeSliderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCRangeSliderTests.m; path = Controls/RangeSlider/FCRangeSliderTests.m; sourceTree = "<group>"; };
-		D4BC2F1813C3A55B0008D98E /* FCGeometryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCGeometryTests.m; path = Utilities/FCGeometryTests.m; sourceTree = "<group>"; };
+		5501F140157697F800303930 /* libFancyCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFancyCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5501F143157697F800303930 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5501F151157698D300303930 /* FCDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCDevice.h; sourceTree = "<group>"; };
+		5501F152157698D300303930 /* FCDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCDevice.m; sourceTree = "<group>"; };
+		5501F153157698D300303930 /* FCGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCGeometry.h; sourceTree = "<group>"; };
+		5501F156157698D300303930 /* FCSimpleFetchedResultsControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCSimpleFetchedResultsControllerDelegate.h; sourceTree = "<group>"; };
+		5501F157157698D300303930 /* FCSimpleFetchedResultsControllerDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCSimpleFetchedResultsControllerDelegate.m; sourceTree = "<group>"; };
+		5501F158157698D300303930 /* Doxygen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Doxygen.h; sourceTree = "<group>"; };
+		5501F159157698D300303930 /* FancyPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FancyPrefix.pch; sourceTree = "<group>"; };
+		5501F15C157698D300303930 /* FCRangeSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCRangeSlider.h; sourceTree = "<group>"; };
+		5501F15D157698D300303930 /* FCRangeSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCRangeSlider.m; sourceTree = "<group>"; };
+		5501F16115769A7F00303930 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		5501F16815769B2F00303930 /* FancyCoreTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FancyCoreTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5501F16915769B2F00303930 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		5501F17C15769B5A00303930 /* FCGeometryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCGeometryTests.m; sourceTree = "<group>"; };
+		5501F17F15769B5A00303930 /* FCRangeSliderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCRangeSliderTests.m; sourceTree = "<group>"; };
+		5501F18715769FDA00303930 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5501F1901576A0B700303930 /* libFancyUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFancyUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5501F1A51576A17100303930 /* FancyUITests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FancyUITests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D48F1496139ED4ED00257AE8 /* Frameworks */ = {
+		5501F13D157697F800303930 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D48EB09D142A52F400449AC1 /* CoreData.framework in Frameworks */,
-				D48F14E2139EE3F100257AE8 /* QuartzCore.framework in Frameworks */,
-				D48F149E139ED4ED00257AE8 /* UIKit.framework in Frameworks */,
-				D48F14A0139ED4ED00257AE8 /* Foundation.framework in Frameworks */,
-				D48F14A2139ED4ED00257AE8 /* CoreGraphics.framework in Frameworks */,
+				5501F18815769FDA00303930 /* CoreGraphics.framework in Frameworks */,
+				5501F16215769A7F00303930 /* UIKit.framework in Frameworks */,
+				5501F144157697F800303930 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D48F14BE139ED4ED00257AE8 /* Frameworks */ = {
+		5501F16415769B2F00303930 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D48F14C3139ED4ED00257AE8 /* UIKit.framework in Frameworks */,
-				D48F14C4139ED4ED00257AE8 /* Foundation.framework in Frameworks */,
-				D48F14C5139ED4ED00257AE8 /* CoreGraphics.framework in Frameworks */,
+				5501F18915769FEF00303930 /* CoreGraphics.framework in Frameworks */,
+				5501F18215769C2900303930 /* libFancyCore.a in Frameworks */,
+				5501F16A15769B2F00303930 /* SenTestingKit.framework in Frameworks */,
+				5501F16B15769B2F00303930 /* UIKit.framework in Frameworks */,
+				5501F16C15769B2F00303930 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5501F18D1576A0B700303930 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5501F19F1576A10500303930 /* libFancyCore.a in Frameworks */,
+				5501F19E1576A10100303930 /* CoreGraphics.framework in Frameworks */,
+				5501F19D1576A0FD00303930 /* UIKit.framework in Frameworks */,
+				5501F1911576A0B700303930 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5501F1A11576A17100303930 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5501F1B71576A20C00303930 /* libFancyUI.a in Frameworks */,
+				5501F1B61576A20600303930 /* CoreGraphics.framework in Frameworks */,
+				5501F1A71576A17100303930 /* UIKit.framework in Frameworks */,
+				5501F1A61576A17100303930 /* SenTestingKit.framework in Frameworks */,
+				5501F1A81576A17100303930 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D40BAAA413A014290080E188 /* Controls */ = {
+		5501F12D157680A200303930 = {
 			isa = PBXGroup;
 			children = (
-				D40BAAA613A014500080E188 /* FCRangeSliderSample.xib */,
-			);
-			name = Controls;
-			sourceTree = "<group>";
-		};
-		D40BAAA813A014580080E188 /* Controls */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Controls;
-			sourceTree = "<group>";
-		};
-		D40BAAAD13A01B5A0080E188 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				D40BAAAE13A01B610080E188 /* Images */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		D40BAAAE13A01B610080E188 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				D43BD74613A159CA001D88D7 /* slider_thumb_highlighted.png */,
-				D40BAAB113A01B8D0080E188 /* slider_thumb.png */,
-			);
-			name = Images;
-			sourceTree = "<group>";
-		};
-		D42EA43513D5193E00F7AE4D /* HTTP */ = {
-			isa = PBXGroup;
-			children = (
-				D42EA43613D5193E00F7AE4D /* FCHTTPFetcher.h */,
-				D42EA43713D5193E00F7AE4D /* FCHTTPFetcher.m */,
-				D42EA43B13D5313100F7AE4D /* FCJSONFetcher.h */,
-				D42EA43C13D5313100F7AE4D /* FCJSONFetcher.m */,
-				D413C99E13DCC5640093F577 /* FCJSONFetcherFactory.h */,
-				D413C99F13DCC5640093F577 /* FCJSONFetcherFactory.m */,
-			);
-			name = HTTP;
-			path = Utilities/HTTP;
-			sourceTree = "<group>";
-		};
-		D469289313C39AD200DB1F7E /* Controls */ = {
-			isa = PBXGroup;
-			children = (
-				D469289513C39AD900DB1F7E /* RangeSlider */,
-			);
-			name = Controls;
-			sourceTree = "<group>";
-		};
-		D469289513C39AD900DB1F7E /* RangeSlider */ = {
-			isa = PBXGroup;
-			children = (
-				D4BC2F1413C3A06F0008D98E /* FCRangeSliderTests.m */,
-			);
-			name = RangeSlider;
-			sourceTree = "<group>";
-		};
-		D46EB2D113A0028400F0D588 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				D4A04D87142A3743001D5115 /* Core Data */,
-				D42EA43513D5193E00F7AE4D /* HTTP */,
-				D46EB2D313A002F600F0D588 /* FCGeometry.h */,
-				D44DCE6E13FC3BCE006B2BAE /* FCDevice.h */,
-				D44DCE6F13FC3BCE006B2BAE /* FCDevice.m */,
-			);
-			name = Utilities;
-			sourceTree = "<group>";
-		};
-		D48F148E139ED4ED00257AE8 = {
-			isa = PBXGroup;
-			children = (
-				D48F14A3139ED4ED00257AE8 /* fancy-ios */,
-				D48F14C8139ED4ED00257AE8 /* fancy-iosTests */,
-				D48F149C139ED4ED00257AE8 /* Frameworks */,
-				D48F149A139ED4ED00257AE8 /* Products */,
+				5501F14F157698D300303930 /* src */,
+				5501F17A15769B5A00303930 /* tests */,
+				5501F142157697F800303930 /* Frameworks */,
+				5501F141157697F800303930 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D48F149A139ED4ED00257AE8 /* Products */ = {
+		5501F141157697F800303930 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D48F1499139ED4ED00257AE8 /* fancy-ios.app */,
-				D48F14C2139ED4ED00257AE8 /* fancy-iosTests.octest */,
+				5501F140157697F800303930 /* libFancyCore.a */,
+				5501F16815769B2F00303930 /* FancyCoreTests.octest */,
+				5501F1901576A0B700303930 /* libFancyUI.a */,
+				5501F1A51576A17100303930 /* FancyUITests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D48F149C139ED4ED00257AE8 /* Frameworks */ = {
+		5501F142157697F800303930 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D48EB09C142A52F400449AC1 /* CoreData.framework */,
-				D48F14E1139EE3F100257AE8 /* QuartzCore.framework */,
-				D48F149D139ED4ED00257AE8 /* UIKit.framework */,
-				D48F149F139ED4ED00257AE8 /* Foundation.framework */,
-				D48F14A1139ED4ED00257AE8 /* CoreGraphics.framework */,
+				5501F18715769FDA00303930 /* CoreGraphics.framework */,
+				5501F16115769A7F00303930 /* UIKit.framework */,
+				5501F143157697F800303930 /* Foundation.framework */,
+				5501F16915769B2F00303930 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D48F14A3139ED4ED00257AE8 /* fancy-ios */ = {
+		5501F14F157698D300303930 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				D48F14DC139ED68600257AE8 /* Controls */,
-				D46EB2D113A0028400F0D588 /* Utilities */,
-				D48F14AC139ED4ED00257AE8 /* AppDelegate.h */,
-				D48F14AD139ED4ED00257AE8 /* AppDelegate.m */,
-				D48F14AF139ED4ED00257AE8 /* iPhone */,
-				D48F14B6139ED4ED00257AE8 /* iPad */,
-				D40BAAAD13A01B5A0080E188 /* Resources */,
-				D48F14A4139ED4ED00257AE8 /* Supporting Files */,
-				D4A9519013ABED830088A658 /* Doxygen.h */,
+				5501F150157698D300303930 /* core */,
+				5501F154157698D300303930 /* database */,
+				5501F158157698D300303930 /* Doxygen.h */,
+				5501F159157698D300303930 /* FancyPrefix.pch */,
+				5501F15A157698D300303930 /* ui */,
 			);
-			path = "fancy-ios";
+			path = src;
 			sourceTree = "<group>";
 		};
-		D48F14A4139ED4ED00257AE8 /* Supporting Files */ = {
+		5501F150157698D300303930 /* core */ = {
 			isa = PBXGroup;
 			children = (
-				D48F14A5139ED4ED00257AE8 /* fancy-ios-Info.plist */,
-				D48F14A6139ED4ED00257AE8 /* InfoPlist.strings */,
-				D48F14A9139ED4ED00257AE8 /* fancy-ios-Prefix.pch */,
-				D48F14AA139ED4ED00257AE8 /* main.m */,
-				D4A9518313ABE6D70088A658 /* project.xcconfig */,
-				D4A9518613ABE6FD0088A658 /* debug.xcconfig */,
-				D4A9518813ABE72B0088A658 /* release.xcconfig */,
+				5501F151157698D300303930 /* FCDevice.h */,
+				5501F152157698D300303930 /* FCDevice.m */,
+				5501F153157698D300303930 /* FCGeometry.h */,
 			);
-			name = "Supporting Files";
+			path = core;
 			sourceTree = "<group>";
 		};
-		D48F14AF139ED4ED00257AE8 /* iPhone */ = {
+		5501F154157698D300303930 /* database */ = {
 			isa = PBXGroup;
 			children = (
-				D40BAAA413A014290080E188 /* Controls */,
-				D48F14DB139ED5B100257AE8 /* AppDelegate_iPhone.h */,
-				D48F14B1139ED4ED00257AE8 /* AppDelegate_iPhone.m */,
-				D48F14B3139ED4ED00257AE8 /* MainWindow_iPhone.xib */,
+				5501F155157698D300303930 /* core-data */,
 			);
-			name = iPhone;
+			path = database;
 			sourceTree = "<group>";
 		};
-		D48F14B6139ED4ED00257AE8 /* iPad */ = {
+		5501F155157698D300303930 /* core-data */ = {
 			isa = PBXGroup;
 			children = (
-				D40BAAA813A014580080E188 /* Controls */,
-				D48F14B7139ED4ED00257AE8 /* AppDelegate_iPad.h */,
-				D48F14B8139ED4ED00257AE8 /* AppDelegate_iPad.m */,
-				D48F14BA139ED4ED00257AE8 /* MainWindow_iPad.xib */,
+				5501F156157698D300303930 /* FCSimpleFetchedResultsControllerDelegate.h */,
+				5501F157157698D300303930 /* FCSimpleFetchedResultsControllerDelegate.m */,
 			);
-			name = iPad;
+			path = "core-data";
 			sourceTree = "<group>";
 		};
-		D48F14C8139ED4ED00257AE8 /* fancy-iosTests */ = {
+		5501F15A157698D300303930 /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				D469289313C39AD200DB1F7E /* Controls */,
-				D4BC2F1613C3A3800008D98E /* Utilities */,
-				D48F14C9139ED4ED00257AE8 /* Supporting Files */,
+				5501F15B157698D300303930 /* range-slider */,
 			);
-			path = "fancy-iosTests";
+			path = ui;
 			sourceTree = "<group>";
 		};
-		D48F14C9139ED4ED00257AE8 /* Supporting Files */ = {
+		5501F15B157698D300303930 /* range-slider */ = {
 			isa = PBXGroup;
 			children = (
-				D48F14CA139ED4ED00257AE8 /* fancy-iosTests-Info.plist */,
-				D48F14CB139ED4ED00257AE8 /* InfoPlist.strings */,
-				D48F14CE139ED4ED00257AE8 /* fancy-iosTests-Prefix.pch */,
+				5501F15C157698D300303930 /* FCRangeSlider.h */,
+				5501F15D157698D300303930 /* FCRangeSlider.m */,
 			);
-			name = "Supporting Files";
+			path = "range-slider";
 			sourceTree = "<group>";
 		};
-		D48F14DC139ED68600257AE8 /* Controls */ = {
+		5501F17A15769B5A00303930 /* tests */ = {
 			isa = PBXGroup;
 			children = (
-				D48F14DD139ED69100257AE8 /* RangeSlider */,
+				5501F17B15769B5A00303930 /* core */,
+				5501F17D15769B5A00303930 /* ui */,
 			);
-			name = Controls;
+			path = tests;
 			sourceTree = "<group>";
 		};
-		D48F14DD139ED69100257AE8 /* RangeSlider */ = {
+		5501F17B15769B5A00303930 /* core */ = {
 			isa = PBXGroup;
 			children = (
-				D48F14DE139ED6E100257AE8 /* FCRangeSlider.h */,
-				D48F14DF139ED6E100257AE8 /* FCRangeSlider.m */,
-				D46EB2E213A00B1D00F0D588 /* FCRangeSliderSampleController.h */,
-				D46EB2E313A00B1D00F0D588 /* FCRangeSliderSampleController.m */,
+				5501F17C15769B5A00303930 /* FCGeometryTests.m */,
 			);
-			name = RangeSlider;
+			path = core;
 			sourceTree = "<group>";
 		};
-		D4A04D87142A3743001D5115 /* Core Data */ = {
+		5501F17D15769B5A00303930 /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				D48EB098142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.h */,
-				D48EB099142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.m */,
+				5501F17E15769B5A00303930 /* range-slider */,
 			);
-			name = "Core Data";
+			path = ui;
 			sourceTree = "<group>";
 		};
-		D4BC2F1613C3A3800008D98E /* Utilities */ = {
+		5501F17E15769B5A00303930 /* range-slider */ = {
 			isa = PBXGroup;
 			children = (
-				D4BC2F1813C3A55B0008D98E /* FCGeometryTests.m */,
+				5501F17F15769B5A00303930 /* FCRangeSliderTests.m */,
 			);
-			name = Utilities;
+			path = "range-slider";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		D46EB2D413A005F200F0D588 /* Headers */ = {
+		5501F13E157697F800303930 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D40BAAA913A015600080E188 /* FCRangeSlider.h in Headers */,
-				D46EB2D513A005F900F0D588 /* FCGeometry.h in Headers */,
-				D40BAAAA13A015600080E188 /* AppDelegate.h in Headers */,
-				D40BAAAB13A015600080E188 /* AppDelegate_iPhone.h in Headers */,
-				D40BAAAC13A015600080E188 /* AppDelegate_iPad.h in Headers */,
-				D46EB2E413A00B1D00F0D588 /* FCRangeSliderSampleController.h in Headers */,
-				D4A9519113ABED830088A658 /* Doxygen.h in Headers */,
-				D42EA43813D5193E00F7AE4D /* FCHTTPFetcher.h in Headers */,
-				D42EA43D13D5313100F7AE4D /* FCJSONFetcher.h in Headers */,
-				D413C9A013DCC5640093F577 /* FCJSONFetcherFactory.h in Headers */,
-				D44DCE7013FC3BCE006B2BAE /* FCDevice.h in Headers */,
-				D48EB09A142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.h in Headers */,
+				5501F15F157699FC00303930 /* FCDevice.h in Headers */,
+				5501F160157699FE00303930 /* FCGeometry.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5501F18E1576A0B700303930 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5501F19C1576A0F300303930 /* FCRangeSlider.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D48F1498139ED4ED00257AE8 /* fancy-ios */ = {
+		5501F13F157697F800303930 /* FancyCore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D48F14D5139ED4ED00257AE8 /* Build configuration list for PBXNativeTarget "fancy-ios" */;
+			buildConfigurationList = 5501F14D157697F800303930 /* Build configuration list for PBXNativeTarget "FancyCore" */;
 			buildPhases = (
-				D46EB2D413A005F200F0D588 /* Headers */,
-				D48F1495139ED4ED00257AE8 /* Sources */,
-				D48F1496139ED4ED00257AE8 /* Frameworks */,
-				D48F1497139ED4ED00257AE8 /* Resources */,
+				5501F13C157697F800303930 /* Sources */,
+				5501F13D157697F800303930 /* Frameworks */,
+				5501F13E157697F800303930 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "fancy-ios";
-			productName = "fancy-ios";
-			productReference = D48F1499139ED4ED00257AE8 /* fancy-ios.app */;
-			productType = "com.apple.product-type.application";
+			name = FancyCore;
+			productName = FancyCore;
+			productReference = 5501F140157697F800303930 /* libFancyCore.a */;
+			productType = "com.apple.product-type.library.static";
 		};
-		D48F14C1139ED4ED00257AE8 /* fancy-iosTests */ = {
+		5501F16715769B2F00303930 /* FancyCoreTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D48F14D8139ED4ED00257AE8 /* Build configuration list for PBXNativeTarget "fancy-iosTests" */;
+			buildConfigurationList = 5501F17715769B2F00303930 /* Build configuration list for PBXNativeTarget "FancyCoreTests" */;
 			buildPhases = (
-				D48F14BD139ED4ED00257AE8 /* Sources */,
-				D48F14BE139ED4ED00257AE8 /* Frameworks */,
-				D48F14BF139ED4ED00257AE8 /* Resources */,
-				D48F14C0139ED4ED00257AE8 /* ShellScript */,
+				5501F16315769B2F00303930 /* Sources */,
+				5501F16415769B2F00303930 /* Frameworks */,
+				5501F16515769B2F00303930 /* Resources */,
+				5501F16615769B2F00303930 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D48F14C7139ED4ED00257AE8 /* PBXTargetDependency */,
 			);
-			name = "fancy-iosTests";
-			productName = "fancy-iosTests";
-			productReference = D48F14C2139ED4ED00257AE8 /* fancy-iosTests.octest */;
+			name = FancyCoreTests;
+			productName = FancyCoreTests;
+			productReference = 5501F16815769B2F00303930 /* FancyCoreTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		5501F18F1576A0B700303930 /* FancyUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5501F1981576A0B700303930 /* Build configuration list for PBXNativeTarget "FancyUI" */;
+			buildPhases = (
+				5501F18C1576A0B700303930 /* Sources */,
+				5501F18D1576A0B700303930 /* Frameworks */,
+				5501F18E1576A0B700303930 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55A825F21576B06B0011226E /* PBXTargetDependency */,
+			);
+			name = FancyUI;
+			productName = FancyUI;
+			productReference = 5501F1901576A0B700303930 /* libFancyUI.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5501F1A41576A17100303930 /* FancyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5501F1B31576A17100303930 /* Build configuration list for PBXNativeTarget "FancyUITests" */;
+			buildPhases = (
+				5501F1A01576A17100303930 /* Sources */,
+				5501F1A11576A17100303930 /* Frameworks */,
+				5501F1A21576A17100303930 /* Resources */,
+				5501F1A31576A17100303930 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FancyUITests;
+			productName = FancyUITests;
+			productReference = 5501F1A51576A17100303930 /* FancyUITests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D48F1490139ED4ED00257AE8 /* Project object */ = {
+		5501F12F157680A200303930 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
-			buildConfigurationList = D48F1493139ED4ED00257AE8 /* Build configuration list for PBXProject "fancy-ios" */;
+			buildConfigurationList = 5501F132157680A200303930 /* Build configuration list for PBXProject "fancy-ios" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = D48F148E139ED4ED00257AE8;
-			productRefGroup = D48F149A139ED4ED00257AE8 /* Products */;
+			mainGroup = 5501F12D157680A200303930;
+			productRefGroup = 5501F141157697F800303930 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D48F1498139ED4ED00257AE8 /* fancy-ios */,
-				D48F14C1139ED4ED00257AE8 /* fancy-iosTests */,
+				5501F13F157697F800303930 /* FancyCore */,
+				5501F16715769B2F00303930 /* FancyCoreTests */,
+				5501F18F1576A0B700303930 /* FancyUI */,
+				5501F1A41576A17100303930 /* FancyUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D48F1497139ED4ED00257AE8 /* Resources */ = {
+		5501F16515769B2F00303930 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D48F14A8139ED4ED00257AE8 /* InfoPlist.strings in Resources */,
-				D48F14B5139ED4ED00257AE8 /* MainWindow_iPhone.xib in Resources */,
-				D48F14BC139ED4ED00257AE8 /* MainWindow_iPad.xib in Resources */,
-				D40BAAA713A014500080E188 /* FCRangeSliderSample.xib in Resources */,
-				D40BAAB213A01B8D0080E188 /* slider_thumb.png in Resources */,
-				D43BD74713A159CA001D88D7 /* slider_thumb_highlighted.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D48F14BF139ED4ED00257AE8 /* Resources */ = {
+		5501F1A21576A17100303930 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D48F14CD139ED4ED00257AE8 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D48F14C0139ED4ED00257AE8 /* ShellScript */ = {
+		5501F16615769B2F00303930 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		5501F1A31576A17100303930 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -476,187 +404,287 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D48F1495139ED4ED00257AE8 /* Sources */ = {
+		5501F13C157697F800303930 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D48F14AB139ED4ED00257AE8 /* main.m in Sources */,
-				D48F14AE139ED4ED00257AE8 /* AppDelegate.m in Sources */,
-				D48F14B2139ED4ED00257AE8 /* AppDelegate_iPhone.m in Sources */,
-				D48F14B9139ED4ED00257AE8 /* AppDelegate_iPad.m in Sources */,
-				D48F14E0139ED6E100257AE8 /* FCRangeSlider.m in Sources */,
-				D46EB2E513A00B1D00F0D588 /* FCRangeSliderSampleController.m in Sources */,
-				D42EA43913D5193E00F7AE4D /* FCHTTPFetcher.m in Sources */,
-				D42EA43E13D5313100F7AE4D /* FCJSONFetcher.m in Sources */,
-				D413C9A113DCC5640093F577 /* FCJSONFetcherFactory.m in Sources */,
-				D44DCE7113FC3BCE006B2BAE /* FCDevice.m in Sources */,
-				D48EB09B142A52E800449AC1 /* FCSimpleFetchedResultsControllerDelegate.m in Sources */,
+				5501F15E157699E800303930 /* FCDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D48F14BD139ED4ED00257AE8 /* Sources */ = {
+		5501F16315769B2F00303930 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4BC2F1513C3A06F0008D98E /* FCRangeSliderTests.m in Sources */,
-				D4BC2F1913C3A55B0008D98E /* FCGeometryTests.m in Sources */,
+				5501F18015769B5A00303930 /* FCGeometryTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5501F18C1576A0B700303930 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5501F19B1576A0F000303930 /* FCRangeSlider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5501F1A01576A17100303930 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5501F1B81576A28100303930 /* FCRangeSliderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D48F14C7139ED4ED00257AE8 /* PBXTargetDependency */ = {
+		55A825F21576B06B0011226E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D48F1498139ED4ED00257AE8 /* fancy-ios */;
-			targetProxy = D48F14C6139ED4ED00257AE8 /* PBXContainerItemProxy */;
+			target = 5501F13F157697F800303930 /* FancyCore */;
+			targetProxy = 55A825F11576B06B0011226E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		D48F14A6139ED4ED00257AE8 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D48F14A7139ED4ED00257AE8 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		D48F14B3139ED4ED00257AE8 /* MainWindow_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D48F14B4139ED4ED00257AE8 /* en */,
-			);
-			name = MainWindow_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		D48F14BA139ED4ED00257AE8 /* MainWindow_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D48F14BB139ED4ED00257AE8 /* en */,
-			);
-			name = MainWindow_iPad.xib;
-			sourceTree = "<group>";
-		};
-		D48F14CB139ED4ED00257AE8 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D48F14CC139ED4ED00257AE8 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		D48F14D3139ED4ED00257AE8 /* Debug */ = {
+		5501F134157680A300303930 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4A9518313ABE6D70088A658 /* project.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5501F135157680A300303930 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		5501F14B157697F800303930 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/FancyCore.dst;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = src/FancyPrefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		D48F14D4139ED4ED00257AE8 /* Release */ = {
+		5501F14C157697F800303930 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4A9518313ABE6D70088A658 /* project.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/FancyCore.dst;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = src/FancyPrefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		D48F14D6139ED4ED00257AE8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4A9518613ABE6FD0088A658 /* debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "fancy-ios/fancy-ios-Prefix.pch";
-				INFOPLIST_FILE = "fancy-ios/fancy-ios-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		D48F14D7139ED4ED00257AE8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4A9518813ABE72B0088A658 /* release.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "fancy-ios/fancy-ios-Prefix.pch";
-				INFOPLIST_FILE = "fancy-ios/fancy-ios-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;
-				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
-		D48F14D9139ED4ED00257AE8 /* Debug */ = {
+		5501F17815769B2F00303930 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/fancy-ios.app/fancy-ios";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "fancy-iosTests/fancy-iosTests-Prefix.pch";
-				INFOPLIST_FILE = "fancy-iosTests/fancy-iosTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					SenTestingKit,
+				GCC_PREFIX_HEADER = src/FancyPrefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "tests/core/FancyCoreTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
-		D48F14DA139ED4ED00257AE8 /* Release */ = {
+		5501F17915769B2F00303930 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/fancy-ios.app/fancy-ios";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "fancy-iosTests/fancy-iosTests-Prefix.pch";
-				INFOPLIST_FILE = "fancy-iosTests/fancy-iosTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					SenTestingKit,
-				);
+				GCC_PREFIX_HEADER = src/FancyPrefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "tests/core/FancyCoreTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		5501F1991576A0B700303930 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/FancyUI.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = src/FancyPrefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5501F19A1576A0B700303930 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/FancyUI.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = src/FancyPrefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5501F1B41576A17100303930 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = src/FancyPrefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "tests/ui/FancyUITests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		5501F1B51576A17100303930 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = src/FancyPrefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "tests/ui/FancyUITests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -664,34 +692,52 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D48F1493139ED4ED00257AE8 /* Build configuration list for PBXProject "fancy-ios" */ = {
+		5501F132157680A200303930 /* Build configuration list for PBXProject "fancy-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D48F14D3139ED4ED00257AE8 /* Debug */,
-				D48F14D4139ED4ED00257AE8 /* Release */,
+				5501F134157680A300303930 /* Debug */,
+				5501F135157680A300303930 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D48F14D5139ED4ED00257AE8 /* Build configuration list for PBXNativeTarget "fancy-ios" */ = {
+		5501F14D157697F800303930 /* Build configuration list for PBXNativeTarget "FancyCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D48F14D6139ED4ED00257AE8 /* Debug */,
-				D48F14D7139ED4ED00257AE8 /* Release */,
+				5501F14B157697F800303930 /* Debug */,
+				5501F14C157697F800303930 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D48F14D8139ED4ED00257AE8 /* Build configuration list for PBXNativeTarget "fancy-iosTests" */ = {
+		5501F17715769B2F00303930 /* Build configuration list for PBXNativeTarget "FancyCoreTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D48F14D9139ED4ED00257AE8 /* Debug */,
-				D48F14DA139ED4ED00257AE8 /* Release */,
+				5501F17815769B2F00303930 /* Debug */,
+				5501F17915769B2F00303930 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5501F1981576A0B700303930 /* Build configuration list for PBXNativeTarget "FancyUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5501F1991576A0B700303930 /* Debug */,
+				5501F19A1576A0B700303930 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5501F1B31576A17100303930 /* Build configuration list for PBXNativeTarget "FancyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5501F1B41576A17100303930 /* Debug */,
+				5501F1B51576A17100303930 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D48F1490139ED4ED00257AE8 /* Project object */;
+	rootObject = 5501F12F157680A200303930 /* Project object */;
 }

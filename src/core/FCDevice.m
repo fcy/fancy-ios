@@ -34,16 +34,11 @@ static id sharedInstance = nil;
 #pragma mark -
 #pragma mark Memory management
 
-- (void)dealloc {
-    [cache release];
-    [super dealloc];
-}
 
 - (void)receviedMemoryWarning:(NSNotification *)notification {
     if (sharedInstance) {
         [[NSNotificationCenter defaultCenter] removeObserver:sharedInstance];
         
-        [sharedInstance release];
         sharedInstance = nil;
     }
 }

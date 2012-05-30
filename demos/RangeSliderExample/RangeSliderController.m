@@ -25,7 +25,7 @@
 @synthesize lblRange;
 
 + (RangeSliderController *)rangeSliderSampleController {
-    return [[[RangeSliderController alloc] init] autorelease];
+    return [[RangeSliderController alloc] init];
 }
 
 - (IBAction)onlyNonFractionValueChanged:(id)sender {
@@ -73,14 +73,6 @@
     return self;
 }
 
-- (void)dealloc {
-    [lblRange release];
-    [lblRangeValue release];
-    [slider release];
-    [lblMinimumValue release];
-    [lblMaximumValue release];
-    [super dealloc];
-}
 
 - (void)didReceiveMemoryWarning
 {

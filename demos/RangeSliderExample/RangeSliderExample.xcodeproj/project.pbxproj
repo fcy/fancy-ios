@@ -20,10 +20,10 @@
 		55A826421576B6220011226E /* slider_thumb_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A826401576B6220011226E /* slider_thumb_highlighted.png */; };
 		55A826431576B6220011226E /* slider_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A826411576B6220011226E /* slider_thumb.png */; };
 		55A826D11576C40B0011226E /* FCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A826CE1576C40B0011226E /* FCDevice.h */; };
-		55A826D21576C40B0011226E /* FCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A826CF1576C40B0011226E /* FCDevice.m */; };
+		55A826D21576C40B0011226E /* FCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A826CF1576C40B0011226E /* FCDevice.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		55A826D31576C40B0011226E /* FCGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A826D01576C40B0011226E /* FCGeometry.h */; };
 		55A826D81576C4170011226E /* FCRangeSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A826D61576C4170011226E /* FCRangeSlider.h */; };
-		55A826D91576C4170011226E /* FCRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A826D71576C4170011226E /* FCRangeSlider.m */; };
+		55A826D91576C4170011226E /* FCRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A826D71576C4170011226E /* FCRangeSlider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -247,7 +247,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -268,7 +268,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -282,6 +282,7 @@
 		55A825C71576A5230011226E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RangeSliderExample-Prefix.pch";
 				INFOPLIST_FILE = "RangeSliderExample-Info.plist";
@@ -295,6 +296,7 @@
 		55A825C81576A5230011226E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RangeSliderExample-Prefix.pch";
 				INFOPLIST_FILE = "RangeSliderExample-Info.plist";

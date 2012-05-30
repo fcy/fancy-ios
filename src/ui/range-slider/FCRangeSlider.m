@@ -99,12 +99,6 @@
     return self;
 }
 
-- (void)dealloc {
-    [minimumThumbView release];
-    [inRangeTrackView release];
-    [outRangeTrackView release];
-    [super dealloc];
-}
 
 - (void)setFrame:(CGRect)newFrame {
     [super setFrame:CGRectSetHeight(newFrame, FIXED_HEIGHT)];

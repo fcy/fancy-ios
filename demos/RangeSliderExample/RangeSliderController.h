@@ -28,12 +28,12 @@
 
 + (RangeSliderController *)rangeSliderSampleController;
 
-@property (nonatomic, retain) IBOutlet FCRangeSlider *slider;
-@property (nonatomic, retain) IBOutlet UILabel *lblRange;
-@property (nonatomic, retain) IBOutlet UILabel *lblRangeValue;
-@property (nonatomic, retain) IBOutlet UILabel *lblMinimumValue;
-@property (nonatomic, retain) IBOutlet UILabel *lblMaximumValue;
-@property (nonatomic, retain) IBOutlet UILabel *lblMinimumRangeLength;
+@property (nonatomic) IBOutlet FCRangeSlider *slider;
+@property (nonatomic) IBOutlet UILabel *lblRange;
+@property (nonatomic) IBOutlet UILabel *lblRangeValue;
+@property (nonatomic) IBOutlet UILabel *lblMinimumValue;
+@property (nonatomic) IBOutlet UILabel *lblMaximumValue;
+@property (nonatomic) IBOutlet UILabel *lblMinimumRangeLength;
 
 - (IBAction)onlyNonFractionValueChanged:(id)sender;
 - (IBAction)onlyPositiveRangeValueChanged:(id)sender;

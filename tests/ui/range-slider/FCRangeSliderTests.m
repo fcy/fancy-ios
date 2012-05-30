@@ -29,7 +29,6 @@
 }
 
 - (void)tearDown {
-    [rangeSlider release];
     rangeSlider = nil;
 }
 

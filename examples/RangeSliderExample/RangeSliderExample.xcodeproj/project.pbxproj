@@ -16,49 +16,15 @@
 		55A825DA1576A5FC0011226E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A825D41576A5FC0011226E /* main.m */; };
 		55A825EB1576AD560011226E /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A825CF1576A5FC0011226E /* AppDelegate.h */; };
 		55A825EC1576AD580011226E /* RangeSliderController.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A825D21576A5FC0011226E /* RangeSliderController.h */; };
-		55A826301576B2A20011226E /* libFancyUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A826291576B28C0011226E /* libFancyUI.a */; };
 		55A826341576B3270011226E /* RangeSliderExample-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 55A826331576B3270011226E /* RangeSliderExample-Prefix.pch */; };
 		55A826421576B6220011226E /* slider_thumb_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A826401576B6220011226E /* slider_thumb_highlighted.png */; };
 		55A826431576B6220011226E /* slider_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A826411576B6220011226E /* slider_thumb.png */; };
+		55A826D11576C40B0011226E /* FCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A826CE1576C40B0011226E /* FCDevice.h */; };
+		55A826D21576C40B0011226E /* FCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A826CF1576C40B0011226E /* FCDevice.m */; };
+		55A826D31576C40B0011226E /* FCGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A826D01576C40B0011226E /* FCGeometry.h */; };
+		55A826D81576C4170011226E /* FCRangeSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A826D61576C4170011226E /* FCRangeSlider.h */; };
+		55A826D91576C4170011226E /* FCRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A826D71576C4170011226E /* FCRangeSlider.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		55A826241576B28C0011226E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 55A8261A1576B28C0011226E /* fancy-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5501F140157697F800303930;
-			remoteInfo = FancyCore;
-		};
-		55A826261576B28C0011226E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 55A8261A1576B28C0011226E /* fancy-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5501F16815769B2F00303930;
-			remoteInfo = FancyCoreTests;
-		};
-		55A826281576B28C0011226E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 55A8261A1576B28C0011226E /* fancy-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5501F1901576A0B700303930;
-			remoteInfo = FancyUI;
-		};
-		55A8262A1576B28C0011226E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 55A8261A1576B28C0011226E /* fancy-ios.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5501F1A51576A17100303930;
-			remoteInfo = FancyUITests;
-		};
-		55A8262D1576B29C0011226E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 55A8261A1576B28C0011226E /* fancy-ios.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5501F18F1576A0B700303930;
-			remoteInfo = FancyUI;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		55A825A81576A5230011226E /* RangeSliderExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RangeSliderExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,10 +38,14 @@
 		55A825D31576A5FC0011226E /* RangeSliderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangeSliderController.m; sourceTree = "<group>"; };
 		55A825D41576A5FC0011226E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		55A825D51576A5FC0011226E /* RangeSliderExample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RangeSliderExample-Info.plist"; sourceTree = "<group>"; };
-		55A8261A1576B28C0011226E /* fancy-ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "fancy-ios.xcodeproj"; path = "../../fancy-ios.xcodeproj"; sourceTree = "<group>"; };
 		55A826331576B3270011226E /* RangeSliderExample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RangeSliderExample-Prefix.pch"; sourceTree = "<group>"; };
 		55A826401576B6220011226E /* slider_thumb_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider_thumb_highlighted.png; sourceTree = "<group>"; };
 		55A826411576B6220011226E /* slider_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider_thumb.png; sourceTree = "<group>"; };
+		55A826CE1576C40B0011226E /* FCDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCDevice.h; sourceTree = "<group>"; };
+		55A826CF1576C40B0011226E /* FCDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCDevice.m; sourceTree = "<group>"; };
+		55A826D01576C40B0011226E /* FCGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCGeometry.h; sourceTree = "<group>"; };
+		55A826D61576C4170011226E /* FCRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCRangeSlider.h; sourceTree = "<group>"; };
+		55A826D71576C4170011226E /* FCRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCRangeSlider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55A826301576B2A20011226E /* libFancyUI.a in Frameworks */,
 				55A825AD1576A5230011226E /* UIKit.framework in Frameworks */,
 				55A825AF1576A5230011226E /* Foundation.framework in Frameworks */,
 				55A825B11576A5230011226E /* CoreGraphics.framework in Frameworks */,
@@ -96,7 +65,7 @@
 		55A8259D1576A5230011226E = {
 			isa = PBXGroup;
 			children = (
-				55A8261A1576B28C0011226E /* fancy-ios.xcodeproj */,
+				55A826CB1576C3E80011226E /* fancy-ios */,
 				55A825CF1576A5FC0011226E /* AppDelegate.h */,
 				55A825D01576A5FC0011226E /* AppDelegate.m */,
 				55A825D11576A5FC0011226E /* RangeSlider.xib */,
@@ -130,15 +99,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		55A8261B1576B28C0011226E /* Products */ = {
+		55A826CB1576C3E80011226E /* fancy-ios */ = {
 			isa = PBXGroup;
 			children = (
-				55A826251576B28C0011226E /* libFancyCore.a */,
-				55A826271576B28C0011226E /* FancyCoreTests.octest */,
-				55A826291576B28C0011226E /* libFancyUI.a */,
-				55A8262B1576B28C0011226E /* FancyUITests.octest */,
+				55A826D41576C4170011226E /* ui */,
+				55A826CD1576C40B0011226E /* core */,
 			);
-			name = Products;
+			name = "fancy-ios";
+			sourceTree = "<group>";
+		};
+		55A826CD1576C40B0011226E /* core */ = {
+			isa = PBXGroup;
+			children = (
+				55A826CE1576C40B0011226E /* FCDevice.h */,
+				55A826CF1576C40B0011226E /* FCDevice.m */,
+				55A826D01576C40B0011226E /* FCGeometry.h */,
+			);
+			name = core;
+			path = ../../src/core;
+			sourceTree = "<group>";
+		};
+		55A826D41576C4170011226E /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				55A826D51576C4170011226E /* range-slider */,
+			);
+			name = ui;
+			path = ../../src/ui;
+			sourceTree = "<group>";
+		};
+		55A826D51576C4170011226E /* range-slider */ = {
+			isa = PBXGroup;
+			children = (
+				55A826D61576C4170011226E /* FCRangeSlider.h */,
+				55A826D71576C4170011226E /* FCRangeSlider.m */,
+			);
+			path = "range-slider";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +147,9 @@
 				55A825EB1576AD560011226E /* AppDelegate.h in Headers */,
 				55A825EC1576AD580011226E /* RangeSliderController.h in Headers */,
 				55A826341576B3270011226E /* RangeSliderExample-Prefix.pch in Headers */,
+				55A826D11576C40B0011226E /* FCDevice.h in Headers */,
+				55A826D31576C40B0011226E /* FCGeometry.h in Headers */,
+				55A826D81576C4170011226E /* FCRangeSlider.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,7 +168,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				55A8262E1576B29C0011226E /* PBXTargetDependency */,
 			);
 			name = RangeSliderExample;
 			productName = RangeSliderExample;
@@ -194,49 +192,12 @@
 			mainGroup = 55A8259D1576A5230011226E;
 			productRefGroup = 55A825A91576A5230011226E /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 55A8261B1576B28C0011226E /* Products */;
-					ProjectRef = 55A8261A1576B28C0011226E /* fancy-ios.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				55A825A71576A5230011226E /* RangeSliderExample */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		55A826251576B28C0011226E /* libFancyCore.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libFancyCore.a;
-			remoteRef = 55A826241576B28C0011226E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		55A826271576B28C0011226E /* FancyCoreTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = FancyCoreTests.octest;
-			remoteRef = 55A826261576B28C0011226E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		55A826291576B28C0011226E /* libFancyUI.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libFancyUI.a;
-			remoteRef = 55A826281576B28C0011226E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		55A8262B1576B28C0011226E /* FancyUITests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = FancyUITests.octest;
-			remoteRef = 55A8262A1576B28C0011226E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		55A825A61576A5230011226E /* Resources */ = {
@@ -259,18 +220,12 @@
 				55A825D71576A5FC0011226E /* AppDelegate.m in Sources */,
 				55A825D91576A5FC0011226E /* RangeSliderController.m in Sources */,
 				55A825DA1576A5FC0011226E /* main.m in Sources */,
+				55A826D21576C40B0011226E /* FCDevice.m in Sources */,
+				55A826D91576C4170011226E /* FCRangeSlider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		55A8262E1576B29C0011226E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FancyUI;
-			targetProxy = 55A8262D1576B29C0011226E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		55A825C41576A5230011226E /* Debug */ = {
@@ -330,12 +285,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RangeSliderExample-Prefix.pch";
 				INFOPLIST_FILE = "RangeSliderExample-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/fancy-ios-cpugwtajugmrsweruhvmqzeelzpk/Build/Products/Debug-iphoneos\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "../../src/**";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -346,12 +298,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RangeSliderExample-Prefix.pch";
 				INFOPLIST_FILE = "RangeSliderExample-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/fancy-ios-cpugwtajugmrsweruhvmqzeelzpk/Build/Products/Debug-iphoneos\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "../../src/**";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

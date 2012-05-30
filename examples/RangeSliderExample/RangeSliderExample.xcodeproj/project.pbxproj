@@ -11,11 +11,11 @@
 		55A825AF1576A5230011226E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A825AE1576A5230011226E /* Foundation.framework */; };
 		55A825B11576A5230011226E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A825B01576A5230011226E /* CoreGraphics.framework */; };
 		55A825D71576A5FC0011226E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A825D01576A5FC0011226E /* AppDelegate.m */; };
-		55A825D81576A5FC0011226E /* FCRangeSliderSample.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55A825D11576A5FC0011226E /* FCRangeSliderSample.xib */; };
-		55A825D91576A5FC0011226E /* FCRangeSliderSampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A825D31576A5FC0011226E /* FCRangeSliderSampleController.m */; };
+		55A825D81576A5FC0011226E /* RangeSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55A825D11576A5FC0011226E /* RangeSlider.xib */; };
+		55A825D91576A5FC0011226E /* RangeSliderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A825D31576A5FC0011226E /* RangeSliderController.m */; };
 		55A825DA1576A5FC0011226E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A825D41576A5FC0011226E /* main.m */; };
 		55A825EB1576AD560011226E /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A825CF1576A5FC0011226E /* AppDelegate.h */; };
-		55A825EC1576AD580011226E /* FCRangeSliderSampleController.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A825D21576A5FC0011226E /* FCRangeSliderSampleController.h */; };
+		55A825EC1576AD580011226E /* RangeSliderController.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A825D21576A5FC0011226E /* RangeSliderController.h */; };
 		55A826301576B2A20011226E /* libFancyUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A826291576B28C0011226E /* libFancyUI.a */; };
 		55A826341576B3270011226E /* RangeSliderExample-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 55A826331576B3270011226E /* RangeSliderExample-Prefix.pch */; };
 		55A826421576B6220011226E /* slider_thumb_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A826401576B6220011226E /* slider_thumb_highlighted.png */; };
@@ -67,9 +67,9 @@
 		55A825B01576A5230011226E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		55A825CF1576A5FC0011226E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		55A825D01576A5FC0011226E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		55A825D11576A5FC0011226E /* FCRangeSliderSample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FCRangeSliderSample.xib; sourceTree = "<group>"; };
-		55A825D21576A5FC0011226E /* FCRangeSliderSampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCRangeSliderSampleController.h; sourceTree = "<group>"; };
-		55A825D31576A5FC0011226E /* FCRangeSliderSampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCRangeSliderSampleController.m; sourceTree = "<group>"; };
+		55A825D11576A5FC0011226E /* RangeSlider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RangeSlider.xib; sourceTree = "<group>"; };
+		55A825D21576A5FC0011226E /* RangeSliderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangeSliderController.h; sourceTree = "<group>"; };
+		55A825D31576A5FC0011226E /* RangeSliderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangeSliderController.m; sourceTree = "<group>"; };
 		55A825D41576A5FC0011226E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		55A825D51576A5FC0011226E /* RangeSliderExample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RangeSliderExample-Info.plist"; sourceTree = "<group>"; };
 		55A8261A1576B28C0011226E /* fancy-ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "fancy-ios.xcodeproj"; path = "../../fancy-ios.xcodeproj"; sourceTree = "<group>"; };
@@ -99,9 +99,9 @@
 				55A8261A1576B28C0011226E /* fancy-ios.xcodeproj */,
 				55A825CF1576A5FC0011226E /* AppDelegate.h */,
 				55A825D01576A5FC0011226E /* AppDelegate.m */,
-				55A825D11576A5FC0011226E /* FCRangeSliderSample.xib */,
-				55A825D21576A5FC0011226E /* FCRangeSliderSampleController.h */,
-				55A825D31576A5FC0011226E /* FCRangeSliderSampleController.m */,
+				55A825D11576A5FC0011226E /* RangeSlider.xib */,
+				55A825D21576A5FC0011226E /* RangeSliderController.h */,
+				55A825D31576A5FC0011226E /* RangeSliderController.m */,
 				55A825D41576A5FC0011226E /* main.m */,
 				55A825D51576A5FC0011226E /* RangeSliderExample-Info.plist */,
 				55A826331576B3270011226E /* RangeSliderExample-Prefix.pch */,
@@ -149,7 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55A825EB1576AD560011226E /* AppDelegate.h in Headers */,
-				55A825EC1576AD580011226E /* FCRangeSliderSampleController.h in Headers */,
+				55A825EC1576AD580011226E /* RangeSliderController.h in Headers */,
 				55A826341576B3270011226E /* RangeSliderExample-Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,7 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55A825D81576A5FC0011226E /* FCRangeSliderSample.xib in Resources */,
+				55A825D81576A5FC0011226E /* RangeSlider.xib in Resources */,
 				55A826421576B6220011226E /* slider_thumb_highlighted.png in Resources */,
 				55A826431576B6220011226E /* slider_thumb.png in Resources */,
 			);
@@ -257,7 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55A825D71576A5FC0011226E /* AppDelegate.m in Sources */,
-				55A825D91576A5FC0011226E /* FCRangeSliderSampleController.m in Sources */,
+				55A825D91576A5FC0011226E /* RangeSliderController.m in Sources */,
 				55A825DA1576A5FC0011226E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

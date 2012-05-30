@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "FCRangeSliderSampleController.h"
+#import "RangeSliderController.h"
 
 @implementation AppDelegate
 
@@ -26,7 +26,7 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.viewController = [FCRangeSliderSampleController rangeSliderSampleController];
+    self.viewController = [RangeSliderController rangeSliderSampleController];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

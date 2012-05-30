@@ -20,13 +20,13 @@
  *
  * @image html FCRangeSliderSampleController.png "Shows the FCRangeSlider in action"
  */
-@interface FCRangeSliderSampleController : UIViewController {
+@interface RangeSliderController : UIViewController {
     
     UILabel *lblMinimumValue;
     UILabel *lblMaximumValue;
 }
 
-+ (FCRangeSliderSampleController *)rangeSliderSampleController;
++ (RangeSliderController *)rangeSliderSampleController;
 
 @property (nonatomic, retain) IBOutlet FCRangeSlider *slider;
 @property (nonatomic, retain) IBOutlet UILabel *lblRange;

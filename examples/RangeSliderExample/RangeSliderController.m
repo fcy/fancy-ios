@@ -12,10 +12,10 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
-#import "FCRangeSliderSampleController.h"
+#import "RangeSliderController.h"
 
 
-@implementation FCRangeSliderSampleController
+@implementation RangeSliderController
 
 @synthesize lblRangeValue;
 @synthesize lblMinimumValue;
@@ -24,8 +24,8 @@
 @synthesize slider;
 @synthesize lblRange;
 
-+ (FCRangeSliderSampleController *)rangeSliderSampleController {
-    return [[[FCRangeSliderSampleController alloc] init] autorelease];
++ (RangeSliderController *)rangeSliderSampleController {
+    return [[[RangeSliderController alloc] init] autorelease];
 }
 
 - (IBAction)onlyNonFractionValueChanged:(id)sender {
@@ -60,11 +60,16 @@
     slider.rangeValue = FCRangeSliderValueMake(3, 6);
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+- (id)init {
+    self = [super initWithNibName:@"RangeSlider" bundle:nil];
     if (self) {
         // Custom initialization
     }
+    return self;
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [self init];
     return self;
 }
 

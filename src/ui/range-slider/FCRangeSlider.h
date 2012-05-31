@@ -30,7 +30,7 @@
  * range ends and not the length.
  *
  * This component idea was based on @link https://github.com/doukasd/iOS-Components/tree/master/Controls/DoubleSlider Dimitris Doukas' DoubleSlider @endlink
- * @note Depends on FCGeometry.h
+ * @note Depends on FancyCore
  */
 typedef struct _FCRangeSliderValue {
     CGFloat start;
@@ -46,17 +46,7 @@ typedef struct _FCRangeSliderValue {
  * or <strong>thumb</strong> as UISlider calls it, and the user can move them freely to select
  * the range he wants.
  */
-@interface FCRangeSlider : UIControl {
-@private
-    UIImageView *outRangeTrackView;
-    UIImageView *inRangeTrackView;
-    UIImageView *minimumThumbView;
-    UIImageView *maximumThumbView;
-    UIImageView *thumbBeingDragged;
-    CGFloat trackSliderWidth;
-    NSNumberFormatter *roundFormatter;
-    BOOL isTracking;
-}
+@interface FCRangeSlider : UIControl
 
 /**
  * @brief Contains the mininum allowed value

@@ -29,56 +29,65 @@
 - (void)safelySetMinMaxValues;
 @end
 
-@implementation FCRangeSlider 
+@implementation FCRangeSlider {
+    UIImageView *_outRangeTrackView;
+    UIImageView *_inRangeTrackView;
+    UIImageView *_minimumThumbView;
+    UIImageView *_maximumThumbView;
+    UIImageView *_thumbBeingDragged;
+    CGFloat _trackSliderWidth;
+    NSNumberFormatter *_roundFormatter;
+    BOOL _isTracking;
+}
 
-@synthesize minimumValue;
-@synthesize maximumValue;
-@synthesize range;
-@synthesize rangeValue;
-@synthesize minimumRangeLength;
-@synthesize acceptOnlyNonFractionValues;
-@synthesize acceptOnlyPositiveRanges;
+@synthesize minimumValue = _minimumValue;
+@synthesize maximumValue = _maximumValue;
+@synthesize range = _range;
+@synthesize rangeValue = _rangeValue;
+@synthesize minimumRangeLength = _minimumRangeLength;
+@synthesize acceptOnlyNonFractionValues = _acceptOnlyNonFractionValues;
+@synthesize acceptOnlyPositiveRanges = _acceptOnlyPositiveRanges;
 
 - (void)initialize {
-    minimumValue = 0.0f;
-    maximumValue = 10.0f;
-    acceptOnlyNonFractionValues = NO;
-    acceptOnlyPositiveRanges = NO;
-    minimumRangeLength = 0.0f;
+    _minimumValue = 0.0f;
+    _maximumValue = 10.0f;
+    _acceptOnlyNonFractionValues = NO;
+    _acceptOnlyPositiveRanges = NO;
+    _minimumRangeLength = 0.0f;
     self.clipsToBounds = YES;
     
     UIImage *thumbImage = [UIImage imageNamed:@"slider_thumb"];
     CGFloat thumbCenter = thumbImage.size.width / 2;
-    trackSliderWidth = self.frame.size.width - thumbImage.size.width;
+    _trackSliderWidth = self.frame.size.width - thumbImage.size.width;
     
-    outRangeTrackView = [[UIImageView alloc] initWithFrame:CGRectMake(thumbCenter, 10, trackSliderWidth, 10)];
-    outRangeTrackView.contentMode = UIViewContentModeScaleToFill;
-    outRangeTrackView.backgroundColor = [UIColor darkGrayColor];
-    outRangeTrackView.layer.cornerRadius = 5;
-    [self addSubview:outRangeTrackView];
+    _outRangeTrackView = [[UIImageView alloc] initWithFrame:CGRectMake(thumbCenter, 10, _trackSliderWidth, 10)];
+    _outRangeTrackView.contentMode = UIViewContentModeScaleToFill;
+    _outRangeTrackView.backgroundColor = [UIColor darkGrayColor];
+    _outRangeTrackView.layer.cornerRadius = 5;
+    [self addSubview:_outRangeTrackView];
     
-    inRangeTrackView = [[UIImageView alloc] initWithFrame:CGRectMake(thumbCenter, 10, trackSliderWidth, 10)];
-    inRangeTrackView.contentMode = UIViewContentModeScaleToFill;
-    inRangeTrackView.backgroundColor = [UIColor blueColor];
-    inRangeTrackView.layer.cornerRadius = 5;
-    [self addSubview:inRangeTrackView];
+    _inRangeTrackView = [[UIImageView alloc] initWithFrame:CGRectMake(thumbCenter, 10, _trackSliderWidth, 10)];
+    _inRangeTrackView.contentMode = UIViewContentModeScaleToFill;
+    _inRangeTrackView.backgroundColor = [UIColor blueColor];
+    _inRangeTrackView.layer.cornerRadius = 5;
+    [self addSubview:_inRangeTrackView];
     
-    minimumThumbView = [[UIImageView alloc] initWithImage:thumbImage];
-    minimumThumbView.frame = CGRectSetHeight(minimumThumbView.frame, self.frame.size.height);
-    minimumThumbView.contentMode = UIViewContentModeCenter;
-    [self addSubview:minimumThumbView];
+    _minimumThumbView = [[UIImageView alloc] initWithImage:thumbImage];
+    _minimumThumbView.frame = CGRectSetHeight(_minimumThumbView.frame, self.frame.size.height);
+    _minimumThumbView.contentMode = UIViewContentModeCenter;
+    [self addSubview:_minimumThumbView];
     
-    maximumThumbView = [[UIImageView alloc] initWithImage:thumbImage];
-    maximumThumbView.frame = CGRectSetPosition(minimumThumbView.frame, self.frame.size.width - thumbImage.size.width, 0);
-    maximumThumbView.frame = CGRectSetHeight(maximumThumbView.frame, self.frame.size.height);
-    maximumThumbView.contentMode = UIViewContentModeCenter;
-    [self addSubview:maximumThumbView];
+    _maximumThumbView = [[UIImageView alloc] initWithImage:thumbImage];
+    _maximumThumbView.frame = CGRectSetPosition(_minimumThumbView.frame, self.frame.size.width - thumbImage.size.width, 0);
+    _maximumThumbView.frame = CGRectSetHeight(_maximumThumbView.frame, self.frame.size.height);
+    _maximumThumbView.contentMode = UIViewContentModeCenter;
+    [self addSubview:_maximumThumbView];
     
-    roundFormatter = [[NSNumberFormatter alloc] init];
-    [roundFormatter setMaximumFractionDigits:0];
-    [roundFormatter setRoundingMode:NSNumberFormatterRoundHalfEven];
+    _roundFormatter = [[NSNumberFormatter alloc] init];
+    [_roundFormatter setMaximumFractionDigits:0];
+    [_roundFormatter setRoundingMode:NSNumberFormatterRoundHalfEven];
     
-    self.rangeValue = FCRangeSliderValueMake(minimumValue, maximumValue);    
+    self.rangeValue = FCRangeSliderValueMake(_minimumValue, _maximumValue);
 }
 
 - (id)initWithFrame:(CGRect)frame {
@@ -107,27 +116,27 @@
 - (void)setThumbImage:(UIImage *)image forState:(UIControlState)state {
     switch (state) {
         case UIControlStateNormal:
-            minimumThumbView.image = image;
-            maximumThumbView.image = image;
+            _minimumThumbView.image = image;
+            _maximumThumbView.image = image;
             break;
         case UIControlStateHighlighted:
-            minimumThumbView.highlightedImage = image;
-            maximumThumbView.highlightedImage = image;
+            _minimumThumbView.highlightedImage = image;
+            _maximumThumbView.highlightedImage = image;
         default:
             break;
     }
 }
 
 - (void)setOutRangeTrackImage:(UIImage *)image {
-    outRangeTrackView.backgroundColor = [UIColor clearColor];
-    outRangeTrackView.layer.cornerRadius = 0;
-    outRangeTrackView.image = image;
+    _outRangeTrackView.backgroundColor = [UIColor clearColor];
+    _outRangeTrackView.layer.cornerRadius = 0;
+    _outRangeTrackView.image = image;
 }
 
 - (void)setInRangeTrackImage:(UIImage *)image {
-    inRangeTrackView.backgroundColor = [UIColor clearColor];
-    inRangeTrackView.layer.cornerRadius = 0;
-    inRangeTrackView.image = image;    
+    _inRangeTrackView.backgroundColor = [UIColor clearColor];
+    _inRangeTrackView.layer.cornerRadius = 0;
+    _inRangeTrackView.image = image;
 }
 
 #pragma mark -
@@ -135,15 +144,15 @@
 
 - (void)setMinimumValue:(CGFloat)newMinimumValue {
     CGFloat newMin = newMinimumValue;
-    if (acceptOnlyNonFractionValues) {
+    if (_acceptOnlyNonFractionValues) {
         newMin = [[self roundValueFloat:newMinimumValue] floatValue];
     }
     
-    minimumValue = newMin;
+    _minimumValue = newMin;
     [self safelySetMinMaxValues];
 
-    if (rangeValue.start < minimumValue) {
-        self.rangeValue = FCRangeSliderValueMake(minimumValue, rangeValue.end);
+    if (_rangeValue.start < _minimumValue) {
+        self.rangeValue = FCRangeSliderValueMake(_minimumValue, _rangeValue.end);
     } else {
         [self updateThumbsPositionAnimated:YES];
     }
@@ -151,18 +160,18 @@
 
 - (void)setMaximumValue:(CGFloat)newMaximumValue {
     CGFloat newMax = newMaximumValue;
-    if (acceptOnlyNonFractionValues) {
+    if (_acceptOnlyNonFractionValues) {
         newMax = [[self roundValueFloat:newMaximumValue] floatValue];
     }
     
-    maximumValue = newMax;    
+    _maximumValue = newMax;
     [self safelySetMinMaxValues];
 
-    if (rangeValue.end > maximumValue) {
-        if (rangeValue.start < maximumValue){
-            self.rangeValue = FCRangeSliderValueMake(rangeValue.start, maximumValue);
+    if (_rangeValue.end > _maximumValue) {
+        if (_rangeValue.start < _maximumValue){
+            self.rangeValue = FCRangeSliderValueMake(_rangeValue.start, _maximumValue);
         } else {
-            self.rangeValue = FCRangeSliderValueMake(minimumValue, maximumValue);
+            self.rangeValue = FCRangeSliderValueMake(_minimumValue, _maximumValue);
         }
     } else {
         [self updateThumbsPositionAnimated:YES];
@@ -170,9 +179,9 @@
 }
 
 - (void)setMinimumRangeLength:(CGFloat)newMinimumRangeLength {
-    minimumRangeLength = newMinimumRangeLength;
+    _minimumRangeLength = newMinimumRangeLength;
 
-    if (fabs(rangeValue.end - rangeValue.start) < minimumRangeLength) {
+    if (fabs(_rangeValue.end - _rangeValue.start) < _minimumRangeLength) {
         [self setRangeValue:self.rangeValue animated:YES];
     }
 }
@@ -186,31 +195,31 @@
 }
 
 - (void)setRangeValue:(FCRangeSliderValue)newRangeValue animated:(BOOL)animated {
-    CGFloat safeStart = MAX(newRangeValue.start, minimumValue);
-    CGFloat safeEnd = MIN(newRangeValue.end, maximumValue);
+    CGFloat safeStart = MAX(newRangeValue.start, _minimumValue);
+    CGFloat safeEnd = MIN(newRangeValue.end, _maximumValue);
 
-    if (acceptOnlyPositiveRanges && safeEnd < safeStart) {
+    if (_acceptOnlyPositiveRanges && safeEnd < safeStart) {
         return;
     }
     
-    if (acceptOnlyNonFractionValues) {
+    if (_acceptOnlyNonFractionValues) {
         safeStart = [[self roundValueFloat:safeStart] floatValue];
         safeEnd = [[self roundValueFloat:safeEnd] floatValue];
     }
     
     void (^adjustForMinimumRangeLength)(CGFloat *, CGFloat *) =
     ^(CGFloat *start, CGFloat *end) {
-        if (*start + minimumRangeLength < maximumValue) {
-            *end = *start + minimumRangeLength;
-        } else if (*end - minimumRangeLength > minimumValue) {
-            *start = *end - minimumRangeLength;
+        if (*start + _minimumRangeLength < _maximumValue) {
+            *end = *start + _minimumRangeLength;
+        } else if (*end - _minimumRangeLength > _minimumValue) {
+            *start = *end - _minimumRangeLength;
         } else {
-            *end = maximumValue;
-            *start = MAX(minimumValue, *end - minimumRangeLength);
+            *end = _maximumValue;
+            *start = MAX(_minimumValue, *end - _minimumRangeLength);
         }
     };
 
-    if (minimumRangeLength > fabs(safeStart-safeEnd)) {
+    if (_minimumRangeLength > fabs(safeStart-safeEnd)) {
         if (safeEnd > safeStart) {
             adjustForMinimumRangeLength(&safeStart, &safeEnd);
         } else {
@@ -218,13 +227,13 @@
         }
     }
 
-    rangeValue = FCRangeSliderValueMake(safeStart, safeEnd);
+    _rangeValue = FCRangeSliderValueMake(safeStart, safeEnd);
     
     NSInteger minInt = [[self roundValueFloat:safeStart] integerValue];
     NSInteger maxInt = [[self roundValueFloat:safeEnd] integerValue];
-    range = NSMakeRange(minInt, maxInt - minInt + 1);    
+    _range = NSMakeRange(minInt, maxInt - minInt + 1);
     
-    if (!isTracking) {
+    if (!_isTracking) {
         [self updateThumbsPositionAnimated:animated];
     }
     
@@ -239,12 +248,12 @@
 }
 
 - (void)setAcceptOnlyNonFractionValues:(BOOL)newAcceptOnlyNonFractionValues {
-    if (newAcceptOnlyNonFractionValues != acceptOnlyNonFractionValues && newAcceptOnlyNonFractionValues) {
-        [self setRange:range animated:YES];
-        self.minimumValue = [[self roundValueFloat:minimumValue] floatValue];
-        self.maximumValue = [[self roundValueFloat:maximumValue] floatValue];
+    if (newAcceptOnlyNonFractionValues != _acceptOnlyNonFractionValues && newAcceptOnlyNonFractionValues) {
+        [self setRange:_range animated:YES];
+        self.minimumValue = [[self roundValueFloat:_minimumValue] floatValue];
+        self.maximumValue = [[self roundValueFloat:_maximumValue] floatValue];
     }
-    acceptOnlyNonFractionValues = newAcceptOnlyNonFractionValues;
+    _acceptOnlyNonFractionValues = newAcceptOnlyNonFractionValues;
 }
 
 #pragma mark -
@@ -252,39 +261,39 @@
 
 -(BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
     [self safelySetMinMaxValues];
-    isTracking = YES;
+    _isTracking = YES;
     
     CGPoint touchPoint = [touch locationInView:self];
-    if (CGRectContainsPoint(minimumThumbView.frame, touchPoint)) {
-        thumbBeingDragged = minimumThumbView;
-    } else if (CGRectContainsPoint(maximumThumbView.frame, touchPoint)) {
-        thumbBeingDragged = maximumThumbView;
+    if (CGRectContainsPoint(_minimumThumbView.frame, touchPoint)) {
+        _thumbBeingDragged = _minimumThumbView;
+    } else if (CGRectContainsPoint(_maximumThumbView.frame, touchPoint)) {
+        _thumbBeingDragged = _maximumThumbView;
     } else {
         [self cancelTrackingWithEvent:event];
-        thumbBeingDragged = nil;
+        _thumbBeingDragged = nil;
         return NO;
     }
     
-    thumbBeingDragged.highlighted = YES;
+    _thumbBeingDragged.highlighted = YES;
     return YES;
 }
 
 - (BOOL)continueTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
-    if (thumbBeingDragged) {
+    if (_thumbBeingDragged) {
         CGPoint touchPoint = [touch locationInView:self];
-        UIImageView *otherThumb = (thumbBeingDragged == minimumThumbView) ? maximumThumbView : minimumThumbView;
+        UIImageView *otherThumb = (_thumbBeingDragged == _minimumThumbView) ? _maximumThumbView : _minimumThumbView;
         CGFloat otherXCenter = otherThumb.center.x;
         CGFloat xCenter = touchPoint.x;
-        CGFloat minimumRangeLengthInPixels = trackSliderWidth * minimumRangeLength / (maximumValue - minimumValue);
+        CGFloat minimumRangeLengthInPixels = _trackSliderWidth * _minimumRangeLength / (_maximumValue - _minimumValue);
         BOOL updatePosition = YES;
-        if (acceptOnlyPositiveRanges) {
-            if ((thumbBeingDragged == maximumThumbView && xCenter <= otherXCenter) ||
-                (thumbBeingDragged == minimumThumbView && xCenter >= otherXCenter)) {
+        if (_acceptOnlyPositiveRanges) {
+            if ((_thumbBeingDragged == _maximumThumbView && xCenter <= otherXCenter) ||
+                (_thumbBeingDragged == _minimumThumbView && xCenter >= otherXCenter)) {
                 updatePosition = NO;
             }
         }
         if (updatePosition && minimumRangeLengthInPixels <= fabs(xCenter - otherThumb.center.x)) {
-            thumbBeingDragged.center = CGPointMake(touchPoint.x, thumbBeingDragged.center.y);
+            _thumbBeingDragged.center = CGPointMake(touchPoint.x, _thumbBeingDragged.center.y);
             [self clipThumbToBounds];
             [self swtichThumbsPositionIfNecessary];
             [self updateInRangeTrackView];
@@ -298,15 +307,15 @@
 }
 
 -(void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
-    isTracking = NO;
+    _isTracking = NO;
 
-    if (acceptOnlyNonFractionValues) {
+    if (_acceptOnlyNonFractionValues) {
         [self setThumbsPositionToNonFractionValues];
         [self updateRangeValue];
     }
     
-    thumbBeingDragged.highlighted = NO;
-    thumbBeingDragged = nil;
+    _thumbBeingDragged.highlighted = NO;
+    _thumbBeingDragged = nil;
 //    DLog(@"selected range %f %f | %d %d", rangeValue.start, rangeValue.end, range.location, range.length);
 }
 
@@ -314,63 +323,63 @@
 #pragma mark Private methods
 
 - (void)clipThumbToBounds {
-    if (thumbBeingDragged.frame.origin.x < 0) {
-        thumbBeingDragged.frame = CGRectSetPositionX(thumbBeingDragged.frame, 0);
-    } else if (thumbBeingDragged.frame.origin.x + thumbBeingDragged.bounds.size.width > self.bounds.size.width) {
-        thumbBeingDragged.frame = CGRectSetPositionX(thumbBeingDragged.frame, self.bounds.size.width - thumbBeingDragged.bounds.size.width);
+    if (_thumbBeingDragged.frame.origin.x < 0) {
+        _thumbBeingDragged.frame = CGRectSetPositionX(_thumbBeingDragged.frame, 0);
+    } else if (_thumbBeingDragged.frame.origin.x + _thumbBeingDragged.bounds.size.width > self.bounds.size.width) {
+        _thumbBeingDragged.frame = CGRectSetPositionX(_thumbBeingDragged.frame, self.bounds.size.width - _thumbBeingDragged.bounds.size.width);
     }    
 }
 
 - (void)swtichThumbsPositionIfNecessary {
-    if (thumbBeingDragged == minimumThumbView && thumbBeingDragged.frame.origin.x >= CGRectEndValue(maximumThumbView.frame)) {
-        minimumThumbView = maximumThumbView;
-        maximumThumbView = thumbBeingDragged;
-    } else if (thumbBeingDragged == maximumThumbView && CGRectEndValue(thumbBeingDragged.frame) <= minimumThumbView.frame.origin.x) {
-        maximumThumbView = minimumThumbView;
-        minimumThumbView = thumbBeingDragged;
+    if (_thumbBeingDragged == _minimumThumbView && _thumbBeingDragged.frame.origin.x >= CGRectEndValue(_maximumThumbView.frame)) {
+        _minimumThumbView = _maximumThumbView;
+        _maximumThumbView = _thumbBeingDragged;
+    } else if (_thumbBeingDragged == _maximumThumbView && CGRectEndValue(_thumbBeingDragged.frame) <= _minimumThumbView.frame.origin.x) {
+        _maximumThumbView = _minimumThumbView;
+        _minimumThumbView = _thumbBeingDragged;
     }
 }
 
 - (void)updateInRangeTrackView {
-    CGFloat newX = minimumThumbView.center.x;
-    CGFloat newWidth = maximumThumbView.frame.origin.x + (maximumThumbView.bounds.size.width / 2) - newX;
-    inRangeTrackView.frame = CGRectMake(newX, inRangeTrackView.frame.origin.y, newWidth, inRangeTrackView.bounds.size.height);
+    CGFloat newX = _minimumThumbView.center.x;
+    CGFloat newWidth = _maximumThumbView.frame.origin.x + (_maximumThumbView.bounds.size.width / 2) - newX;
+    _inRangeTrackView.frame = CGRectMake(newX, _inRangeTrackView.frame.origin.y, newWidth, _inRangeTrackView.bounds.size.height);
 }
 
 - (void)updateRangeValue {
-    CGFloat valueSpan = maximumValue - minimumValue;
-    CGPoint minPointInTrack = [self convertPoint:minimumThumbView.center toView:outRangeTrackView];
-    CGFloat min = minimumValue + minPointInTrack.x / trackSliderWidth * valueSpan;
-    CGPoint maxPointInTrack = [self convertPoint:maximumThumbView.center toView:outRangeTrackView];
-    CGFloat max = minimumValue + maxPointInTrack.x /trackSliderWidth * valueSpan;
+    CGFloat valueSpan = _maximumValue - _minimumValue;
+    CGPoint minPointInTrack = [self convertPoint:_minimumThumbView.center toView:_outRangeTrackView];
+    CGFloat min = _minimumValue + minPointInTrack.x / _trackSliderWidth * valueSpan;
+    CGPoint maxPointInTrack = [self convertPoint:_maximumThumbView.center toView:_outRangeTrackView];
+    CGFloat max = _minimumValue + maxPointInTrack.x / _trackSliderWidth * valueSpan;
     
     self.rangeValue = FCRangeSliderValueMake(min, max);
 }
 
 - (void)setThumbsPositionToNonFractionValues {
-    [self setRange:range animated:YES];
+    [self setRange:_range animated:YES];
 }
 
 - (void)updateThumbsPositionAnimated:(BOOL)animated {
-    CGFloat valueSpan = maximumValue - minimumValue;
-    CGFloat currentMinValue = rangeValue.start - minimumValue;
-    CGFloat currentMaxValue = rangeValue.end - minimumValue;
+    CGFloat valueSpan = _maximumValue - _minimumValue;
+    CGFloat currentMinValue = _rangeValue.start - _minimumValue;
+    CGFloat currentMaxValue = _rangeValue.end - _minimumValue;
     
-    CGFloat minPointXInTrack = trackSliderWidth / valueSpan * currentMinValue;
-    CGPoint minCenter = [self convertPoint:CGPointMake(minPointXInTrack, 0) fromView:outRangeTrackView];
+    CGFloat minPointXInTrack = _trackSliderWidth / valueSpan * currentMinValue;
+    CGPoint minCenter = [self convertPoint:CGPointMake(minPointXInTrack, 0) fromView:_outRangeTrackView];
     
-    CGFloat maxPoinXtInTrack = trackSliderWidth / valueSpan * currentMaxValue;
-    CGPoint maxCenter = [self convertPoint:CGPointMake(maxPoinXtInTrack, 0) fromView:outRangeTrackView];
+    CGFloat maxPoinXtInTrack = _trackSliderWidth / valueSpan * currentMaxValue;
+    CGPoint maxCenter = [self convertPoint:CGPointMake(maxPoinXtInTrack, 0) fromView:_outRangeTrackView];
 
     void (^move)(void) = ^{
-        minimumThumbView.center = CGPointMake(minCenter.x, minimumThumbView.center.y);
-        maximumThumbView.center = CGPointMake(maxCenter.x, maximumThumbView.center.y);
+        _minimumThumbView.center = CGPointMake(minCenter.x, _minimumThumbView.center.y);
+        _maximumThumbView.center = CGPointMake(maxCenter.x, _maximumThumbView.center.y);
         [self updateInRangeTrackView];
     };
     
     void (^adjustRect)(BOOL) = ^(BOOL finished) {
-        minimumThumbView.frame = CGRectIntegral(minimumThumbView.frame);
-        maximumThumbView.frame = CGRectIntegral(maximumThumbView.frame);
+        _minimumThumbView.frame = CGRectIntegral(_minimumThumbView.frame);
+        _maximumThumbView.frame = CGRectIntegral(_maximumThumbView.frame);
     };
     
     if (animated) {
@@ -382,20 +391,19 @@
 }
 
 - (NSNumber *)roundValueFloat:(CGFloat)value {
-    return [roundFormatter numberFromString:[roundFormatter stringFromNumber:[NSNumber numberWithFloat:value]]];
+    return [_roundFormatter numberFromString:[_roundFormatter stringFromNumber:[NSNumber numberWithFloat:value]]];
 }
 
 - (void) safelySetMinMaxValues {
-    if (minimumValue > maximumValue) {
-        CGFloat switchValues = minimumValue;
-        minimumValue = maximumValue;
-        maximumValue = switchValues;
-    } else if (maximumValue < minimumValue) {
-        CGFloat switchValues = maximumValue;
-        maximumValue = minimumValue;
-        minimumValue = switchValues;
+    if (_minimumValue > _maximumValue) {
+        CGFloat switchValues = _minimumValue;
+        _minimumValue = _maximumValue;
+        _maximumValue = switchValues;
+    } else if (_maximumValue < _minimumValue) {
+        CGFloat switchValues = _maximumValue;
+        _maximumValue = _minimumValue;
+        _minimumValue = switchValues;
     }
-    
 }
 
 @end

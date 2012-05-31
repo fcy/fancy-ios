@@ -31,9 +31,18 @@
 		5501F1B61576A20600303930 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F18715769FDA00303930 /* CoreGraphics.framework */; };
 		5501F1B71576A20C00303930 /* libFancyUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F1901576A0B700303930 /* libFancyUI.a */; };
 		5501F1B81576A28100303930 /* FCRangeSliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5501F17F15769B5A00303930 /* FCRangeSliderTests.m */; };
+		55A825F21576B06B00112270 /* FCThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A825F21576B06B0011226F /* FCThumbView.m */; };
+		55A825F21576B06B00112272 /* FCThumbView.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A825F21576B06B00112271 /* FCThumbView.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		551F42951577F9F200014BF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 551F428D1577F9F200014BF1 /* RangeSliderExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 55A825A81576A5230011226E;
+			remoteInfo = RangeSliderExample;
+		};
 		55A825F11576B06B0011226E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5501F12F157680A200303930 /* Project object */;
@@ -63,6 +72,9 @@
 		5501F18715769FDA00303930 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5501F1901576A0B700303930 /* libFancyUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFancyUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5501F1A51576A17100303930 /* FancyUITests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FancyUITests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		551F428D1577F9F200014BF1 /* RangeSliderExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RangeSliderExample.xcodeproj; path = demos/RangeSliderExample/RangeSliderExample.xcodeproj; sourceTree = "<group>"; };
+		55A825F21576B06B0011226F /* FCThumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCThumbView.m; sourceTree = "<group>"; };
+		55A825F21576B06B00112271 /* FCThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCThumbView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +129,7 @@
 		5501F12D157680A200303930 = {
 			isa = PBXGroup;
 			children = (
+				551F428B1577F9E200014BF1 /* demos */,
 				5501F14F157698D300303930 /* src */,
 				5501F17A15769B5A00303930 /* tests */,
 				5501F142157697F800303930 /* Frameworks */,
@@ -196,6 +209,8 @@
 		5501F15B157698D300303930 /* range-slider */ = {
 			isa = PBXGroup;
 			children = (
+				55A825F21576B06B00112271 /* FCThumbView.h */,
+				55A825F21576B06B0011226F /* FCThumbView.m */,
 				5501F15C157698D300303930 /* FCRangeSlider.h */,
 				5501F15D157698D300303930 /* FCRangeSlider.m */,
 			);
@@ -235,6 +250,22 @@
 			path = "range-slider";
 			sourceTree = "<group>";
 		};
+		551F428B1577F9E200014BF1 /* demos */ = {
+			isa = PBXGroup;
+			children = (
+				551F428D1577F9F200014BF1 /* RangeSliderExample.xcodeproj */,
+			);
+			name = demos;
+			sourceTree = "<group>";
+		};
+		551F428E1577F9F200014BF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				551F42961577F9F200014BF1 /* RangeSliderExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -252,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5501F19C1576A0F300303930 /* FCRangeSlider.h in Headers */,
+				55A825F21576B06B00112272 /* FCThumbView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +379,12 @@
 			mainGroup = 5501F12D157680A200303930;
 			productRefGroup = 5501F141157697F800303930 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 551F428E1577F9F200014BF1 /* Products */;
+					ProjectRef = 551F428D1577F9F200014BF1 /* RangeSliderExample.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5501F13F157697F800303930 /* FancyCore */,
@@ -356,6 +394,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		551F42961577F9F200014BF1 /* RangeSliderExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = RangeSliderExample.app;
+			remoteRef = 551F42951577F9F200014BF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5501F16515769B2F00303930 /* Resources */ = {
@@ -425,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5501F19B1576A0F000303930 /* FCRangeSlider.m in Sources */,
+				55A825F21576B06B00112270 /* FCThumbView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

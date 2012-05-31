@@ -96,7 +96,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [slider setThumbImage:[UIImage imageNamed:@"slider_thumb_highlighted"] forState:UIControlStateHighlighted];
     [self sliderValueChanged:slider];
 }
 

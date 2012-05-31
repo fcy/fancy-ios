@@ -18,3 +18,5 @@ build/*
 xcuserdata
 profile
 *.moved-aside
+.idea/workspace.xml
+.idea/.name

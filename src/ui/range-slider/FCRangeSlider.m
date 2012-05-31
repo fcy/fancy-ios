@@ -13,8 +13,10 @@
 //    limitations under the License.
 
 #import <QuartzCore/QuartzCore.h>
+#import <CoreGraphics/CoreGraphics.h>
 #import "FCRangeSlider.h"
 #import "FCGeometry.h"
+#import "FCThumbView.h"
 
 #define FIXED_HEIGHT 30.0f
 
@@ -32,9 +34,9 @@
 @implementation FCRangeSlider {
     UIImageView *_outRangeTrackView;
     UIImageView *_inRangeTrackView;
-    UIImageView *_minimumThumbView;
-    UIImageView *_maximumThumbView;
-    UIImageView *_thumbBeingDragged;
+    FCThumbView *_minimumThumbView;
+    FCThumbView *_maximumThumbView;
+    FCThumbView *_thumbBeingDragged;
     CGFloat _trackSliderWidth;
     NSNumberFormatter *_roundFormatter;
     BOOL _isTracking;
@@ -56,9 +58,8 @@
     _minimumRangeLength = 0.0f;
     self.clipsToBounds = YES;
     
-    UIImage *thumbImage = [UIImage imageNamed:@"slider_thumb"];
-    CGFloat thumbCenter = thumbImage.size.width / 2;
-    _trackSliderWidth = self.frame.size.width - thumbImage.size.width;
+    CGFloat thumbCenter = [FCThumbView size].width / 2;
+    _trackSliderWidth = self.frame.size.width - [FCThumbView size].width;
     
     _outRangeTrackView = [[UIImageView alloc] initWithFrame:CGRectMake(thumbCenter, 10, _trackSliderWidth, 10)];
     _outRangeTrackView.contentMode = UIViewContentModeScaleToFill;
@@ -71,14 +72,14 @@
     _inRangeTrackView.backgroundColor = [UIColor blueColor];
     _inRangeTrackView.layer.cornerRadius = 5;
     [self addSubview:_inRangeTrackView];
-    
-    _minimumThumbView = [[UIImageView alloc] initWithImage:thumbImage];
-    _minimumThumbView.frame = CGRectSetHeight(_minimumThumbView.frame, self.frame.size.height);
-    _minimumThumbView.contentMode = UIViewContentModeCenter;
+
+    CGFloat thumbYPosition = (FIXED_HEIGHT / 2) - ([FCThumbView size].height / 2);
+    _minimumThumbView = [[FCThumbView alloc] init];
+    _minimumThumbView.frame = CGRectOffset(_minimumThumbView.frame, 0, thumbYPosition);
     [self addSubview:_minimumThumbView];
     
-    _maximumThumbView = [[UIImageView alloc] initWithImage:thumbImage];
-    _maximumThumbView.frame = CGRectSetPosition(_minimumThumbView.frame, self.frame.size.width - thumbImage.size.width, 0);
+    _maximumThumbView = [[FCThumbView alloc] init];
+    _maximumThumbView.frame = CGRectSetPosition(_minimumThumbView.frame, self.frame.size.width - [FCThumbView size].width, thumbYPosition);
     _maximumThumbView.frame = CGRectSetHeight(_maximumThumbView.frame, self.frame.size.height);
     _maximumThumbView.contentMode = UIViewContentModeCenter;
     [self addSubview:_maximumThumbView];
@@ -260,7 +261,7 @@
 #pragma mark Drag handling
 
 -(BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
-    [self safelySetMinMaxValues];
+     [self safelySetMinMaxValues];
     _isTracking = YES;
     
     CGPoint touchPoint = [touch locationInView:self];
@@ -281,7 +282,7 @@
 - (BOOL)continueTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
     if (_thumbBeingDragged) {
         CGPoint touchPoint = [touch locationInView:self];
-        UIImageView *otherThumb = (_thumbBeingDragged == _minimumThumbView) ? _maximumThumbView : _minimumThumbView;
+        FCThumbView *otherThumb = (_thumbBeingDragged == _minimumThumbView) ? _maximumThumbView : _minimumThumbView;
         CGFloat otherXCenter = otherThumb.center.x;
         CGFloat xCenter = touchPoint.x;
         CGFloat minimumRangeLengthInPixels = _trackSliderWidth * _minimumRangeLength / (_maximumValue - _minimumValue);

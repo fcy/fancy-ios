@@ -35,6 +35,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -80,46 +81,63 @@ $(document).ready(function(){initNavTree('_f_c_geometry_8h.html','');});
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &lt;Foundation/NSObjCRuntime.h&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="_f_c_geometry_8h.html#a6e5a2e883ef64786b54d758062c0f120">   35</a></span>&#160;NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#a6e5a2e883ef64786b54d758062c0f120" title="Changes the size of a CGRect by adding or subtracting width and height.">CGRectChangeSize</a>(CGRect rect, CGFloat deltaWidth, CGFloat deltaHeight) {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    CGFloat width = rect.size.width + deltaWidth;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    CGFloat height = rect.size.height + deltaHeight;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> CGRectMake(rect.origin.x, rect.origin.y, width, height);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="_f_c_geometry_8h.html#a1b18e704b06dc42bedf82c50c2dd9832">   47</a></span>&#160;NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#a1b18e704b06dc42bedf82c50c2dd9832" title="Set a new height to a CGRect.">CGRectSetHeight</a>(CGRect rect, CGFloat height) {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, height);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="_f_c_geometry_8h.html#ad44c852eaeb914c5abc8942a7a2ed11b">   57</a></span>&#160;NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#ad44c852eaeb914c5abc8942a7a2ed11b" title="Set a new width to a CGRect.">CGRectSetWidth</a>(CGRect rect, CGFloat width) {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> CGRectMake(rect.origin.x, rect.origin.y, width, rect.size.height);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="_f_c_geometry_8h.html#aae67f6479082f82428e4bcbe50f9c286">   68</a></span>&#160;NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#aae67f6479082f82428e4bcbe50f9c286" title="Changes the size of a CGRect to the width and height.">CGRectSetSize</a>(CGRect rect, CGFloat width, CGFloat height) {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> CGRectMake(rect.origin.x, rect.origin.y, width, height);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="code" href="_f_c_geometry_8h.html#a4bfa6a5f185a0807b94aa889f392fc1c">   82</a></span>&#160;NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#a4bfa6a5f185a0807b94aa889f392fc1c" title="Set a new CGPoint as origin of a CGRect.">CGRectSetPosition</a>(CGRect rect, CGFloat x, CGFloat y) {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> CGRectMake(x, y, rect.size.width, rect.size.height);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="code" href="_f_c_geometry_8h.html#a65a15c4431be5534237412dcf905b101">   92</a></span>&#160;NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#a65a15c4431be5534237412dcf905b101" title="Set a new origin.x to a CGRect.">CGRectSetPositionX</a>(CGRect rect, CGFloat x) {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> CGRectMake(x, rect.origin.y, rect.size.width, rect.size.height);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno"><a class="code" href="_f_c_geometry_8h.html#aa7e115b8b0488c137ee9028febb0ed84">  102</a></span>&#160;NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#aa7e115b8b0488c137ee9028febb0ed84" title="Set a new origin.y to a CGRect.">CGRectSetPositionY</a>(CGRect rect, CGFloat y) {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">return</span> CGRectMake(rect.origin.x, y, rect.size.width, rect.size.height);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="code" href="_f_c_geometry_8h.html#a614b8d387996dd2dc4aedbd7dc0a600b">  109</a></span>&#160;NS_INLINE CGFloat <a class="code" href="_f_c_geometry_8h.html#a614b8d387996dd2dc4aedbd7dc0a600b">CGRectEndValue</a>(CGRect rect) {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> rect.origin.x + rect.size.width;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;CGRect <a class="code" href="_f_c_geometry_8h.html#afa45b27ff9df19dd1890e4b04ce35eca" title="Changes the size of a CGRect by adding or subtracting width and height.">FCCGRectAdjustSizeBy</a>(CGRect rect, CGFloat deltaWidth, CGFloat deltaHeight);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="_f_c_geometry_8h.html#a0f2b5ebf5b3a7d80a39b457f175f450c">   43</a></span>&#160;NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#a0f2b5ebf5b3a7d80a39b457f175f450c" title="Set a new height to a CGRect.">FCCGRectSetHeight</a>(CGRect rect, CGFloat height) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span> CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, height);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="_f_c_geometry_8h.html#a09cc52ec7d39a3e63c761e763d183922">   53</a></span>&#160;NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#a09cc52ec7d39a3e63c761e763d183922" title="Set a new width to a CGRect.">FCCGRectSetWidth</a>(CGRect rect, CGFloat width) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> CGRectMake(rect.origin.x, rect.origin.y, width, rect.size.height);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="_f_c_geometry_8h.html#a425912f9cc105baa83f66c7e4fa358f1">   63</a></span>&#160;NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#a425912f9cc105baa83f66c7e4fa358f1" title="Changes the size of a CGRect to the width and height of CGSize.">FCCGRectSetSize</a>(CGRect rect, CGSize size) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> CGRectMake(rect.origin.x, rect.origin.y, size.width, size.height);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="_f_c_geometry_8h.html#a17c6b0941a17fb95c6054646d4f03f5d">   74</a></span>&#160;NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#a17c6b0941a17fb95c6054646d4f03f5d" title="Changes the size of a CGRect to the width and height.">FCCGRectSetSizeMake</a>(CGRect rect, CGFloat width, CGFloat height) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> CGRectMake(rect.origin.x, rect.origin.y, width, height);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="code" href="_f_c_geometry_8h.html#a436f16b742302d50119b00ae1a933e0c">   88</a></span>&#160;NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#a436f16b742302d50119b00ae1a933e0c" title="Set a new CGPoint as origin of a CGRect.">FCCGRectSetPosition</a>(CGRect rect, CGFloat x, CGFloat y) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">return</span> CGRectMake(x, y, rect.size.width, rect.size.height);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="code" href="_f_c_geometry_8h.html#aa4097cc0e3193913dca0915fe8a92149">   98</a></span>&#160;NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#aa4097cc0e3193913dca0915fe8a92149" title="Set a new origin.x to a CGRect.">FCCGRectSetPositionX</a>(CGRect rect, CGFloat x) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> CGRectMake(x, rect.origin.y, rect.size.width, rect.size.height);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="_f_c_geometry_8h.html#adcecc0cedb5ab559411504456d979850">  108</a></span>&#160;NS_INLINE CGRect <a class="code" href="_f_c_geometry_8h.html#adcecc0cedb5ab559411504456d979850" title="Set a new origin.y to a CGRect.">FCCGRectSetPositionY</a>(CGRect rect, CGFloat y) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">return</span> CGRectMake(rect.origin.x, y, rect.size.width, rect.size.height);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="code" href="_f_c_geometry_8h.html#a3e4033b6ec67b036ffc1a1880b2a50ad">  119</a></span>&#160;NS_INLINE CGFloat <a class="code" href="_f_c_geometry_8h.html#a3e4033b6ec67b036ffc1a1880b2a50ad" title="Returns the last horizontal point of a rect.">FCCGRectHorizontalEndValue</a>(CGRect rect) {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span> rect.origin.x + rect.size.width;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;CGRect <a class="code" href="_f_c_geometry_8h.html#a23d87463315d1cbca7edcc2ec50ad497" title="Set a new height to a CGRect.">CGRectSetHeight</a>(CGRect rect, CGFloat height) DEPRECATED_ATTRIBUTE;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;CGRect <a class="code" href="_f_c_geometry_8h.html#a741250b37f1f0c0725810e52b58d8025" title="Set a new width to a CGRect.">CGRectSetWidth</a>(CGRect rect, CGFloat width) DEPRECATED_ATTRIBUTE;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;CGRect <a class="code" href="_f_c_geometry_8h.html#aa23fdcad145769116ad9cd93642c2492" title="Changes the size of a CGRect to the width and height.">CGRectSetSize</a>(CGRect rect, CGFloat width, CGFloat height) DEPRECATED_ATTRIBUTE;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;CGRect <a class="code" href="_f_c_geometry_8h.html#ac8adf84460f60a97a83f0a719177f3ef" title="Set a new CGPoint as origin of a CGRect.">CGRectSetPosition</a>(CGRect rect, CGFloat x, CGFloat y) DEPRECATED_ATTRIBUTE;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;CGRect <a class="code" href="_f_c_geometry_8h.html#a477734c0ace2e95b5ff24ccc96d8ad87" title="Set a new origin.x to a CGRect.">CGRectSetPositionX</a>(CGRect rect, CGFloat x) DEPRECATED_ATTRIBUTE;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;CGRect <a class="code" href="_f_c_geometry_8h.html#a4ce1ac0e5115658fa3f8d362d8f39ebf" title="Set a new origin.y to a CGRect.">CGRectSetPositionY</a>(CGRect rect, CGFloat y) DEPRECATED_ATTRIBUTE;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;CGRect <a class="code" href="_f_c_geometry_8h.html#a523edf80f15b411b7bcad7d8f89fad21" title="Changes the size of a CGRect by adding or subtracting width and height.">CGRectChangeSize</a>(CGRect rect, CGFloat deltaWidth, CGFloat deltaHeight) DEPRECATED_ATTRIBUTE;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;CGFloat <a class="code" href="_f_c_geometry_8h.html#ab9359772bda844f216714be68600df45">CGRectEndValue</a>(CGRect rect) DEPRECATED_ATTRIBUTE;</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li><li class="navelem"><a class="el" href="_f_c_geometry_8h.html">FCGeometry.h</a></li>
-    <li class="footer">Generated on Thu May 31 2012 19:17:24 for Fancy iOS by
+    <li class="footer">Generated on Fri Jun 1 2012 12:23:46 for Fancy iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1 </li>
   </ul>

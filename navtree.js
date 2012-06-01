@@ -1,6 +1,7 @@
 var NAVTREE =
 [
   [ "Fancy iOS", "index.html", [
+    [ "Deprecated List", "deprecated.html", null ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],

@@ -112,12 +112,10 @@
 }
 
 - (void)testSetMaximumValueToLowerThanRangeStartSelectsTheWholeNewRange {
-    CGFloat expectedRangeEnd = 20.0f;
-    
     rangeSlider.minimumValue = 0.0f;
     rangeSlider.maximumValue = 100.0f;
     rangeSlider.rangeValue = FCRangeSliderValueMake(80.0f, 100.0f);
-    rangeSlider.maximumValue = expectedRangeEnd;
+    rangeSlider.maximumValue = 20.0f;
     
     STAssertEqualsWithAccuracy([rangeSlider minimumValue], [rangeSlider rangeValue].start, 0.001, @"rangeValue.start should be equals to minimumValue");
     STAssertEqualsWithAccuracy([rangeSlider maximumValue], [rangeSlider rangeValue].end, 0.001, @"rangeValue.end should be equals to minimumValue");

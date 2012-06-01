@@ -79,8 +79,8 @@
     [self addSubview:_minimumThumbView];
     
     _maximumThumbView = [[FCThumbView alloc] init];
-    _maximumThumbView.frame = CGRectSetPosition(_minimumThumbView.frame, self.frame.size.width - [FCThumbView size].width, thumbYPosition);
-    _maximumThumbView.frame = CGRectSetHeight(_maximumThumbView.frame, self.frame.size.height);
+    _maximumThumbView.frame = FCCGRectSetPosition(_minimumThumbView.frame, self.frame.size.width - [FCThumbView size].width, thumbYPosition);
+    _maximumThumbView.frame = FCCGRectSetHeight(_maximumThumbView.frame, self.frame.size.height);
     _maximumThumbView.contentMode = UIViewContentModeCenter;
     [self addSubview:_maximumThumbView];
     
@@ -102,7 +102,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.frame = CGRectSetHeight(self.frame, FIXED_HEIGHT);
+        self.frame = FCCGRectSetHeight(self.frame, FIXED_HEIGHT);
         [self initialize];
         self.backgroundColor = [UIColor clearColor];
     }
@@ -111,7 +111,7 @@
 
 
 - (void)setFrame:(CGRect)newFrame {
-    [super setFrame:CGRectSetHeight(newFrame, FIXED_HEIGHT)];
+    [super setFrame:FCCGRectSetHeight(newFrame, FIXED_HEIGHT)];
 }
 
 - (void)setThumbImage:(UIImage *)image forState:(UIControlState)state {
@@ -325,17 +325,17 @@
 
 - (void)clipThumbToBounds {
     if (_thumbBeingDragged.frame.origin.x < 0) {
-        _thumbBeingDragged.frame = CGRectSetPositionX(_thumbBeingDragged.frame, 0);
+        _thumbBeingDragged.frame = FCCGRectSetPositionX(_thumbBeingDragged.frame, 0);
     } else if (_thumbBeingDragged.frame.origin.x + _thumbBeingDragged.bounds.size.width > self.bounds.size.width) {
-        _thumbBeingDragged.frame = CGRectSetPositionX(_thumbBeingDragged.frame, self.bounds.size.width - _thumbBeingDragged.bounds.size.width);
+        _thumbBeingDragged.frame = FCCGRectSetPositionX(_thumbBeingDragged.frame, self.bounds.size.width - _thumbBeingDragged.bounds.size.width);
     }    
 }
 
 - (void)swtichThumbsPositionIfNecessary {
-    if (_thumbBeingDragged == _minimumThumbView && _thumbBeingDragged.frame.origin.x >= CGRectEndValue(_maximumThumbView.frame)) {
+    if (_thumbBeingDragged == _minimumThumbView && _thumbBeingDragged.frame.origin.x >= FCCGRectHorizontalEndValue(_maximumThumbView.frame)) {
         _minimumThumbView = _maximumThumbView;
         _maximumThumbView = _thumbBeingDragged;
-    } else if (_thumbBeingDragged == _maximumThumbView && CGRectEndValue(_thumbBeingDragged.frame) <= _minimumThumbView.frame.origin.x) {
+    } else if (_thumbBeingDragged == _maximumThumbView && FCCGRectHorizontalEndValue(_thumbBeingDragged.frame) <= _minimumThumbView.frame.origin.x) {
         _maximumThumbView = _minimumThumbView;
         _minimumThumbView = _thumbBeingDragged;
     }

@@ -35,7 +35,7 @@
 
 
 - (id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:CGRectSetSize(frame, THUMB_WIDTH, THUMB_HEIGHT)];
+    self = [super initWithFrame:FCCGRectSetSize(frame, [FCThumbView size])];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
         self.userInteractionEnabled = NO;
@@ -52,7 +52,7 @@
 }
 
 - (void)setFrame:(CGRect)newFrame {
-    [super setFrame:CGRectSetSize(newFrame, THUMB_WIDTH, THUMB_HEIGHT)];
+    [super setFrame:FCCGRectSetSize(newFrame, [FCThumbView size])];
 }
 
 - (UIImage *)image {

@@ -17,8 +17,8 @@ The list of dependencies is listed as comments in the header files.
 Requirements
 ------------
 
-- Xcode: 4.0
-- Minumum iOS version: 4.0
+- Minumum iOS version: 5.0
+- ARC
 - See the Xcode project to see the list of frameworks used. As of this moment there's no external frameworks or libraries in the project.
 
 

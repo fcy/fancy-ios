@@ -52,6 +52,9 @@ CGFloat CGRectEndValue(CGRect rect) {
     return FCCGRectHorizontalEndValue(rect);
 }
 
+CGPoint FCCenterPointOfRect(CGRect rect) {
+    return CGPointMake(rect.size.width / 2, rect.size.height / 2);
+}
 
 
 

@@ -87,4 +87,11 @@
     STAssertEqualsWithAccuracy(105.0f, FCCGRectHorizontalEndValue(base), 0.01f, @"End value = sum x + width");
 }
 
+- (void)testGettingTheCenterPointOfARect {
+    CGRect rect = CGRectMake(2, 2, 20, 10);
+    CGPoint expectedCenter = CGPointMake(10, 5);
+    CGPoint center = FCCenterPointOfRect(rect);
+    STAssertTrue(CGPointEqualToPoint(expectedCenter, center), @"The center of rect %@ should be %@, not %@", NSStringFromCGRect(rect), NSStringFromCGPoint(expectedCenter), NSStringFromCGPoint(center));
+}
+
 @end

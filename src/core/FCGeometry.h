@@ -121,6 +121,13 @@ NS_INLINE CGFloat FCCGRectHorizontalEndValue(CGRect rect) {
 }
 
 /**
+ * @brief Returns the center point of a CGRect
+ *
+ * @param rect The rect that you want the center point
+ */
+CGPoint FCCenterPointOfRect(CGRect rect);
+
+/**
  * @brief Set a new height to a CGRect
  *
  * @deprecated Use FCCGRectSetHeight instead.

@@ -8,6 +8,12 @@
 
 #import "FCDevice.h"
 
+BOOL FCDeviceScreenResolutionIsRetina(FCDeviceScreenResolution resolution) {
+    return resolution == FCDeviceScreenResolutionPhoneRetina ||
+            resolution == FCDeviceScreenResolutionPhoneRetina4 ||
+            resolution == FCDeviceScreenResolutionPadRetina;
+}
+
 static id sharedInstance = nil;
 
 #define CAN_MAKE_PHONE_CALLS_KEY @"phoneCall"
@@ -54,5 +60,24 @@ static id sharedInstance = nil;
     }
     return [canMake boolValue];
 }
+
+- (FCDeviceScreenResolution)currentResolution {
+    FCDeviceScreenResolution current = FCDeviceScreenResolutionUnknow;
+    BOOL isRetina = [[UIScreen mainScreen] scale] == 2.0f;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        current = FCDeviceScreenResolutionPhoneStandard;
+        if (isRetina) {
+            current = FCDeviceScreenResolutionPhoneRetina;
+            if ([[UIScreen mainScreen] bounds].size.height == 568.0f) {
+                current = FCDeviceScreenResolutionPhoneRetina4;
+            }
+        }
+    } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        current = isRetina ? FCDeviceScreenResolutionPadRetina : FCDeviceScreenResolutionPadStandard;
+    }
+    
+    return current;
+}
+
 
 @end

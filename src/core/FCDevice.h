@@ -22,6 +22,21 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger , FCDeviceScreenResolution) {
+    FCDeviceScreenResolutionUnknow = -1,
+    FCDeviceScreenResolutionPhoneStandard = 1, // iPhone < 4 standard resolution
+    FCDeviceScreenResolutionPhoneRetina,       // iPhone 4 and 4S retina resolution
+    FCDeviceScreenResolutionPhoneRetina4,      // iPhone 5 retina 4 inch resolution
+    FCDeviceScreenResolutionPadStandard,       // iPad 1 and 2 standard resolution
+    FCDeviceScreenResolutionPadRetina,         // iPad 3 retina resolution
+};
+
+/**
+ * @brief Returns true if the device has a retina display
+ */
+BOOL FCDeviceScreenResolutionIsRetina(FCDeviceScreenResolution resolution);
+
+
 /**
  * @brief Class with helper methods to get information about the device
  *
@@ -47,5 +62,7 @@
  * and caches the result.
  */
 - (BOOL)canMakePhoneCalls;
+
+- (FCDeviceScreenResolution)currentResolution;
 
 @end

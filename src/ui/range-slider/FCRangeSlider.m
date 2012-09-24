@@ -24,7 +24,7 @@
 
 - (void)clipThumbToBounds;
 - (void)updateInRangeTrackView;
-- (void)swtichThumbsPositionIfNecessary;
+- (void)switchThumbsPositionIfNecessary;
 - (void)updateRangeValue;
 - (void)setThumbsPositionToNonFractionValues;
 - (NSNumber *)roundValueFloat:(CGFloat)value;
@@ -42,6 +42,9 @@
     CGFloat _trackSliderWidth;
     NSNumberFormatter *_roundFormatter;
     BOOL _isTracking;
+    CGFloat _endPointMin;
+    CGFloat _endPointMax;
+    CGFloat _intrinsicProportion;
 }
 
 @synthesize minimumValue = _minimumValue;
@@ -91,6 +94,7 @@
     [_roundFormatter setMaximumFractionDigits:0];
     [_roundFormatter setRoundingMode:NSNumberFormatterRoundHalfEven];
 
+    [self updateIntrinsicProportion];
     self.rangeValue = FCRangeSliderValueMake(_minimumValue, _maximumValue);
 }
 
@@ -119,6 +123,7 @@
 
 - (void)setFrame:(CGRect)newFrame {
     [super setFrame:FCCGRectSetHeight(newFrame, FIXED_HEIGHT)];
+    [self updateIntrinsicProportion];
 }
 
 - (void)setThumbImage:(UIImage *)image forState:(UIControlState)state {
@@ -147,12 +152,14 @@
 - (void)setMinimumValue:(CGFloat)newMinimumValue {
     _minimumValue = _acceptOnlyNonFractionValues ? [[self roundValueFloat:newMinimumValue] floatValue] : newMinimumValue;
     [self safelySetMinMaxValues];
+    [self updateIntrinsicProportion];
     [self constrainRangeValueToMinMaxValues];
 }
 
 - (void)setMaximumValue:(CGFloat)newMaximumValue {
     _maximumValue = _acceptOnlyNonFractionValues ? [[self roundValueFloat:newMaximumValue] floatValue] : newMaximumValue;
     [self safelySetMinMaxValues];
+    [self updateIntrinsicProportion];
     [self constrainRangeValueToMinMaxValues];
 }
 
@@ -283,7 +290,7 @@
         if (updatePosition && minimumRangeLengthInPixels <= fabs(xCenter - otherThumb.center.x)) {
             _thumbBeingDragged.center = CGPointMake(touchPoint.x, _thumbBeingDragged.center.y);
             [self clipThumbToBounds];
-            [self swtichThumbsPositionIfNecessary];
+            [self switchThumbsPositionIfNecessary];
             [self updateInRangeTrackView];
 
             [self updateRangeValue];
@@ -304,21 +311,22 @@
 
     _thumbBeingDragged.highlighted = NO;
     _thumbBeingDragged = nil;
-//    DLog(@"selected range %f %f | %d %d", rangeValue.start, rangeValue.end, range.location, range.length);
 }
 
 #pragma mark -
 #pragma mark Private methods
 
 - (void)clipThumbToBounds {
-    if (_thumbBeingDragged.frame.origin.x < 0) {
-        _thumbBeingDragged.frame = FCCGRectSetPositionX(_thumbBeingDragged.frame, 0);
-    } else if (_thumbBeingDragged.frame.origin.x + _thumbBeingDragged.bounds.size.width > self.bounds.size.width) {
-        _thumbBeingDragged.frame = FCCGRectSetPositionX(_thumbBeingDragged.frame, self.bounds.size.width - _thumbBeingDragged.bounds.size.width);
+    CGFloat centerX = _thumbBeingDragged.center.x;
+    if (centerX < _endPointMin) {
+        centerX = _endPointMin;
+    } else if (centerX > _endPointMax) {
+        centerX = _endPointMax;
     }
+    _thumbBeingDragged.center = CGPointMake(centerX, _thumbBeingDragged.center.y);
 }
 
-- (void)swtichThumbsPositionIfNecessary {
+- (void)switchThumbsPositionIfNecessary {
     if (_thumbBeingDragged == _minimumThumbView && _thumbBeingDragged.frame.origin.x >= FCCGRectHorizontalEndValue(_maximumThumbView.frame)) {
         _minimumThumbView = _maximumThumbView;
         _maximumThumbView = _thumbBeingDragged;
@@ -335,13 +343,10 @@
 }
 
 - (void)updateRangeValue {
-    CGFloat valueSpan = _maximumValue - _minimumValue;
-    CGPoint minPointInTrack = [self convertPoint:_minimumThumbView.center toView:_outRangeTrackView];
-    CGFloat min = _minimumValue + minPointInTrack.x / _trackSliderWidth * valueSpan;
-    CGPoint maxPointInTrack = [self convertPoint:_maximumThumbView.center toView:_outRangeTrackView];
-    CGFloat max = _minimumValue + maxPointInTrack.x / _trackSliderWidth * valueSpan;
+    CGFloat minValue = (_minimumThumbView.center.x - _endPointMin) * _intrinsicProportion + _minimumValue;
+    CGFloat maxValue = (_maximumThumbView.center.x - _endPointMin) * _intrinsicProportion + _minimumValue;
 
-    self.rangeValue = FCRangeSliderValueMake(min, max);
+    self.rangeValue = FCRangeSliderValueMake(minValue, maxValue);
 }
 
 - (void)setThumbsPositionToNonFractionValues {
@@ -349,19 +354,15 @@
 }
 
 - (void)updateThumbsPositionAnimated:(BOOL)animated {
-    CGFloat valueSpan = _maximumValue - _minimumValue;
     CGFloat currentMinValue = _rangeValue.start - _minimumValue;
     CGFloat currentMaxValue = _rangeValue.end - _minimumValue;
 
-    CGFloat minPointXInTrack = _trackSliderWidth / valueSpan * currentMinValue;
-    CGPoint minCenter = [self convertPoint:CGPointMake(minPointXInTrack, 0) fromView:_outRangeTrackView];
-
-    CGFloat maxPoinXtInTrack = _trackSliderWidth / valueSpan * currentMaxValue;
-    CGPoint maxCenter = [self convertPoint:CGPointMake(maxPoinXtInTrack, 0) fromView:_outRangeTrackView];
+    CGFloat minCenterX = currentMinValue / _intrinsicProportion + _endPointMin;
+    CGFloat maxCenterX = currentMaxValue / _intrinsicProportion + _endPointMin;
 
     void (^move)(void) = ^{
-        _minimumThumbView.center = CGPointMake(minCenter.x, _minimumThumbView.center.y);
-        _maximumThumbView.center = CGPointMake(maxCenter.x, _maximumThumbView.center.y);
+        _minimumThumbView.center = CGPointMake(minCenterX, _minimumThumbView.center.y);
+        _maximumThumbView.center = CGPointMake(maxCenterX, _maximumThumbView.center.y);
         [self updateInRangeTrackView];
     };
 
@@ -402,6 +403,12 @@
 - (void)setThumbsHighlightedImage:(UIImage *)image {
     _minimumThumbView.highlightedImage = image;
     _maximumThumbView.highlightedImage = image;
+}
+
+- (void)updateIntrinsicProportion {
+    _endPointMin = [_outRangeTrackView frame].origin.x;
+    _endPointMax = FCCGRectHorizontalEndValue([_outRangeTrackView frame]);
+    _intrinsicProportion = (_maximumValue - _minimumValue) / (_endPointMax - _endPointMin);
 }
 
 @end

@@ -19,7 +19,6 @@
 		55A825EB1576AD560011226E /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A825CF1576A5FC0011226E /* AppDelegate.h */; };
 		55A825EC1576AD580011226E /* RangeSliderController.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A825D21576A5FC0011226E /* RangeSliderController.h */; };
 		55A826341576B3270011226E /* RangeSliderExample-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 55A826331576B3270011226E /* RangeSliderExample-Prefix.pch */; };
-		55A826431576B6220011226E /* slider_thumb.png in Resources */ = {isa = PBXBuildFile; };
 		55A826D11576C40B0011226E /* FCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A826CE1576C40B0011226E /* FCDevice.h */; };
 		55A826D21576C40B0011226E /* FCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A826CF1576C40B0011226E /* FCDevice.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		55A826D31576C40B0011226E /* FCGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A826D01576C40B0011226E /* FCGeometry.h */; };
@@ -207,7 +206,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				55A825D81576A5FC0011226E /* RangeSlider.xib in Resources */,
-				55A826431576B6220011226E /* slider_thumb.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

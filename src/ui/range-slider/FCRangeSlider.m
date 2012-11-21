@@ -64,16 +64,13 @@
     self.clipsToBounds = YES;
     self.backgroundColor = [UIColor clearColor];
 
-    CGFloat thumbCenter = [FCThumbView size].width / 2;
-    _trackSliderWidth = self.frame.size.width - [FCThumbView size].width;
-
-    _outRangeTrackView = [[UIImageView alloc] initWithFrame:CGRectMake(thumbCenter, 10, _trackSliderWidth, 10)];
+    _outRangeTrackView = [UIImageView new];
     _outRangeTrackView.contentMode = UIViewContentModeScaleToFill;
     _outRangeTrackView.backgroundColor = [UIColor darkGrayColor];
     _outRangeTrackView.layer.cornerRadius = 5;
     [self addSubview:_outRangeTrackView];
 
-    _inRangeTrackView = [[UIImageView alloc] initWithFrame:CGRectMake(thumbCenter, 10, _trackSliderWidth, 10)];
+    _inRangeTrackView = [UIImageView new];
     _inRangeTrackView.contentMode = UIViewContentModeScaleToFill;
     _inRangeTrackView.backgroundColor = [UIColor blueColor];
     _inRangeTrackView.layer.cornerRadius = 5;
@@ -123,7 +120,18 @@
 
 - (void)setFrame:(CGRect)newFrame {
     [super setFrame:FCCGRectSetHeight(newFrame, FIXED_HEIGHT)];
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+
+    CGFloat thumbCenter = [FCThumbView size].width / 2;
+    _trackSliderWidth = self.bounds.size.width - [FCThumbView size].width;
+    _outRangeTrackView.frame = CGRectMake(thumbCenter, 10, _trackSliderWidth, 10);
+    _inRangeTrackView.frame = CGRectMake(thumbCenter, 10, _trackSliderWidth, 10);
+
     [self updateIntrinsicProportion];
+    [self updateThumbsPositionAnimated:NO];
 }
 
 - (void)setThumbImage:(UIImage *)image forState:(UIControlState)state {

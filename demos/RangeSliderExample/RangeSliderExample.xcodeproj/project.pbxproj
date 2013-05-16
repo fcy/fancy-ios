@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		551F42851577F92600014BF1 /* FCThumbView.h in Headers */ = {isa = PBXBuildFile; fileRef = 551F42831577F92600014BF1 /* FCThumbView.h */; };
-		551F42861577F92600014BF1 /* FCThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 551F42841577F92600014BF1 /* FCThumbView.m */; };
+		551F42851577F92600014BF1 /* FCYThumbView.h in Headers */ = {isa = PBXBuildFile; fileRef = 551F42831577F92600014BF1 /* FCYThumbView.h */; };
+		551F42861577F92600014BF1 /* FCYThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 551F42841577F92600014BF1 /* FCYThumbView.m */; };
 		55A825AD1576A5230011226E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A825AC1576A5230011226E /* UIKit.framework */; };
 		55A825AF1576A5230011226E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A825AE1576A5230011226E /* Foundation.framework */; };
 		55A825B11576A5230011226E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A825B01576A5230011226E /* CoreGraphics.framework */; };
@@ -19,16 +19,17 @@
 		55A825EB1576AD560011226E /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A825CF1576A5FC0011226E /* AppDelegate.h */; };
 		55A825EC1576AD580011226E /* RangeSliderController.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A825D21576A5FC0011226E /* RangeSliderController.h */; };
 		55A826341576B3270011226E /* RangeSliderExample-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 55A826331576B3270011226E /* RangeSliderExample-Prefix.pch */; };
-		55A826D11576C40B0011226E /* FCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A826CE1576C40B0011226E /* FCDevice.h */; };
-		55A826D21576C40B0011226E /* FCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A826CF1576C40B0011226E /* FCDevice.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		55A826D31576C40B0011226E /* FCGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A826D01576C40B0011226E /* FCGeometry.h */; };
-		55A826D81576C4170011226E /* FCRangeSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A826D61576C4170011226E /* FCRangeSlider.h */; };
-		55A826D91576C4170011226E /* FCRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A826D71576C4170011226E /* FCRangeSlider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		55A826D11576C40B0011226E /* FCYDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A826CE1576C40B0011226E /* FCYDevice.h */; };
+		55A826D21576C40B0011226E /* FCYDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A826CF1576C40B0011226E /* FCYDevice.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		55A826D81576C4170011226E /* FCYRangeSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A826D61576C4170011226E /* FCYRangeSlider.h */; };
+		55A826D91576C4170011226E /* FCYRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A826D71576C4170011226E /* FCYRangeSlider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B3D0448882A260180308332D /* FCYGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D0435DF09594E541A7A880 /* FCYGeometry.m */; };
+		B3D04D6B0C52EBEE9C63A028 /* FCYGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D044B5187A76DFFC087144 /* FCYGeometry.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		551F42831577F92600014BF1 /* FCThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCThumbView.h; sourceTree = "<group>"; };
-		551F42841577F92600014BF1 /* FCThumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCThumbView.m; sourceTree = "<group>"; };
+		551F42831577F92600014BF1 /* FCYThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYThumbView.h; sourceTree = "<group>"; };
+		551F42841577F92600014BF1 /* FCYThumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYThumbView.m; sourceTree = "<group>"; };
 		55A825A81576A5230011226E /* RangeSliderExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RangeSliderExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55A825AC1576A5230011226E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		55A825AE1576A5230011226E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -41,11 +42,12 @@
 		55A825D41576A5FC0011226E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		55A825D51576A5FC0011226E /* RangeSliderExample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RangeSliderExample-Info.plist"; sourceTree = "<group>"; };
 		55A826331576B3270011226E /* RangeSliderExample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RangeSliderExample-Prefix.pch"; sourceTree = "<group>"; };
-		55A826CE1576C40B0011226E /* FCDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCDevice.h; sourceTree = "<group>"; };
-		55A826CF1576C40B0011226E /* FCDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCDevice.m; sourceTree = "<group>"; };
-		55A826D01576C40B0011226E /* FCGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCGeometry.h; sourceTree = "<group>"; };
-		55A826D61576C4170011226E /* FCRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCRangeSlider.h; sourceTree = "<group>"; };
-		55A826D71576C4170011226E /* FCRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCRangeSlider.m; sourceTree = "<group>"; };
+		55A826CE1576C40B0011226E /* FCYDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYDevice.h; sourceTree = "<group>"; };
+		55A826CF1576C40B0011226E /* FCYDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYDevice.m; sourceTree = "<group>"; };
+		55A826D61576C4170011226E /* FCYRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYRangeSlider.h; sourceTree = "<group>"; };
+		55A826D71576C4170011226E /* FCYRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYRangeSlider.m; sourceTree = "<group>"; };
+		B3D0435DF09594E541A7A880 /* FCYGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCYGeometry.m; path = ../ui/FCYGeometry.m; sourceTree = "<group>"; };
+		B3D044B5187A76DFFC087144 /* FCYGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCYGeometry.h; path = ../ui/FCYGeometry.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +111,10 @@
 		55A826CD1576C40B0011226E /* core */ = {
 			isa = PBXGroup;
 			children = (
-				55A826CE1576C40B0011226E /* FCDevice.h */,
-				55A826CF1576C40B0011226E /* FCDevice.m */,
-				55A826D01576C40B0011226E /* FCGeometry.h */,
+				55A826CE1576C40B0011226E /* FCYDevice.h */,
+				55A826CF1576C40B0011226E /* FCYDevice.m */,
+				B3D044B5187A76DFFC087144 /* FCYGeometry.h */,
+				B3D0435DF09594E541A7A880 /* FCYGeometry.m */,
 			);
 			name = core;
 			path = ../../src/core;
@@ -129,10 +132,10 @@
 		55A826D51576C4170011226E /* range-slider */ = {
 			isa = PBXGroup;
 			children = (
-				551F42831577F92600014BF1 /* FCThumbView.h */,
-				551F42841577F92600014BF1 /* FCThumbView.m */,
-				55A826D61576C4170011226E /* FCRangeSlider.h */,
-				55A826D71576C4170011226E /* FCRangeSlider.m */,
+				551F42831577F92600014BF1 /* FCYThumbView.h */,
+				551F42841577F92600014BF1 /* FCYThumbView.m */,
+				55A826D61576C4170011226E /* FCYRangeSlider.h */,
+				55A826D71576C4170011226E /* FCYRangeSlider.m */,
 			);
 			path = "range-slider";
 			sourceTree = "<group>";
@@ -147,10 +150,10 @@
 				55A825EB1576AD560011226E /* AppDelegate.h in Headers */,
 				55A825EC1576AD580011226E /* RangeSliderController.h in Headers */,
 				55A826341576B3270011226E /* RangeSliderExample-Prefix.pch in Headers */,
-				55A826D11576C40B0011226E /* FCDevice.h in Headers */,
-				55A826D31576C40B0011226E /* FCGeometry.h in Headers */,
-				55A826D81576C4170011226E /* FCRangeSlider.h in Headers */,
-				551F42851577F92600014BF1 /* FCThumbView.h in Headers */,
+				55A826D11576C40B0011226E /* FCYDevice.h in Headers */,
+				55A826D81576C4170011226E /* FCYRangeSlider.h in Headers */,
+				551F42851577F92600014BF1 /* FCYThumbView.h in Headers */,
+				B3D04D6B0C52EBEE9C63A028 /* FCYGeometry.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +222,10 @@
 				55A825D71576A5FC0011226E /* AppDelegate.m in Sources */,
 				55A825D91576A5FC0011226E /* RangeSliderController.m in Sources */,
 				55A825DA1576A5FC0011226E /* main.m in Sources */,
-				55A826D21576C40B0011226E /* FCDevice.m in Sources */,
-				55A826D91576C4170011226E /* FCRangeSlider.m in Sources */,
-				551F42861577F92600014BF1 /* FCThumbView.m in Sources */,
+				55A826D21576C40B0011226E /* FCYDevice.m in Sources */,
+				55A826D91576C4170011226E /* FCYRangeSlider.m in Sources */,
+				551F42861577F92600014BF1 /* FCYThumbView.m in Sources */,
+				B3D0448882A260180308332D /* FCYGeometry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

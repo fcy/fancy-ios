@@ -13,12 +13,12 @@
 //    limitations under the License.
 
 #import <UIKit/UIKit.h>
-#import "FCRangeSlider.h"
+#import "FCYRangeSlider.h"
 
 /**
- * @brief UIViewController to demonstrate how to use FCRangeSlider
+ * @brief UIViewController to demonstrate how to use FCYRangeSlider
  *
- * @image html FCRangeSliderSampleController.png "Shows the FCRangeSlider in action"
+ * @image html FCYRangeSliderSampleController.png "Shows the FCYRangeSlider in action"
  */
 @interface RangeSliderController : UIViewController {
     
@@ -28,7 +28,7 @@
 
 + (RangeSliderController *)rangeSliderSampleController;
 
-@property (nonatomic) IBOutlet FCRangeSlider *slider;
+@property (nonatomic) IBOutlet FCYRangeSlider *slider;
 @property (nonatomic) IBOutlet UILabel *lblRange;
 @property (nonatomic) IBOutlet UILabel *lblRangeValue;
 @property (nonatomic) IBOutlet UILabel *lblMinimumValue;

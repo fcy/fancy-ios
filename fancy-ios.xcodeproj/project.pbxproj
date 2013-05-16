@@ -7,21 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5500136A174570D10041DDCC /* FCYGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D04F931B8B893D137BA7B3 /* FCYGeometry.h */; };
+		5500136C174570D40041DDCC /* FCYGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D040606F09627752FCA890 /* FCYGeometry.m */; };
+		5500136F174571410041DDCC /* FCYGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D046061783A6014CC10CFE /* FCYGeometryTests.m */; };
 		5501F144157697F800303930 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F143157697F800303930 /* Foundation.framework */; };
-		5501F15E157699E800303930 /* FCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 5501F152157698D300303930 /* FCDevice.m */; };
-		5501F15F157699FC00303930 /* FCDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 5501F151157698D300303930 /* FCDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5501F160157699FE00303930 /* FCGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 5501F153157698D300303930 /* FCGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5501F15E157699E800303930 /* FCYDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 5501F152157698D300303930 /* FCYDevice.m */; };
+		5501F15F157699FC00303930 /* FCYDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 5501F151157698D300303930 /* FCYDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5501F16215769A7F00303930 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F16115769A7F00303930 /* UIKit.framework */; };
 		5501F16A15769B2F00303930 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F16915769B2F00303930 /* SenTestingKit.framework */; };
 		5501F16B15769B2F00303930 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F16115769A7F00303930 /* UIKit.framework */; };
 		5501F16C15769B2F00303930 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F143157697F800303930 /* Foundation.framework */; };
-		5501F18015769B5A00303930 /* FCGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5501F17C15769B5A00303930 /* FCGeometryTests.m */; };
 		5501F18215769C2900303930 /* libFancyCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F140157697F800303930 /* libFancyCore.a */; };
 		5501F18815769FDA00303930 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F18715769FDA00303930 /* CoreGraphics.framework */; };
 		5501F18915769FEF00303930 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F18715769FDA00303930 /* CoreGraphics.framework */; };
 		5501F1911576A0B700303930 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F143157697F800303930 /* Foundation.framework */; };
-		5501F19B1576A0F000303930 /* FCRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5501F15D157698D300303930 /* FCRangeSlider.m */; };
-		5501F19C1576A0F300303930 /* FCRangeSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 5501F15C157698D300303930 /* FCRangeSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5501F19B1576A0F000303930 /* FCYRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5501F15D157698D300303930 /* FCYRangeSlider.m */; };
+		5501F19C1576A0F300303930 /* FCYRangeSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 5501F15C157698D300303930 /* FCYRangeSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5501F19D1576A0FD00303930 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F16115769A7F00303930 /* UIKit.framework */; };
 		5501F19E1576A10100303930 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F18715769FDA00303930 /* CoreGraphics.framework */; };
 		5501F19F1576A10500303930 /* libFancyCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F140157697F800303930 /* libFancyCore.a */; };
@@ -30,10 +31,11 @@
 		5501F1A81576A17100303930 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F143157697F800303930 /* Foundation.framework */; };
 		5501F1B61576A20600303930 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F18715769FDA00303930 /* CoreGraphics.framework */; };
 		5501F1B71576A20C00303930 /* libFancyUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F1901576A0B700303930 /* libFancyUI.a */; };
-		5501F1B81576A28100303930 /* FCRangeSliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5501F17F15769B5A00303930 /* FCRangeSliderTests.m */; };
-		55A825F21576B06B00112270 /* FCThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A825F21576B06B0011226F /* FCThumbView.m */; };
-		55A825F21576B06B00112272 /* FCThumbView.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A825F21576B06B00112271 /* FCThumbView.h */; };
-		55A825F21576B06B00112274 /* FCGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A825F21576B06B00112273 /* FCGeometry.m */; };
+		5501F1B81576A28100303930 /* FCYRangeSliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5501F17F15769B5A00303930 /* FCYRangeSliderTests.m */; };
+		55A825F21576B06B00112270 /* FCYThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A825F21576B06B0011226F /* FCYThumbView.m */; };
+		55A825F21576B06B00112272 /* FCYThumbView.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A825F21576B06B00112271 /* FCYThumbView.h */; };
+		B3D0467643F53B3E69486479 /* UIImage+FCYImageAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D04B74B1847445AC2CC8A5 /* UIImage+FCYImageAdditions.h */; };
+		B3D04DD660EC54764B82AAC1 /* UIImage+FCYImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D040B82A7B67F31E4AEA09 /* UIImage+FCYImageAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,27 +58,29 @@
 /* Begin PBXFileReference section */
 		5501F140157697F800303930 /* libFancyCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFancyCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5501F143157697F800303930 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		5501F151157698D300303930 /* FCDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCDevice.h; sourceTree = "<group>"; };
-		5501F152157698D300303930 /* FCDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCDevice.m; sourceTree = "<group>"; };
-		5501F153157698D300303930 /* FCGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCGeometry.h; sourceTree = "<group>"; };
-		5501F156157698D300303930 /* FCSimpleFetchedResultsControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCSimpleFetchedResultsControllerDelegate.h; sourceTree = "<group>"; };
-		5501F157157698D300303930 /* FCSimpleFetchedResultsControllerDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCSimpleFetchedResultsControllerDelegate.m; sourceTree = "<group>"; };
+		5501F151157698D300303930 /* FCYDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCYDevice.h; sourceTree = "<group>"; };
+		5501F152157698D300303930 /* FCYDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCYDevice.m; sourceTree = "<group>"; };
+		5501F156157698D300303930 /* FCYSimpleFetchedResultsControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCYSimpleFetchedResultsControllerDelegate.h; sourceTree = "<group>"; };
+		5501F157157698D300303930 /* FCYSimpleFetchedResultsControllerDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCYSimpleFetchedResultsControllerDelegate.m; sourceTree = "<group>"; };
 		5501F158157698D300303930 /* Doxygen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Doxygen.h; sourceTree = "<group>"; };
 		5501F159157698D300303930 /* FancyPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FancyPrefix.pch; sourceTree = "<group>"; };
-		5501F15C157698D300303930 /* FCRangeSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCRangeSlider.h; sourceTree = "<group>"; };
-		5501F15D157698D300303930 /* FCRangeSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCRangeSlider.m; sourceTree = "<group>"; };
+		5501F15C157698D300303930 /* FCYRangeSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCYRangeSlider.h; sourceTree = "<group>"; };
+		5501F15D157698D300303930 /* FCYRangeSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCYRangeSlider.m; sourceTree = "<group>"; };
 		5501F16115769A7F00303930 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		5501F16815769B2F00303930 /* FancyCoreTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FancyCoreTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5501F16915769B2F00303930 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		5501F17C15769B5A00303930 /* FCGeometryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCGeometryTests.m; sourceTree = "<group>"; };
-		5501F17F15769B5A00303930 /* FCRangeSliderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCRangeSliderTests.m; sourceTree = "<group>"; };
+		5501F17F15769B5A00303930 /* FCYRangeSliderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYRangeSliderTests.m; sourceTree = "<group>"; };
 		5501F18715769FDA00303930 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5501F1901576A0B700303930 /* libFancyUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFancyUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5501F1A51576A17100303930 /* FancyUITests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FancyUITests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		551F428D1577F9F200014BF1 /* RangeSliderExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RangeSliderExample.xcodeproj; path = demos/RangeSliderExample/RangeSliderExample.xcodeproj; sourceTree = "<group>"; };
-		55A825F21576B06B0011226F /* FCThumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCThumbView.m; sourceTree = "<group>"; };
-		55A825F21576B06B00112271 /* FCThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCThumbView.h; sourceTree = "<group>"; };
-		55A825F21576B06B00112273 /* FCGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCGeometry.m; sourceTree = "<group>"; };
+		55A825F21576B06B0011226F /* FCYThumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYThumbView.m; sourceTree = "<group>"; };
+		55A825F21576B06B00112271 /* FCYThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYThumbView.h; sourceTree = "<group>"; };
+		B3D040606F09627752FCA890 /* FCYGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYGeometry.m; sourceTree = "<group>"; };
+		B3D040B82A7B67F31E4AEA09 /* UIImage+FCYImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FCYImageAdditions.m"; sourceTree = "<group>"; };
+		B3D046061783A6014CC10CFE /* FCYGeometryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYGeometryTests.m; sourceTree = "<group>"; };
+		B3D04B74B1847445AC2CC8A5 /* UIImage+FCYImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FCYImageAdditions.h"; sourceTree = "<group>"; };
+		B3D04F931B8B893D137BA7B3 /* FCYGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYGeometry.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,10 +180,8 @@
 		5501F150157698D300303930 /* core */ = {
 			isa = PBXGroup;
 			children = (
-				55A825F21576B06B00112273 /* FCGeometry.m */,
-				5501F151157698D300303930 /* FCDevice.h */,
-				5501F152157698D300303930 /* FCDevice.m */,
-				5501F153157698D300303930 /* FCGeometry.h */,
+				5501F151157698D300303930 /* FCYDevice.h */,
+				5501F152157698D300303930 /* FCYDevice.m */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -195,8 +197,8 @@
 		5501F155157698D300303930 /* core-data */ = {
 			isa = PBXGroup;
 			children = (
-				5501F156157698D300303930 /* FCSimpleFetchedResultsControllerDelegate.h */,
-				5501F157157698D300303930 /* FCSimpleFetchedResultsControllerDelegate.m */,
+				5501F156157698D300303930 /* FCYSimpleFetchedResultsControllerDelegate.h */,
+				5501F157157698D300303930 /* FCYSimpleFetchedResultsControllerDelegate.m */,
 			);
 			path = "core-data";
 			sourceTree = "<group>";
@@ -205,6 +207,10 @@
 			isa = PBXGroup;
 			children = (
 				5501F15B157698D300303930 /* range-slider */,
+				B3D040B82A7B67F31E4AEA09 /* UIImage+FCYImageAdditions.m */,
+				B3D04B74B1847445AC2CC8A5 /* UIImage+FCYImageAdditions.h */,
+				B3D040606F09627752FCA890 /* FCYGeometry.m */,
+				B3D04F931B8B893D137BA7B3 /* FCYGeometry.h */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -212,10 +218,10 @@
 		5501F15B157698D300303930 /* range-slider */ = {
 			isa = PBXGroup;
 			children = (
-				55A825F21576B06B00112271 /* FCThumbView.h */,
-				55A825F21576B06B0011226F /* FCThumbView.m */,
-				5501F15C157698D300303930 /* FCRangeSlider.h */,
-				5501F15D157698D300303930 /* FCRangeSlider.m */,
+				55A825F21576B06B00112271 /* FCYThumbView.h */,
+				55A825F21576B06B0011226F /* FCYThumbView.m */,
+				5501F15C157698D300303930 /* FCYRangeSlider.h */,
+				5501F15D157698D300303930 /* FCYRangeSlider.m */,
 			);
 			path = "range-slider";
 			sourceTree = "<group>";
@@ -232,7 +238,6 @@
 		5501F17B15769B5A00303930 /* core */ = {
 			isa = PBXGroup;
 			children = (
-				5501F17C15769B5A00303930 /* FCGeometryTests.m */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				5501F17E15769B5A00303930 /* range-slider */,
+				B3D046061783A6014CC10CFE /* FCYGeometryTests.m */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -248,7 +254,7 @@
 		5501F17E15769B5A00303930 /* range-slider */ = {
 			isa = PBXGroup;
 			children = (
-				5501F17F15769B5A00303930 /* FCRangeSliderTests.m */,
+				5501F17F15769B5A00303930 /* FCYRangeSliderTests.m */,
 			);
 			path = "range-slider";
 			sourceTree = "<group>";
@@ -276,8 +282,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5501F15F157699FC00303930 /* FCDevice.h in Headers */,
-				5501F160157699FE00303930 /* FCGeometry.h in Headers */,
+				5501F15F157699FC00303930 /* FCYDevice.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,8 +290,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5501F19C1576A0F300303930 /* FCRangeSlider.h in Headers */,
-				55A825F21576B06B00112272 /* FCThumbView.h in Headers */,
+				5501F19C1576A0F300303930 /* FCYRangeSlider.h in Headers */,
+				55A825F21576B06B00112272 /* FCYThumbView.h in Headers */,
+				B3D0467643F53B3E69486479 /* UIImage+FCYImageAdditions.h in Headers */,
+				5500136A174570D10041DDCC /* FCYGeometry.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,8 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5501F15E157699E800303930 /* FCDevice.m in Sources */,
-				55A825F21576B06B00112274 /* FCGeometry.m in Sources */,
+				5501F15E157699E800303930 /* FCYDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,7 +474,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5501F18015769B5A00303930 /* FCGeometryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,8 +481,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5501F19B1576A0F000303930 /* FCRangeSlider.m in Sources */,
-				55A825F21576B06B00112270 /* FCThumbView.m in Sources */,
+				5501F19B1576A0F000303930 /* FCYRangeSlider.m in Sources */,
+				55A825F21576B06B00112270 /* FCYThumbView.m in Sources */,
+				B3D04DD660EC54764B82AAC1 /* UIImage+FCYImageAdditions.m in Sources */,
+				5500136C174570D40041DDCC /* FCYGeometry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,7 +492,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5501F1B81576A28100303930 /* FCRangeSliderTests.m in Sources */,
+				5501F1B81576A28100303930 /* FCYRangeSliderTests.m in Sources */,
+				5500136F174571410041DDCC /* FCYGeometryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,7 +511,7 @@
 		5501F134157680A300303930 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -516,7 +524,7 @@
 		5501F135157680A300303930 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",

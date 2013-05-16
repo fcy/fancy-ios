@@ -1,19 +1,5 @@
-//    Copyright 2011 Felipe Cypriano
-// 
-//    Licensed under the Apache License, Version 2.0 (the "License");
-//    you may not use this file except in compliance with the License.
-//    You may obtain a copy of the License at
-// 
-//        http://www.apache.org/licenses/LICENSE-2.0
-// 
-//    Unless required by applicable law or agreed to in writing, software
-//    distributed under the License is distributed on an "AS IS" BASIS,
-//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-//    See the License for the specific language governing permissions and
-//    limitations under the License.
-
 /**
- * @file FCRangeSlider.h
+ * @file FCYRangeSlider.h
  * Range slider class
  *
  * @author Felipe Cypriano
@@ -32,21 +18,21 @@
  * This component idea was based on @link https://github.com/doukasd/iOS-Components/tree/master/Controls/DoubleSlider Dimitris Doukas' DoubleSlider @endlink
  * @note Depends on FancyCore
  */
-typedef struct _FCRangeSliderValue {
+typedef struct _FCYRangeSliderValue {
     CGFloat start;
     CGFloat end;
-} FCRangeSliderValue;
+} FCYRangeSliderValue;
 
 
 /**
  * @brief A slider to select ranges. It's like UISlider but with two thumbs.
  *
- * A FCRangeSlider is a visual component to select two values within a range. It's always
+ * A FCYRangeSlider is a visual component to select two values within a range. It's always
  * displayed as a horizontal bar and the height is fixed at 30 pixels. It has two indicator,
  * or <strong>thumb</strong> as UISlider calls it, and the user can move them freely to select
  * the range he wants.
  */
-@interface FCRangeSlider : UIControl
+@interface FCYRangeSlider : UIControl
 
 /**
  * @brief Contains the mininum allowed value
@@ -90,7 +76,7 @@ typedef struct _FCRangeSliderValue {
  * If acceptOnlyNonFractionValyes is set to YES the values will be rounded automatically.
  *
  */
-@property (nonatomic) FCRangeSliderValue rangeValue;
+@property (nonatomic) FCYRangeSliderValue rangeValue;
 /**
  * @brief Contains the minimum accepted range length
  *
@@ -152,7 +138,7 @@ typedef struct _FCRangeSliderValue {
  * @param newRangeValue The new rangeValue
  * @param animated Specify whether the change will be animated or not
  */
-- (void)setRangeValue:(FCRangeSliderValue)newRangeValue animated:(BOOL)animated;
+- (void)setRangeValue:(FCYRangeSliderValue)newRangeValue animated:(BOOL)animated;
 /**
  * @brief Sets the receiver’s current range, allowing you to animate the change visually.
  *
@@ -164,10 +150,10 @@ typedef struct _FCRangeSliderValue {
 @end
 
 /**
- * @brief Creates a new FCRangeSliderValue
+ * @brief Creates a new FCYRangeSliderValue
  */
-NS_INLINE FCRangeSliderValue FCRangeSliderValueMake(CGFloat start, CGFloat end) {
-    FCRangeSliderValue r;
+NS_INLINE FCYRangeSliderValue FCYRangeSliderValueMake(CGFloat start, CGFloat end) {
+    FCYRangeSliderValue r;
     r.start = start;
     r.end = end;
     return r;

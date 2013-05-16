@@ -36,7 +36,7 @@
     slider.acceptOnlyPositiveRanges = [sender isOn];
 }
 
-- (IBAction)sliderValueChanged:(FCRangeSlider *)sender {
+- (IBAction)sliderValueChanged:(FCYRangeSlider *)sender {
     lblRangeValue.text = [NSString stringWithFormat:@"{%f, %f}", sender.rangeValue.start, sender.rangeValue.end];
     lblRange.text = NSStringFromRange(sender.range);
 }
@@ -57,7 +57,7 @@
 }
 
 - (IBAction)resetSameValueTouched:(id)sender {
-    slider.rangeValue = FCRangeSliderValueMake(3, 6);
+    slider.rangeValue = FCYRangeSliderValueMake(3, 6);
 }
 
 - (id)init {

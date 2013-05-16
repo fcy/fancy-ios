@@ -10,6 +10,7 @@
 		5500136A174570D10041DDCC /* FCYGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D04F931B8B893D137BA7B3 /* FCYGeometry.h */; };
 		5500136C174570D40041DDCC /* FCYGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D040606F09627752FCA890 /* FCYGeometry.m */; };
 		5500136F174571410041DDCC /* FCYGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D046061783A6014CC10CFE /* FCYGeometryTests.m */; };
+		55001372174575F90041DDCC /* NSStringFCYTrimTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D046CFBBC76BAEB6A29650 /* NSStringFCYTrimTests.m */; };
 		5501F144157697F800303930 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F143157697F800303930 /* Foundation.framework */; };
 		5501F15E157699E800303930 /* FCYDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 5501F152157698D300303930 /* FCYDevice.m */; };
 		5501F15F157699FC00303930 /* FCYDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 5501F151157698D300303930 /* FCYDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +36,8 @@
 		55A825F21576B06B00112270 /* FCYThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A825F21576B06B0011226F /* FCYThumbView.m */; };
 		55A825F21576B06B00112272 /* FCYThumbView.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A825F21576B06B00112271 /* FCYThumbView.h */; };
 		B3D0467643F53B3E69486479 /* UIImage+FCYImageAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D04B74B1847445AC2CC8A5 /* UIImage+FCYImageAdditions.h */; };
+		B3D04762BC9B2B9880A71534 /* NSString+FCYTrim.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D04814B5861BDB5DFB2EDE /* NSString+FCYTrim.m */; };
+		B3D047A39C346810776FE04E /* NSString+FCYTrim.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D04F358D280F8E0F9B3F6A /* NSString+FCYTrim.h */; };
 		B3D04DD660EC54764B82AAC1 /* UIImage+FCYImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D040B82A7B67F31E4AEA09 /* UIImage+FCYImageAdditions.m */; };
 /* End PBXBuildFile section */
 
@@ -79,7 +82,10 @@
 		B3D040606F09627752FCA890 /* FCYGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYGeometry.m; sourceTree = "<group>"; };
 		B3D040B82A7B67F31E4AEA09 /* UIImage+FCYImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FCYImageAdditions.m"; sourceTree = "<group>"; };
 		B3D046061783A6014CC10CFE /* FCYGeometryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYGeometryTests.m; sourceTree = "<group>"; };
+		B3D046CFBBC76BAEB6A29650 /* NSStringFCYTrimTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringFCYTrimTests.m; sourceTree = "<group>"; };
+		B3D04814B5861BDB5DFB2EDE /* NSString+FCYTrim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FCYTrim.m"; sourceTree = "<group>"; };
 		B3D04B74B1847445AC2CC8A5 /* UIImage+FCYImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FCYImageAdditions.h"; sourceTree = "<group>"; };
+		B3D04F358D280F8E0F9B3F6A /* NSString+FCYTrim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FCYTrim.h"; sourceTree = "<group>"; };
 		B3D04F931B8B893D137BA7B3 /* FCYGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYGeometry.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +188,8 @@
 			children = (
 				5501F151157698D300303930 /* FCYDevice.h */,
 				5501F152157698D300303930 /* FCYDevice.m */,
+				B3D04814B5861BDB5DFB2EDE /* NSString+FCYTrim.m */,
+				B3D04F358D280F8E0F9B3F6A /* NSString+FCYTrim.h */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -238,6 +246,7 @@
 		5501F17B15769B5A00303930 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				B3D046CFBBC76BAEB6A29650 /* NSStringFCYTrimTests.m */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -283,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5501F15F157699FC00303930 /* FCYDevice.h in Headers */,
+				B3D047A39C346810776FE04E /* NSString+FCYTrim.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5501F15E157699E800303930 /* FCYDevice.m in Sources */,
+				B3D04762BC9B2B9880A71534 /* NSString+FCYTrim.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +485,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55001372174575F90041DDCC /* NSStringFCYTrimTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
     ui.frameworks = 'CoreGraphics'
     
     ui.subspec 'Geometry' do |geometry|
-      geometry.source_files = 'src/ui/FCYGeometry.{h.m}'
+      geometry.source_files = 'src/ui/FCYGeometry.{h,m}'
     end
     
     ui.subspec 'ImageAdditions' do |image|

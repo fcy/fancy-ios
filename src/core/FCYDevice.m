@@ -3,7 +3,7 @@
 //  fancy-ios
 //
 //  Created by Felipe Cypriano on 17/08/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Felipe Cypriano. All rights reserved.
 //
 
 #import "FCYDevice.h"
@@ -51,7 +51,7 @@ BOOL FCYDeviceScreenResolutionIsRetina(FCYDeviceScreenResolution resolution) {
 }
 
 - (FCYDeviceScreenResolution)currentResolution {
-    FCYDeviceScreenResolution current = FCYDeviceScreenResolutionUnknow;
+    FCYDeviceScreenResolution current = FCYDeviceScreenResolutionUnknown;
     BOOL isRetina = [[UIScreen mainScreen] scale] == 2.0f;
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         current = FCYDeviceScreenResolutionPhoneStandard;

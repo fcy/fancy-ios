@@ -64,9 +64,6 @@
 		5501F143157697F800303930 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5501F151157698D300303930 /* FCYDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCYDevice.h; sourceTree = "<group>"; };
 		5501F152157698D300303930 /* FCYDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCYDevice.m; sourceTree = "<group>"; };
-		5501F156157698D300303930 /* FCYSimpleFetchedResultsControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCYSimpleFetchedResultsControllerDelegate.h; sourceTree = "<group>"; };
-		5501F157157698D300303930 /* FCYSimpleFetchedResultsControllerDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCYSimpleFetchedResultsControllerDelegate.m; sourceTree = "<group>"; };
-		5501F158157698D300303930 /* Doxygen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Doxygen.h; sourceTree = "<group>"; };
 		5501F159157698D300303930 /* FancyPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FancyPrefix.pch; sourceTree = "<group>"; };
 		5501F15C157698D300303930 /* FCYRangeSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCYRangeSlider.h; sourceTree = "<group>"; };
 		5501F15D157698D300303930 /* FCYRangeSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCYRangeSlider.m; sourceTree = "<group>"; };
@@ -77,6 +74,8 @@
 		5501F18715769FDA00303930 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5501F1901576A0B700303930 /* libFancyUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFancyUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5501F1A51576A17100303930 /* FancyUITests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FancyUITests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		551C46851746B669003D2A8C /* AppledocSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppledocSettings.plist; sourceTree = "<group>"; };
+		551C46861746B671003D2A8C /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		551F428D1577F9F200014BF1 /* RangeSliderExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RangeSliderExample.xcodeproj; path = demos/RangeSliderExample/RangeSliderExample.xcodeproj; sourceTree = "<group>"; };
 		55A825F21576B06B0011226F /* FCYThumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYThumbView.m; sourceTree = "<group>"; };
 		55A825F21576B06B00112271 /* FCYThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYThumbView.h; sourceTree = "<group>"; };
@@ -144,6 +143,8 @@
 		5501F12D157680A200303930 = {
 			isa = PBXGroup;
 			children = (
+				551C46851746B669003D2A8C /* AppledocSettings.plist */,
+				551C46861746B671003D2A8C /* README.markdown */,
 				551F428B1577F9E200014BF1 /* demos */,
 				5501F14F157698D300303930 /* src */,
 				5501F17A15769B5A00303930 /* tests */,
@@ -178,10 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				5501F150157698D300303930 /* core */,
-				5501F154157698D300303930 /* database */,
-				5501F158157698D300303930 /* Doxygen.h */,
-				5501F159157698D300303930 /* FancyPrefix.pch */,
 				5501F15A157698D300303930 /* ui */,
+				5501F159157698D300303930 /* FancyPrefix.pch */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -197,23 +196,6 @@
 				BA6D16717046F3242E3169F8 /* NSArray+FCYArrayAdditions.h */,
 			);
 			path = core;
-			sourceTree = "<group>";
-		};
-		5501F154157698D300303930 /* database */ = {
-			isa = PBXGroup;
-			children = (
-				5501F155157698D300303930 /* core-data */,
-			);
-			path = database;
-			sourceTree = "<group>";
-		};
-		5501F155157698D300303930 /* core-data */ = {
-			isa = PBXGroup;
-			children = (
-				5501F156157698D300303930 /* FCYSimpleFetchedResultsControllerDelegate.h */,
-				5501F157157698D300303930 /* FCYSimpleFetchedResultsControllerDelegate.m */,
-			);
-			path = "core-data";
 			sourceTree = "<group>";
 		};
 		5501F15A157698D300303930 /* ui */ = {

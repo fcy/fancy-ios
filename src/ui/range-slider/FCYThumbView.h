@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- * @brief Draws a thumb to be used in the slider
+ * Draws a thumb to be used in the slider
  *
  * This view is used as the default thumb in FCYRangeSlider. And it has a fixed size of 24 x 24 points.
  *
@@ -20,28 +20,28 @@
 @interface FCYThumbView : UIView
 
 /**
- * @brief Returns the thumb's size
+ * Returns the thumb's size
  *
  * Size is 24 x 24 points.
  */
 + (CGSize)size;
 
 /**
- * @brief When highlighted the thumb is displayed a little darker
+ * When highlighted the thumb is displayed a little darker
  *
  * Thumb is darker or the highlightedImage is displayed.
  */
 @property (nonatomic) BOOL highlighted;
 
 /**
- * @brief The image to customize the thumb in normal state
+ * The image to customize the thumb in normal state
  *
  * The image size must be 24 x 24 points
  */
 @property (nonatomic, strong) UIImage *image;
 
 /**
- * @brief The image to customize the thumb in highlighted state
+ * The image to customize the thumb in highlighted state
  *
  * The image size must be 24 x 24 points
  */

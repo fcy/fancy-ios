@@ -5,24 +5,35 @@ Objective
 ---------
 This project aims to be a useful library of reusable code for iOS developers.
 
-To find out what is available you can run the project on Xcode or read the source code files specially the ones containing "Sample" on its name.
-
 How to Use It
 ------------
 
-The project ain't a static library or a framework that you add to your projects. Instead it's made by small independent (as much as possible) parts that you copy to your project and start using it.
+### CocoaPods
+Add to your project's `Podfile`:
 
-The list of dependencies is listed as comments in the header files. 
+`pod 'Fancy-iOS`
+
+The pod is very modularized with subspecs and you can install only what you need. For example,
+if you want only the `FCYRangeSlider` put this in your `Podfile`:
+
+`pod 'Fancy-iOS/UI/RangeSlider'`
 
 Requirements
 ------------
 
-- Minumum iOS version: 5.0
+- Minumum iOS version: 6.0
 - ARC
-- See the Xcode project to see the list of frameworks used. As of this moment there's no external frameworks or libraries in the project.
+- See the Xcode project to see the list of frameworks used. As of
+this moment there's no external frameworks or libraries in the project.
+
+- Or use CocoaPods and let it handle all of this.
 
 
 More Information
 ==========================
 
-For a list of available components and what Fancy iOS can do for you see the project's documentation: [fmcypriano.github.com/fancy-ios](http://fmcypriano.github.com/fancy-ios)
+For a list of available components and what Fancy iOS can do for you
+see the project's documentation: [fcy.github.com/fancy-ios](http://fcy.github.com/fancy-ios)
+
+A word of advice unfortunately [appledoc](http://gentlebytes.com/appledoc/) doesn't support C functions so check out
+the source headers for functions and typdefs that aren't in the documentation. They are documented in the header files.

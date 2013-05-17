@@ -2,14 +2,14 @@
 
 /**
  * @file FCYGeometry.h
- * @brief A collection of C functions to make the code less verbose when dealing with CGGeometry structures.
+ * A collection of C functions to make the code less verbose when dealing with CGGeometry structures.
  *
  * @author Felipe Cypriano
  * @date 2011
  */
 
 /**
- * @brief Changes the size of a CGRect by adding or subtracting width and height.
+ * Changes the size of a CGRect by adding or subtracting width and height.
  *
  * This function works like CGRectOffset, but instead of changing the position
  * it changes the size.
@@ -21,7 +21,7 @@
 CGRect FCYCGRectAdjustSizeBy(CGRect rect, CGFloat deltaWidth, CGFloat deltaHeight);
 
 /**
- * @brief Set a new height to a CGRect
+ * Set a new height to a CGRect
  *
  * @param rect The base rect
  * @param height This is number will be the absolute height of the returned rect
@@ -31,7 +31,7 @@ NS_INLINE CGRect FCYCGRectSetHeight(CGRect rect, CGFloat height) {
 }
 
 /**
- * @brief Set a new width to a CGRect
+ * Set a new width to a CGRect
  *
  * @param rect The base rect
  * @param height This is number will be the absolute width of the returned rect
@@ -41,7 +41,7 @@ NS_INLINE CGRect FCYCGRectSetWidth(CGRect rect, CGFloat width) {
 }
 
 /**
- * @brief Changes the size of a CGRect to the width and height of CGSize.
+ * Changes the size of a CGRect to the width and height of CGSize.
  *
  * @param rect The base rect
  * @param size The new size
@@ -51,7 +51,7 @@ NS_INLINE CGRect FCYCGRectSetSize(CGRect rect, CGSize size) {
 }
 
 /**
- * @brief Changes the size of a CGRect to the width and height.
+ * Changes the size of a CGRect to the width and height.
  *
  * @param rect The base rect
  * @param width The new width
@@ -62,7 +62,7 @@ NS_INLINE CGRect FCYCGRectSetSizeMake(CGRect rect, CGFloat width, CGFloat height
 }
 
 /**
- * @brief Set a new CGPoint as origin of a CGRect
+ * Set a new CGPoint as origin of a CGRect
  *
  * Unline CGRectOffset this function actually set an absolute position,
  * instead of adding/subtracting.
@@ -76,7 +76,7 @@ NS_INLINE CGRect FCYCGRectSetPosition(CGRect rect, CGFloat x, CGFloat y) {
 }
 
 /**
- * @brief Set a new origin.x to a CGRect
+ * Set a new origin.x to a CGRect
  *
  * @param rect The base rect
  * @param height This is number will be the new origin.x
@@ -86,7 +86,7 @@ NS_INLINE CGRect FCYCGRectSetPositionX(CGRect rect, CGFloat x) {
 }
 
 /**
- * @brief Set a new origin.y to a CGRect
+ * Set a new origin.y to a CGRect
  *
  * @param rect The base rect
  * @param height This is number will be the new origin.y
@@ -96,7 +96,7 @@ NS_INLINE CGRect FCYCGRectSetPositionY(CGRect rect, CGFloat y) {
 }
 
 /**
- * @brief Returns the last horizontal point of a rect
+ * Returns the last horizontal point of a rect
  *
  * Returns CGRect.origin.x + CGRect.size.width
  * 
@@ -107,7 +107,7 @@ NS_INLINE CGFloat FCYCGRectHorizontalEndValue(CGRect rect) {
 }
 
 /**
- * @brief Returns the center point of a CGRect
+ * Returns the center point of a CGRect
  *
  * @param rect The rect that you want the center point
  */

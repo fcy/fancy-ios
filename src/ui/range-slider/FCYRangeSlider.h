@@ -1,15 +1,12 @@
-/**
- * @file FCYRangeSlider.h
- * Range slider class
- *
- * @author Felipe Cypriano
- * @date 2011
- */
+//
+//  Created by Felipe Cypriano on 2011.
+//  Copyright 2011 Felipe Cypriano. All rights reserved.
+//
 
 #import <Foundation/Foundation.h>
 
 /**
- * @brief Represents the selected range using CGFloat values.
+ * Represents the selected range using CGFloat values.
  *
  * The values are absolute, so the start value corresponds to the exact 
  * location where the range start. Unline NSRange the end is where the 
@@ -25,7 +22,7 @@ typedef struct _FCYRangeSliderValue {
 
 
 /**
- * @brief A slider to select ranges. It's like UISlider but with two thumbs.
+ * A slider to select ranges. It's like UISlider but with two thumbs.
  *
  * A FCYRangeSlider is a visual component to select two values within a range. It's always
  * displayed as a horizontal bar and the height is fixed at 30 pixels. It has two indicator,
@@ -35,7 +32,7 @@ typedef struct _FCYRangeSliderValue {
 @interface FCYRangeSlider : UIControl
 
 /**
- * @brief Contains the mininum allowed value
+ * Contains the mininum allowed value
  *
  * If the change causes the current rangeValue.start to be below the new minimum value,
  * it will be adjusted to match the new minimum value automatically.
@@ -48,7 +45,7 @@ typedef struct _FCYRangeSliderValue {
  */
 @property (nonatomic) CGFloat minimumValue;
 /**
- * @brief Contains the maximum allowed value
+ * Contains the maximum allowed value
  *
  * If the change causes the current rangeValue.end to be above the new maximum value,
  * it will be adjusted to match the new maximum value automatically.
@@ -61,7 +58,7 @@ typedef struct _FCYRangeSliderValue {
  */
 @property (nonatomic) CGFloat maximumValue;
 /**
- * @brief Contains the selected range represented by NSRange
+ * Contains the selected range represented by NSRange
  *
  * Important this property is only completely reliable if acceptOnlyNonFractionValues is
  * set to YES. Because of the difference between floats and integers. NSRange is always rounded.
@@ -69,7 +66,7 @@ typedef struct _FCYRangeSliderValue {
  */
 @property (nonatomic) NSRange range;
 /**
- * @brief Contains the selected range with float values
+ * Contains the selected range with float values
  *
  * This property contains the exact selected range expressed in float values.
  *
@@ -78,7 +75,7 @@ typedef struct _FCYRangeSliderValue {
  */
 @property (nonatomic) FCYRangeSliderValue rangeValue;
 /**
- * @brief Contains the minimum accepted range length
+ * Contains the minimum accepted range length
  *
  * This property contains the minimum length of a range. Setting it to positive value
  * ensures that selected range is at least of a given length. Applies to both
@@ -95,7 +92,7 @@ typedef struct _FCYRangeSliderValue {
  */
 @property (nonatomic) CGFloat minimumRangeLength;
 /**
- * @brief Controls if only integer values can be selected
+ * Controls if only integer values can be selected
  *
  * If this property is set to YES both thumbs will be automatically anchored to it's
  * closest integer value.
@@ -104,7 +101,7 @@ typedef struct _FCYRangeSliderValue {
  */
 @property (nonatomic) BOOL acceptOnlyNonFractionValues;
 /**
- * @brief Controls if only positive ranges (start >= end) can be selected
+ * Controls if only positive ranges (start >= end) can be selected
  *
  * If this property is set to YES slider will not allow for setting end thumb before
  * the start thumb.
@@ -113,18 +110,22 @@ typedef struct _FCYRangeSliderValue {
  */
 @property (nonatomic) BOOL acceptOnlyPositiveRanges;
 /**
- * @brief A image to represent the values outside the selected range
+ * A image to represent the values outside the selected range
  *
  * You should correctly set the UIImage's stretchableImageWithLeftCapWidth:topCapHeight:
  * to get a perfect visual.
+ *
+ * @param image The stretchable image to use
  */
 - (void)setOutRangeTrackImage:(UIImage *)image;
 /**
- * @brief A image to represent the selected range
+ * A image to represent the selected range
+ *
+ * @param image The stretchable image to use
  */
 - (void)setInRangeTrackImage:(UIImage *)image;
 /**
- * @brief A image to represent both thumbs, or indicators.
+ * A image to represent both thumbs, or indicators.
  *
  * @param image The image
  * @param state The state when the image will be show. Currently only 
@@ -133,14 +134,14 @@ typedef struct _FCYRangeSliderValue {
 - (void)setThumbImage:(UIImage *)image forState:(UIControlState)state;
 
 /**
- * @brief Sets the receiver’s current rangeValue, allowing you to animate the change visually.
+ * Sets the receiver’s current rangeValue, allowing you to animate the change visually.
  *
  * @param newRangeValue The new rangeValue
  * @param animated Specify whether the change will be animated or not
  */
 - (void)setRangeValue:(FCYRangeSliderValue)newRangeValue animated:(BOOL)animated;
 /**
- * @brief Sets the receiver’s current range, allowing you to animate the change visually.
+ * Sets the receiver’s current range, allowing you to animate the change visually.
  *
  * @param newRange The new range
  * @param animated Specify whether the change will be animated or not
@@ -150,7 +151,7 @@ typedef struct _FCYRangeSliderValue {
 @end
 
 /**
- * @brief Creates a new FCYRangeSliderValue
+ * Creates a new FCYRangeSliderValue
  */
 NS_INLINE FCYRangeSliderValue FCYRangeSliderValueMake(CGFloat start, CGFloat end) {
     FCYRangeSliderValue r;

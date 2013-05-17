@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>--project-name</key>
+	<string>Fancy-iOS</string>
+	<key>--project-company</key>
+	<string>Felipe Cypriano</string>
+	<key>--company-id</key>
+	<string>com.felipecypriano</string>
+	<key>--create-html</key>
+	<true/>
+	<key>--create-docset</key>
+	<false/>
+	<key>--install-docset</key>
+	<false/>
+	<key>--keep-intermediate-files</key>
+	<true/>
+	<key>--keep-undocumented-members</key>
+	<true/>
+	<key>--index-desc</key>
+	<string>README.markdown</string>
+	<key>--warn-undocumented-member</key>
+	<true/>
+	<key>--output</key>
+	<string>./docs/output</string>
+	<key>--ignore</key>
+	<array>
+		<string>*.m</string>
+		<string>demos</string>
+		<string>tests</string>
+	</array>
+	<key>--include</key>
+	<array>
+		<string>./docs/images/FCRangeSliderSampleController.png</string>
+	</array>
+</dict>
+</plist>

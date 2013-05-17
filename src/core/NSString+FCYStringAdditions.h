@@ -6,7 +6,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (FCYTrim)
+@interface NSString (FCYStringAdditions)
 
 - (NSString *)fcy_trim;
 

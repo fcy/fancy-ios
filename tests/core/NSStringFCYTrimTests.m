@@ -5,7 +5,7 @@
 
 
 #import <SenTestingKit/SenTestingKit.h>
-#import "NSString+FCYTrim.h"
+#import "NSString+FCYStringAdditions.h"
 
 
 @interface NSStringFCYTrimTests : SenTestCase

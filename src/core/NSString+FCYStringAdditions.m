@@ -4,10 +4,10 @@
 //
 
 
-#import "NSString+FCYTrim.h"
+#import "NSString+FCYStringAdditions.h"
 
 
-@implementation NSString (FCYTrim)
+@implementation NSString (FCYStringAdditions)
 
 - (NSString *)fcy_trim {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];

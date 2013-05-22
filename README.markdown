@@ -25,12 +25,12 @@ pod 'Fancy-iOS/UI/RangeSlider'
 #### Available specs & subspecs
 
 - Fancy-iOS
--- Core
--- UI
---- AutoLayout
---- Geometry
---- ImageAdditions
---- RangeSlider
+    - Core
+    - UI
+        - AutoLayout
+        - Geometry
+        - ImageAdditions
+        - RangeSlider
 
 Requirements
 ------------

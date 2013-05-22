@@ -16,7 +16,11 @@ Pod::Spec.new do |s|
   s.subspec 'UI' do |ui|
     ui.dependency 'Fancy-iOS/Core'
     ui.frameworks = 'CoreGraphics'
-    
+
+    ui.subspec 'AutoLayout' do |autolayout|
+      autolayout.source_files = 'src/ui/auto-layout/*.{h,m}'
+    end
+
     ui.subspec 'Geometry' do |geometry|
       geometry.source_files = 'src/ui/FCYGeometry.{h,m}'
     end
@@ -27,6 +31,7 @@ Pod::Spec.new do |s|
     
     ui.subspec 'RangeSlider' do |range_slider|
       range_slider.source_files = 'src/ui/range-slider/*.{h,m}'
+      range_slider.dependency 'Fancy-iOS/UI/Geometry'
     end
   end  
 end

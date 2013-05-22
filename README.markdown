@@ -11,12 +11,26 @@ How to Use It
 ### CocoaPods
 Add to your project's `Podfile`:
 
-`pod 'Fancy-iOS`
+```
+pod 'Fancy-iOS'
+```
 
 The pod is very modularized with subspecs and you can install only what you need. For example,
 if you want only the `FCYRangeSlider` put this in your `Podfile`:
 
-`pod 'Fancy-iOS/UI/RangeSlider'`
+```
+pod 'Fancy-iOS/UI/RangeSlider'
+```
+
+#### Available specs & subspecs
+
+- Fancy-iOS
+-- Core
+-- UI
+--- AutoLayout
+--- Geometry
+--- ImageAdditions
+--- RangeSlider
 
 Requirements
 ------------

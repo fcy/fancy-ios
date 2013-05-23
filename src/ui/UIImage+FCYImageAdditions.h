@@ -10,4 +10,6 @@
 
 + (UIImage *)fcy_resizableImageWithColor:(UIColor *)color;
 
+- (UIImage *)fcy_tintedImageWithColor:(UIColor *)tintColor;
+
 @end

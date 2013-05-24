@@ -7,7 +7,16 @@
 #import "UIColor+FCYColorAdditions.h"
 
 
+static NSString *const RegexForHexComponents = @"#([0-9,A-F]{1,2})([0-9,A-F]{1,2})([0-9,A-F]{1,2})";
+
 @implementation UIColor (FCYColorAdditions)
+
+static NSCache *_cache;
+
++ (void)initialize {
+    [super initialize];
+    _cache = [[NSCache alloc] init];
+}
 
 + (UIColor *)fcy_colorWithHex:(NSString *)hexValue {
     return [self fcy_colorWithHex:hexValue alpha:1.0f];
@@ -46,9 +55,11 @@
 + (NSArray *)hexComponentsFromHexString:(NSString *)hexString {
     NSMutableArray *components = [[NSMutableArray alloc] init];
 
-    NSString *hexComponent = @"[0-9,A-F]{1,2}";
-    NSString *pattern = [NSString stringWithFormat:@"#(%1$@)(%1$@)(%1$@)", hexComponent];
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:nil];
+    NSRegularExpression *regex = [_cache objectForKey:RegexForHexComponents];
+    if (!regex) {
+        regex = [NSRegularExpression regularExpressionWithPattern:RegexForHexComponents options:0 error:nil];
+        [_cache setObject:regex forKey:RegexForHexComponents];
+    }
     NSRange range = NSMakeRange(0,[hexString length]);
     NSTextCheckingResult *match = [regex firstMatchInString:[hexString uppercaseString] options:0 range:range];
     if ([match numberOfRanges] == 4) {

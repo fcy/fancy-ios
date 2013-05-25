@@ -33,4 +33,11 @@
 }
 
 
+- (NSArray *)fcy_arrayByRemovingObjectsInArray:(NSArray *)array {
+    NSMutableArray *mutableArray = [self mutableCopy];
+    [mutableArray removeObjectsInArray:array];
+    return [mutableArray copy];
+}
+
+
 @end

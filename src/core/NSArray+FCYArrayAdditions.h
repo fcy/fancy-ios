@@ -22,4 +22,12 @@
 */
 - (NSArray *)fcy_randomObjectsArrayWithLimit:(NSUInteger)limit;
 
+/**
+* Returns a new array without the objects passed in the `array` parameter
+*
+* @param array The array with the objects to be removed from the new array
+* @return A new array with all the objects from the source array except the ones passed in the parameter
+*/
+- (NSArray *)fcy_arrayByRemovingObjectsInArray:(NSArray *)array;
+
 @end

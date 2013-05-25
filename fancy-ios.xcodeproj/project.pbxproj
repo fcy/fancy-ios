@@ -38,9 +38,11 @@
 		B3D040287393CF0BCA789FC7 /* FCYLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D048A8E51D5E86E12C2B7F /* FCYLayoutConstraint.m */; };
 		B3D041C31A0107C8E845B41F /* UIView+FCYLayoutConstraintAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D04E5DE306EE477247F6F1 /* UIView+FCYLayoutConstraintAdditions.h */; };
 		B3D041DAFDAFED070B3ED502 /* UIView+FCYLayoutConstraintAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D04A74D52683B70FD59051 /* UIView+FCYLayoutConstraintAdditions.m */; };
+		B3D0441D5FF1C6FF4ECF916C /* UIColor+FCYColorAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D048A8F2861D2EBF4A276D /* UIColor+FCYColorAdditions.h */; };
 		B3D0467643F53B3E69486479 /* UIImage+FCYImageAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D04B74B1847445AC2CC8A5 /* UIImage+FCYImageAdditions.h */; };
 		B3D04762BC9B2B9880A71534 /* NSString+FCYStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D04814B5861BDB5DFB2EDE /* NSString+FCYStringAdditions.m */; };
 		B3D047A39C346810776FE04E /* NSString+FCYStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D04F358D280F8E0F9B3F6A /* NSString+FCYStringAdditions.h */; };
+		B3D04D0213BDDD879EB482EE /* UIColor+FCYColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D04040A6399E19F1739796 /* UIColor+FCYColorAdditions.m */; };
 		B3D04DD660EC54764B82AAC1 /* UIImage+FCYImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D040B82A7B67F31E4AEA09 /* UIImage+FCYImageAdditions.m */; };
 		B3D04FD49925DC89E7646BDF /* FCYLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D040C5DAD4030C7F5D9F59 /* FCYLayoutConstraint.h */; };
 		BA6D1AD01D4A84AF934751C3 /* NSArray+FCYArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6D150B22B5F968ED01294D /* NSArray+FCYArrayAdditions.m */; };
@@ -84,6 +86,7 @@
 		551F428D1577F9F200014BF1 /* RangeSliderExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RangeSliderExample.xcodeproj; path = demos/RangeSliderExample/RangeSliderExample.xcodeproj; sourceTree = "<group>"; };
 		55A825F21576B06B0011226F /* FCYThumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYThumbView.m; sourceTree = "<group>"; };
 		55A825F21576B06B00112271 /* FCYThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYThumbView.h; sourceTree = "<group>"; };
+		B3D04040A6399E19F1739796 /* UIColor+FCYColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FCYColorAdditions.m"; sourceTree = "<group>"; };
 		B3D040606F09627752FCA890 /* FCYGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYGeometry.m; sourceTree = "<group>"; };
 		B3D040B82A7B67F31E4AEA09 /* UIImage+FCYImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FCYImageAdditions.m"; sourceTree = "<group>"; };
 		B3D040C5DAD4030C7F5D9F59 /* FCYLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYLayoutConstraint.h; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 		B3D046CFBBC76BAEB6A29650 /* NSStringFCYTrimTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringFCYTrimTests.m; sourceTree = "<group>"; };
 		B3D04814B5861BDB5DFB2EDE /* NSString+FCYStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FCYStringAdditions.m"; sourceTree = "<group>"; };
 		B3D048A8E51D5E86E12C2B7F /* FCYLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYLayoutConstraint.m; sourceTree = "<group>"; };
+		B3D048A8F2861D2EBF4A276D /* UIColor+FCYColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FCYColorAdditions.h"; sourceTree = "<group>"; };
 		B3D04A74D52683B70FD59051 /* UIView+FCYLayoutConstraintAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FCYLayoutConstraintAdditions.m"; sourceTree = "<group>"; };
 		B3D04B74B1847445AC2CC8A5 /* UIImage+FCYImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FCYImageAdditions.h"; sourceTree = "<group>"; };
 		B3D04E5DE306EE477247F6F1 /* UIView+FCYLayoutConstraintAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FCYLayoutConstraintAdditions.h"; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 				B3D040606F09627752FCA890 /* FCYGeometry.m */,
 				B3D04F931B8B893D137BA7B3 /* FCYGeometry.h */,
 				B3D04441BAF3340A7812744E /* auto-layout */,
+				B3D04040A6399E19F1739796 /* UIColor+FCYColorAdditions.m */,
+				B3D048A8F2861D2EBF4A276D /* UIColor+FCYColorAdditions.h */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 				B3D0467643F53B3E69486479 /* UIImage+FCYImageAdditions.h in Headers */,
 				5500136A174570D10041DDCC /* FCYGeometry.h in Headers */,
 				B3D041C31A0107C8E845B41F /* UIView+FCYLayoutConstraintAdditions.h in Headers */,
+				B3D0441D5FF1C6FF4ECF916C /* UIColor+FCYColorAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +518,7 @@
 				B3D04DD660EC54764B82AAC1 /* UIImage+FCYImageAdditions.m in Sources */,
 				5500136C174570D40041DDCC /* FCYGeometry.m in Sources */,
 				B3D041DAFDAFED070B3ED502 /* UIView+FCYLayoutConstraintAdditions.m in Sources */,
+				B3D04D0213BDDD879EB482EE /* UIColor+FCYColorAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -46,6 +46,7 @@
 		B3D04DD660EC54764B82AAC1 /* UIImage+FCYImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D040B82A7B67F31E4AEA09 /* UIImage+FCYImageAdditions.m */; };
 		B3D04FD49925DC89E7646BDF /* FCYLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D040C5DAD4030C7F5D9F59 /* FCYLayoutConstraint.h */; };
 		BA6D1AD01D4A84AF934751C3 /* NSArray+FCYArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6D150B22B5F968ED01294D /* NSArray+FCYArrayAdditions.m */; };
+		D4BFBF22177CEAAF009336CC /* FCYMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = D4BFBF21177CEAAF009336CC /* FCYMacros.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		B3D04F931B8B893D137BA7B3 /* FCYGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYGeometry.h; sourceTree = "<group>"; };
 		BA6D150B22B5F968ED01294D /* NSArray+FCYArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FCYArrayAdditions.m"; sourceTree = "<group>"; };
 		BA6D16717046F3242E3169F8 /* NSArray+FCYArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FCYArrayAdditions.h"; sourceTree = "<group>"; };
+		D4BFBF21177CEAAF009336CC /* FCYMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYMacros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 				B3D04F358D280F8E0F9B3F6A /* NSString+FCYStringAdditions.h */,
 				BA6D150B22B5F968ED01294D /* NSArray+FCYArrayAdditions.m */,
 				BA6D16717046F3242E3169F8 /* NSArray+FCYArrayAdditions.h */,
+				D4BFBF21177CEAAF009336CC /* FCYMacros.h */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4BFBF22177CEAAF009336CC /* FCYMacros.h in Headers */,
 				5501F15F157699FC00303930 /* FCYDevice.h in Headers */,
 				B3D047A39C346810776FE04E /* NSString+FCYStringAdditions.h in Headers */,
 				B3D04FD49925DC89E7646BDF /* FCYLayoutConstraint.h in Headers */,

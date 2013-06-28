@@ -14,7 +14,7 @@
  * Creates a weak variable of self then you should use `FCYStrongifySelfInto`
  * to get a strong reference.
  */
-#define FCYWeakifySelf typeof(self) __weak _fcy_weakSelf
+#define FCYWeakifySelf typeof(self) __weak _fcy_weakSelf = self
 /**
  * Creates a strong reference of self from the previously created, using
  * `FCYWeakifySelf`, weak reference.

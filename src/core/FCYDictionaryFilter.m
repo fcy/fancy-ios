@@ -20,11 +20,12 @@
     self = [super init];
     if (self) {
         _dictionary = dictionary;
+        self.shouldConvertNilToNSNullOnSet = NO;
     }
     return self;
 }
 
-- (id)objectForKey:(id)key {
+- (id)objectForKey:(id<NSCopying>)key {
     id obj = [_dictionary objectForKey:key];
     if ([obj isKindOfClass:[NSNull class]]) {
         obj = nil;
@@ -32,8 +33,27 @@
     return obj;
 }
 
-- (id)objectForKeyedSubscript:(id)key {
+- (id)objectForKeyedSubscript:(id<NSCopying>)key {
     return [self objectForKey:key];
+}
+
+- (void)setObject:(id)object forKey:(id<NSCopying>)key {
+    if ([_dictionary isKindOfClass:[NSMutableDictionary class]]) {
+        NSMutableDictionary *mdic = (NSMutableDictionary *) _dictionary;
+        if (object == nil) {
+            if (self.shouldConvertNilToNSNullOnSet) {
+                object = [NSNull null];
+                [mdic setObject:object forKey:key];
+            }
+        }
+        [mdic setObject:object forKey:key];
+    } else {
+        [[NSException exceptionWithName:NSInternalInconsistencyException reason:@"Should create the filter with a NSMutableDictionary instance to use setObject:forKey:" userInfo:nil] raise];
+    }
+}
+
+- (void)setObject:(id)object forKeyedSubscript:(id<NSCopying>)key {
+    [self setObject:object forKey:key];
 }
 
 @end

@@ -45,6 +45,7 @@
 		B3D04D0213BDDD879EB482EE /* UIColor+FCYColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D04040A6399E19F1739796 /* UIColor+FCYColorAdditions.m */; };
 		B3D04DD660EC54764B82AAC1 /* UIImage+FCYImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D040B82A7B67F31E4AEA09 /* UIImage+FCYImageAdditions.m */; };
 		B3D04FD49925DC89E7646BDF /* FCYLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D040C5DAD4030C7F5D9F59 /* FCYLayoutConstraint.h */; };
+		BA6D10C519ED5B0724CCF7C9 /* FCYDictionaryFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6D170A60BD05E62A83F064 /* FCYDictionaryFilterTests.m */; };
 		BA6D1AD01D4A84AF934751C3 /* NSArray+FCYArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6D150B22B5F968ED01294D /* NSArray+FCYArrayAdditions.m */; };
 		D45878B317851412004B36C7 /* FCYDictionaryFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = D45878B117851412004B36C7 /* FCYDictionaryFilter.h */; };
 		D45878B417851412004B36C7 /* FCYDictionaryFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = D45878B217851412004B36C7 /* FCYDictionaryFilter.m */; };
@@ -105,6 +106,7 @@
 		B3D04F931B8B893D137BA7B3 /* FCYGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYGeometry.h; sourceTree = "<group>"; };
 		BA6D150B22B5F968ED01294D /* NSArray+FCYArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FCYArrayAdditions.m"; sourceTree = "<group>"; };
 		BA6D16717046F3242E3169F8 /* NSArray+FCYArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FCYArrayAdditions.h"; sourceTree = "<group>"; };
+		BA6D170A60BD05E62A83F064 /* FCYDictionaryFilterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYDictionaryFilterTests.m; sourceTree = "<group>"; };
 		D45878B117851412004B36C7 /* FCYDictionaryFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYDictionaryFilter.h; sourceTree = "<group>"; };
 		D45878B217851412004B36C7 /* FCYDictionaryFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYDictionaryFilter.m; sourceTree = "<group>"; };
 		D4BFBF21177CEAAF009336CC /* FCYMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYMacros.h; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				B3D046CFBBC76BAEB6A29650 /* NSStringFCYTrimTests.m */,
+				BA6D170A60BD05E62A83F064 /* FCYDictionaryFilterTests.m */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 			files = (
 				55001372174575F90041DDCC /* NSStringFCYTrimTests.m in Sources */,
 				BA6D1AD01D4A84AF934751C3 /* NSArray+FCYArrayAdditions.m in Sources */,
+				BA6D10C519ED5B0724CCF7C9 /* FCYDictionaryFilterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

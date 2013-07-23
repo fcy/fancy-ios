@@ -45,10 +45,13 @@
                 object = [NSNull null];
                 [mdic setObject:object forKey:key];
             }
+        } else {
+            [mdic setObject:object forKey:key];
         }
-        [mdic setObject:object forKey:key];
     } else {
-        [[NSException exceptionWithName:NSInternalInconsistencyException reason:@"Should create the filter with a NSMutableDictionary instance to use setObject:forKey:" userInfo:nil] raise];
+        [[NSException exceptionWithName:NSInternalInconsistencyException
+                                 reason:@"Should create FCYDictionaryFilter with a NSMutableDictionary instance to use setObject:forKey:"
+                               userInfo:nil] raise];
     }
 }
 

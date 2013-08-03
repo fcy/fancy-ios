@@ -2,7 +2,7 @@
 #import "NSString+FCYStringAdditions.h"
 
 
-SPEC_BEGIN(NSStringFCYTrimSpecs)
+SPEC_BEGIN(NSStringFCYTrimSpec)
 
 describe(@"FCYTrim NSString category", ^{
     describe(@"fcy_trim", ^{

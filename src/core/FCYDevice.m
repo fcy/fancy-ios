@@ -14,11 +14,7 @@ BOOL FCYDeviceScreenResolutionIsRetina(FCYDeviceScreenResolution resolution) {
             resolution == FCYDeviceScreenResolutionPadRetina;
 }
 
-#define CAN_MAKE_PHONE_CALLS_KEY @"phoneCall"
-
-@implementation FCYDevice {
-    NSCache *_cache;
-}
+@implementation FCYDevice
 
 + (id)shared {
     static id sharedInstance = nil;
@@ -32,7 +28,6 @@ BOOL FCYDeviceScreenResolutionIsRetina(FCYDeviceScreenResolution resolution) {
 - (id)init {
     self = [super init];
     if (self) {
-        _cache = [[NSCache alloc] init];
     }
     
     return self;
@@ -42,12 +37,7 @@ BOOL FCYDeviceScreenResolutionIsRetina(FCYDeviceScreenResolution resolution) {
 #pragma mark FCYDevice methods
 
 - (BOOL)canMakePhoneCalls {
-    NSNumber *canMake = [_cache objectForKey:CAN_MAKE_PHONE_CALLS_KEY];
-    if (canMake == nil) {
-        canMake = [NSNumber numberWithBool:[[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tel://"]]];
-        [_cache setObject:canMake forKey:CAN_MAKE_PHONE_CALLS_KEY];
-    }
-    return [canMake boolValue];
+    return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tel://"]];
 }
 
 - (FCYDeviceScreenResolution)currentResolution {

@@ -35,13 +35,14 @@
 		D44FA13017AD643E0083B15D /* FCYThumbView.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A825F21576B06B00112271 /* FCYThumbView.h */; };
 		D44FA13117AD643E0083B15D /* UIColor+FCYColorAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D048A8F2861D2EBF4A276D /* UIColor+FCYColorAdditions.h */; };
 		D44FA13217AD643E0083B15D /* UIImage+FCYImageAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D04B74B1847445AC2CC8A5 /* UIImage+FCYImageAdditions.h */; };
-		D44FA13317AD648B0083B15D /* NSStringFCYTrimSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D046CFBBC76BAEB6A29650 /* NSStringFCYTrimSpecs.m */; };
-		D44FA13417AD648B0083B15D /* FCYDictionaryFilterSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6D170A60BD05E62A83F064 /* FCYDictionaryFilterSpecs.m */; };
-		D44FA13517AD648B0083B15D /* FCYRangeSliderSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 5501F17F15769B5A00303930 /* FCYRangeSliderSpecs.m */; };
-		D44FA13617AD648B0083B15D /* FCYGeometrySpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D046061783A6014CC10CFE /* FCYGeometrySpecs.m */; };
+		D44FA13317AD648B0083B15D /* NSStringFCYTrimSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D046CFBBC76BAEB6A29650 /* NSStringFCYTrimSpec.m */; };
+		D44FA13417AD648B0083B15D /* FCYDictionaryFilterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6D170A60BD05E62A83F064 /* FCYDictionaryFilterSpec.m */; };
+		D44FA13517AD648B0083B15D /* FCYRangeSliderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5501F17F15769B5A00303930 /* FCYRangeSliderSpec.m */; };
+		D44FA13617AD648B0083B15D /* FCYGeometrySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D046061783A6014CC10CFE /* FCYGeometrySpec.m */; };
 		D44FA13717AD65530083B15D /* libFancy-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D44FA0F817AD62E30083B15D /* libFancy-iOS.a */; };
 		D44FA13A17AD66020083B15D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F18715769FDA00303930 /* CoreGraphics.framework */; };
 		D44FA13B17AD660A0083B15D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F18715769FDA00303930 /* CoreGraphics.framework */; };
+		D44FA13E17ADA1580083B15D /* NSArrayFCYArrayAdditionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6D120ABA983A2703DDCC54 /* NSArrayFCYArrayAdditionsSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +77,7 @@
 		5501F15D157698D300303930 /* FCYRangeSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCYRangeSlider.m; sourceTree = "<group>"; };
 		5501F16115769A7F00303930 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		5501F16915769B2F00303930 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		5501F17F15769B5A00303930 /* FCYRangeSliderSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYRangeSliderSpecs.m; sourceTree = "<group>"; };
+		5501F17F15769B5A00303930 /* FCYRangeSliderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYRangeSliderSpec.m; sourceTree = "<group>"; };
 		5501F18715769FDA00303930 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		550396A6174D5268004F32B2 /* Fancy-iOS.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Fancy-iOS.podspec"; sourceTree = "<group>"; };
 		551C46851746B669003D2A8C /* AppledocSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppledocSettings.plist; sourceTree = "<group>"; };
@@ -88,8 +89,8 @@
 		B3D040606F09627752FCA890 /* FCYGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYGeometry.m; sourceTree = "<group>"; };
 		B3D040B82A7B67F31E4AEA09 /* UIImage+FCYImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FCYImageAdditions.m"; sourceTree = "<group>"; };
 		B3D040C5DAD4030C7F5D9F59 /* FCYLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYLayoutConstraint.h; sourceTree = "<group>"; };
-		B3D046061783A6014CC10CFE /* FCYGeometrySpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYGeometrySpecs.m; sourceTree = "<group>"; };
-		B3D046CFBBC76BAEB6A29650 /* NSStringFCYTrimSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringFCYTrimSpecs.m; sourceTree = "<group>"; };
+		B3D046061783A6014CC10CFE /* FCYGeometrySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYGeometrySpec.m; sourceTree = "<group>"; };
+		B3D046CFBBC76BAEB6A29650 /* NSStringFCYTrimSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringFCYTrimSpec.m; sourceTree = "<group>"; };
 		B3D04814B5861BDB5DFB2EDE /* NSString+FCYStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FCYStringAdditions.m"; sourceTree = "<group>"; };
 		B3D048A8E51D5E86E12C2B7F /* FCYLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYLayoutConstraint.m; sourceTree = "<group>"; };
 		B3D048A8F2861D2EBF4A276D /* UIColor+FCYColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FCYColorAdditions.h"; sourceTree = "<group>"; };
@@ -98,9 +99,10 @@
 		B3D04E5DE306EE477247F6F1 /* UIView+FCYLayoutConstraintAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FCYLayoutConstraintAdditions.h"; sourceTree = "<group>"; };
 		B3D04F358D280F8E0F9B3F6A /* NSString+FCYStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FCYStringAdditions.h"; sourceTree = "<group>"; };
 		B3D04F931B8B893D137BA7B3 /* FCYGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYGeometry.h; sourceTree = "<group>"; };
+		BA6D120ABA983A2703DDCC54 /* NSArrayFCYArrayAdditionsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayFCYArrayAdditionsSpec.m; sourceTree = "<group>"; };
 		BA6D150B22B5F968ED01294D /* NSArray+FCYArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FCYArrayAdditions.m"; sourceTree = "<group>"; };
 		BA6D16717046F3242E3169F8 /* NSArray+FCYArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FCYArrayAdditions.h"; sourceTree = "<group>"; };
-		BA6D170A60BD05E62A83F064 /* FCYDictionaryFilterSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYDictionaryFilterSpecs.m; sourceTree = "<group>"; };
+		BA6D170A60BD05E62A83F064 /* FCYDictionaryFilterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYDictionaryFilterSpec.m; sourceTree = "<group>"; };
 		D44FA0F817AD62E30083B15D /* libFancy-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libFancy-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D44FA10A17AD63890083B15D /* Fancy-iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fancy-iOSTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D44FA13C17AD68190083B15D /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
@@ -235,8 +237,9 @@
 		5501F17B15769B5A00303930 /* core */ = {
 			isa = PBXGroup;
 			children = (
-				B3D046CFBBC76BAEB6A29650 /* NSStringFCYTrimSpecs.m */,
-				BA6D170A60BD05E62A83F064 /* FCYDictionaryFilterSpecs.m */,
+				B3D046CFBBC76BAEB6A29650 /* NSStringFCYTrimSpec.m */,
+				BA6D170A60BD05E62A83F064 /* FCYDictionaryFilterSpec.m */,
+				BA6D120ABA983A2703DDCC54 /* NSArrayFCYArrayAdditionsSpec.m */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -245,7 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				5501F17E15769B5A00303930 /* range-slider */,
-				B3D046061783A6014CC10CFE /* FCYGeometrySpecs.m */,
+				B3D046061783A6014CC10CFE /* FCYGeometrySpec.m */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -253,7 +256,7 @@
 		5501F17E15769B5A00303930 /* range-slider */ = {
 			isa = PBXGroup;
 			children = (
-				5501F17F15769B5A00303930 /* FCYRangeSliderSpecs.m */,
+				5501F17F15769B5A00303930 /* FCYRangeSliderSpec.m */,
 			);
 			path = "range-slider";
 			sourceTree = "<group>";
@@ -438,10 +441,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D44FA13317AD648B0083B15D /* NSStringFCYTrimSpecs.m in Sources */,
-				D44FA13417AD648B0083B15D /* FCYDictionaryFilterSpecs.m in Sources */,
-				D44FA13517AD648B0083B15D /* FCYRangeSliderSpecs.m in Sources */,
-				D44FA13617AD648B0083B15D /* FCYGeometrySpecs.m in Sources */,
+				D44FA13317AD648B0083B15D /* NSStringFCYTrimSpec.m in Sources */,
+				D44FA13417AD648B0083B15D /* FCYDictionaryFilterSpec.m in Sources */,
+				D44FA13517AD648B0083B15D /* FCYRangeSliderSpec.m in Sources */,
+				D44FA13617AD648B0083B15D /* FCYGeometrySpec.m in Sources */,
+				D44FA13E17ADA1580083B15D /* NSArrayFCYArrayAdditionsSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,7 @@
 #import "Kiwi.h"
 #import "FCYDictionaryFilter.h"
 
-SPEC_BEGIN(FCYDictionaryFilterSpecs)
+SPEC_BEGIN(FCYDictionaryFilterSpec)
 
 describe(@"FCYDictionaryFilter", ^{
     context(@"newly created", ^{

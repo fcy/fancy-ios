@@ -1,7 +1,7 @@
 #import "Kiwi.h"
 #import "FCYRangeSlider.h"
 
-SPEC_BEGIN(FCYRangeSliderSpecs)
+SPEC_BEGIN(FCYRangeSliderSpec)
 
 describe(@"FCYRangeSlider", ^{
     __block FCYRangeSlider *rangeSlider;

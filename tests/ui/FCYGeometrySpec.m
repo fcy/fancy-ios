@@ -2,7 +2,7 @@
 #import "FCYGeometry.h"
 
 
-SPEC_BEGIN(FCYGeometrySpecs)
+SPEC_BEGIN(FCYGeometrySpec)
 
 describe(@"FCYGeometry", ^{
     __block CGRect base;

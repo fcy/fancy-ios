@@ -39,17 +39,21 @@ describe(@"FCYRangeSlider", ^{
         });
     });
 
-    it(@"adjusts rangeValue.start when minimumValue is set to be greater than the current rangeValue.start", ^{
-        rangeSlider.minimumValue = 1.0f;
-        [[theValue(rangeSlider.rangeValue.start) should] equal:theValue(rangeSlider.minimumValue)];
-        [[theValue(rangeSlider.range.length) should] equal:theValue(10.0f)];
+    context(@"minimumValue greater than rangeValue.start", ^{
+        it(@"changes rangeValue.start to be equal minimumValue", ^{
+            rangeSlider.minimumValue = 1.0f;
+            [[theValue(rangeSlider.rangeValue.start) should] equal:theValue(rangeSlider.minimumValue)];
+            [[theValue(rangeSlider.range.length) should] equal:theValue(10.0f)];
+        });
     });
 
-    it(@"adjusts rangeValue.end when maximumValue is set to be lower than the current rangeValue.end", ^{
-        rangeSlider.maximumValue = 8.0f;
-        [[theValue(rangeSlider.rangeValue.end) should] equal:theValue(rangeSlider.maximumValue)];
-        CGFloat expectedRangeLength = rangeSlider.rangeValue.start + rangeSlider.rangeValue.end + 1;
-        [[theValue(rangeSlider.range.length) should] equal:theValue(expectedRangeLength)];
+    context(@"maximumValue lower than rangeValue.end", ^{
+        it(@"changes rangeValue.end to be equal to maximumValue", ^{
+            rangeSlider.maximumValue = 8.0f;
+            [[theValue(rangeSlider.rangeValue.end) should] equal:theValue(rangeSlider.maximumValue)];
+            CGFloat expectedRangeLength = rangeSlider.rangeValue.start + rangeSlider.rangeValue.end + 1;
+            [[theValue(rangeSlider.range.length) should] equal:theValue(expectedRangeLength)];
+        });
     });
 
     describe(@"setRangeValue:", ^{
@@ -83,11 +87,13 @@ describe(@"FCYRangeSlider", ^{
             [[theValue(rangeSlider.rangeValue.end) should] equal:theValue(10.0f)];
         });
 
-        it(@"sets the rangeValue to be (minimumValue, maximumValue) if minimumRangeLength is greater than the slider scale", ^{
-            rangeSlider.minimumRangeLength = 11.0f;
-            rangeSlider.rangeValue = FCYRangeSliderValueMake(5.0f, 7.0f);
-            [[theValue(rangeSlider.rangeValue.start) should] equal:theValue(rangeSlider.minimumValue)];
-            [[theValue(rangeSlider.rangeValue.end) should] equal:theValue(rangeSlider.maximumValue)];
+        context(@"minimumRangeLength greater than the slider scale", ^{
+            it(@"sets the rangeValue to be (minimumValue, maximumValue)", ^{
+                rangeSlider.minimumRangeLength = 11.0f;
+                rangeSlider.rangeValue = FCYRangeSliderValueMake(5.0f, 7.0f);
+                [[theValue(rangeSlider.rangeValue.start) should] equal:theValue(rangeSlider.minimumValue)];
+                [[theValue(rangeSlider.rangeValue.end) should] equal:theValue(rangeSlider.maximumValue)];
+            });
         });
 
         context(@"property acceptOnlyPositiveRanges is set to YES", ^{
@@ -100,13 +106,15 @@ describe(@"FCYRangeSlider", ^{
         });
     });
 
-    it(@"sets the rangeValue to be (minimumValue, maximumValue) when maximumValue changes to lower than rangeValue.start", ^{
-        rangeSlider.minimumValue = 0.0f;
-        rangeSlider.maximumValue = 100.0f;
-        rangeSlider.rangeValue = FCYRangeSliderValueMake(80.0f, 100.0f);
-        rangeSlider.maximumValue = 20.0f;
-        [[theValue(rangeSlider.rangeValue.start) should] equal:theValue(rangeSlider.minimumValue)];
-        [[theValue(rangeSlider.rangeValue.end) should] equal:theValue(rangeSlider.maximumValue)];
+    context(@"maximumValue lower than rangeValue.start", ^{
+        it(@"changes the rangeValue to be (minimumValue, maximumValue)", ^{
+            rangeSlider.minimumValue = 0.0f;
+            rangeSlider.maximumValue = 100.0f;
+            rangeSlider.rangeValue = FCYRangeSliderValueMake(80.0f, 100.0f);
+            rangeSlider.maximumValue = 20.0f;
+            [[theValue(rangeSlider.rangeValue.start) should] equal:theValue(rangeSlider.minimumValue)];
+            [[theValue(rangeSlider.rangeValue.end) should] equal:theValue(rangeSlider.maximumValue)];
+        });
     });
 });
 

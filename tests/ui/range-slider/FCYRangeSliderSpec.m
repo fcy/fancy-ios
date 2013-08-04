@@ -14,25 +14,27 @@ describe(@"FCYRangeSlider", ^{
     });
 
     context(@"initial values", ^{
-        it(@"minimuValue should be 0", ^{
+        it(@"has a minimuValue of zero", ^{
             [[theValue([rangeSlider minimumValue]) should] beZero];
         });
 
-        it(@"maximumValue should be 10", ^{
+        it(@"has a maximumValue of 10", ^{
             [[theValue([rangeSlider maximumValue]) should] equal:theValue(10.0f)];
         });
 
-        it(@"initialRange should be NSMakeRange(0, 11)", ^{
-            NSRange expectedInitialRange = NSMakeRange([rangeSlider minimumValue], [rangeSlider maximumValue] + 1);
+        it(@"has initialRange of NSMakeRange(0, 11)", ^{
+            NSUInteger location = (NSUInteger) [rangeSlider minimumValue];
+            NSUInteger length = (NSUInteger) [rangeSlider maximumValue] + 1;
+            NSRange expectedInitialRange = NSMakeRange(location, length);
             [[theValue([rangeSlider range]) should] equal:theValue(expectedInitialRange)];
         });
 
-        it(@"initialRangeValue should be (0,10)", ^{
+        it(@"has initialRangeValue of (0,10)", ^{
             [[theValue(rangeSlider.rangeValue.start) should] equal:theValue(0.0f)];
             [[theValue(rangeSlider.rangeValue.end) should] equal:theValue(10.0f)];
         });
 
-        it(@"initialMinimumRangeLength should be 0", ^{
+        it(@"has initialMinimumRangeLength of zero", ^{
             [[theValue(rangeSlider.minimumRangeLength) should] beZero];
         });
     });

@@ -28,7 +28,7 @@
  * [dictionary[@"key"] isKindOfClass[NSNull class]]; // returns YES
  * ```
  */
-@property (nonatomic) BOOL shouldConvertNilToNSNullOnSet;
+@property (nonatomic) BOOL convertNilToNSNullOnSet;
 
 /**
  * Creates a new `FCYDictionaryFilter`
@@ -65,12 +65,12 @@
 - (id)objectForKeyedSubscript:(id)key;
 
 /**
- * Filter the object based on the property `shouldConvertNilToNSNullOnSet`.
+ * Filter the object based on the property `convertNilToNSNullOnSet`.
  *
  * @warn You should pass a `NSMutableDictionary` when instantiating `FCYDictionaryFilter`
  * @param object the object to set
  * @key the key
- * @sa `shouldConvertNilToNSNullOnSet`
+ * @sa `convertNilToNSNullOnSet`
  */
 - (void)setObject:(id)object forKey:(id<NSCopying>)key;
 

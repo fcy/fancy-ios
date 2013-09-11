@@ -20,7 +20,7 @@
     self = [super init];
     if (self) {
         _dictionary = dictionary;
-        self.shouldConvertNilToNSNullOnSet = NO;
+        self.convertNilToNSNullOnSet = NO;
     }
     return self;
 }
@@ -41,7 +41,7 @@
     if ([_dictionary isKindOfClass:[NSMutableDictionary class]]) {
         NSMutableDictionary *mdic = (NSMutableDictionary *) _dictionary;
         if (object == nil) {
-            if (self.shouldConvertNilToNSNullOnSet) {
+            if (self.convertNilToNSNullOnSet) {
                 object = [NSNull null];
                 [mdic setObject:object forKey:key];
             }

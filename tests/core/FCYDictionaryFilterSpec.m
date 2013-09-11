@@ -5,9 +5,9 @@ SPEC_BEGIN(FCYDictionaryFilterSpec)
 
 describe(@"FCYDictionaryFilter", ^{
     context(@"newly created", ^{
-        it(@"defaults shouldConvertNilToNSNull to NO", ^{
+        it(@"defaults convertNilToNSNull to NO", ^{
             FCYDictionaryFilter *dictionaryFilter = [[FCYDictionaryFilter alloc] init];
-            [[theValue(dictionaryFilter.shouldConvertNilToNSNullOnSet) should] beNo];
+            [[theValue(dictionaryFilter.convertNilToNSNullOnSet) should] beNo];
         });
     });
 
@@ -65,9 +65,9 @@ describe(@"FCYDictionaryFilter", ^{
             [_mutableDictionary[@"key"] shouldBeNil];
         });
 
-        context(@"shouldConvertNilToNSNull setted to YES", ^{
+        context(@"convertNilToNSNull setted to YES", ^{
             it(@"sets a NSNull object if passed nil", ^{
-                _filter.shouldConvertNilToNSNullOnSet = YES;
+                _filter.convertNilToNSNullOnSet = YES;
                 [_filter setObject:nil forKey:@"key"];
                 [[_mutableDictionary[@"key"] should] beKindOfClass:[NSNull class]];
             });

@@ -10,7 +10,7 @@
 /**
  * Makes Cubic Bezier calculations
  *
- * @note If you import `FCYCubicBezier+CATimingFunction` you can
+ * @note If you import `FCYCubicBezier+CAMediaTimingFunction.h` you can
  * use a `CATimingFunction` from QuartzCore to make a new instance
  * to make custom animations using the standard values of the platform.
  */

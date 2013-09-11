@@ -1,5 +1,6 @@
 #import "Kiwi.h"
 #import "FCYDictionaryFilter.h"
+#import "FCYMacros.h"
 
 SPEC_BEGIN(FCYDictionaryFilterSpec)
 
@@ -29,7 +30,9 @@ describe(@"FCYDictionaryFilter", ^{
         it(@"calls objectForKey:", ^{
             FCYDictionaryFilter *filter = [[FCYDictionaryFilter alloc] init];
             [[[filter should] receive] objectForKey:@"key"];
-            filter[@"key"];
+            FCYSuppressWarning(-Wunused-value, {
+                filter[@"key"];
+            });
         });
     });
 

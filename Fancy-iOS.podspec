@@ -1,16 +1,22 @@
 Pod::Spec.new do |s|
   s.name = 'Fancy-iOS'
-  s.version = '0.6.0'
+  s.version = '0.7.0'
   s.license = { :type => 'MIT', :file => 'LICENSE.txt' }
   s.homepage = 'https://github.com/fcy/fancy-ios'
   s.authors = { 'Felipe Cypriano' => 'felipe@cypriano.me' }
   s.summary = 'A useful library of reusable code for iOS developers.'
-  s.source =  { :git => 'https://github.com/fcy/fancy-ios.git', :tag => "#{s.version}" }
+  s.source =  { :git => 'https://github.com/fcy/fancy-ios.git', :tag => "v#{s.version}" }
   s.requires_arc = true
   s.platform = :ios, '6.0'
   
   s.subspec 'Core' do |core|
+    core.frameworks = 'Foundation'
     core.source_files = 'src/core/*.{h,m}'
+  end
+
+  s.subspec 'QuartzCore' do |qc|
+    qc.frameworks = 'QuartzCore'
+    qc.source_files = 'src/quartz-core/*.{h,m}'
   end
   
   s.subspec 'UI' do |ui|

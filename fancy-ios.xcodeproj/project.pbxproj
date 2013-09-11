@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0AC2B461CD7E49E98A57FDF8 /* libPods-Fancy-iOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFDF17131DC45CE9CEB46B4 /* libPods-Fancy-iOSTests.a */; };
+		5591AE8717E0F077007E247E /* FCYCubicBezierSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D04E3DD3ACAA9DA0168BA9 /* FCYCubicBezierSpec.m */; };
+		5591AE8917E0FB86007E247E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5591AE8817E0FB86007E247E /* QuartzCore.framework */; };
+		5591AE8A17E0FBBE007E247E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5591AE8817E0FB86007E247E /* QuartzCore.framework */; };
+		B3D042EB20E4C5082B12BBA1 /* FCYCubicBezierCAMediaTimingFunctionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D044C7625D9AB69DEE2D49 /* FCYCubicBezierCAMediaTimingFunctionSpec.m */; };
+		B3D04A5023C805993A0DE07B /* FCYCubicBezier+CAMediaTimingFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D04E286DD4625BA8CD492F /* FCYCubicBezier+CAMediaTimingFunction.h */; };
+		B3D04D8351601FB547C8CC16 /* FCYCubicBezier.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D04B44220159EC1186B11F /* FCYCubicBezier.h */; };
+		B3D04E3D835B2F39840F5548 /* FCYCubicBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D0451CB91B05A6B0181464 /* FCYCubicBezier.m */; };
+		B3D04F9A703AC48D5CE6B5C5 /* FCYCubicBezier+CAMediaTiming.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D04FC552D30963E3792191 /* FCYCubicBezier+CAMediaTiming.m */; };
 		D44FA0F917AD62E30083B15D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F143157697F800303930 /* Foundation.framework */; };
 		D44FA10B17AD638A0083B15D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F16915769B2F00303930 /* SenTestingKit.framework */; };
 		D44FA10C17AD638A0083B15D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501F16115769A7F00303930 /* UIKit.framework */; };
@@ -82,6 +90,7 @@
 		550396A6174D5268004F32B2 /* Fancy-iOS.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Fancy-iOS.podspec"; sourceTree = "<group>"; };
 		551C46851746B669003D2A8C /* AppledocSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppledocSettings.plist; sourceTree = "<group>"; };
 		551C46861746B671003D2A8C /* README.markdown */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		5591AE8817E0FB86007E247E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		55A825F21576B06B0011226F /* FCYThumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYThumbView.m; sourceTree = "<group>"; };
 		55A825F21576B06B00112271 /* FCYThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYThumbView.h; sourceTree = "<group>"; };
 		5FFDF17131DC45CE9CEB46B4 /* libPods-Fancy-iOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Fancy-iOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,16 +98,22 @@
 		B3D040606F09627752FCA890 /* FCYGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYGeometry.m; sourceTree = "<group>"; };
 		B3D040B82A7B67F31E4AEA09 /* UIImage+FCYImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FCYImageAdditions.m"; sourceTree = "<group>"; };
 		B3D040C5DAD4030C7F5D9F59 /* FCYLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYLayoutConstraint.h; sourceTree = "<group>"; };
+		B3D044C7625D9AB69DEE2D49 /* FCYCubicBezierCAMediaTimingFunctionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYCubicBezierCAMediaTimingFunctionSpec.m; sourceTree = "<group>"; };
+		B3D0451CB91B05A6B0181464 /* FCYCubicBezier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYCubicBezier.m; sourceTree = "<group>"; };
 		B3D046061783A6014CC10CFE /* FCYGeometrySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYGeometrySpec.m; sourceTree = "<group>"; };
 		B3D046CFBBC76BAEB6A29650 /* NSStringFCYTrimSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringFCYTrimSpec.m; sourceTree = "<group>"; };
 		B3D04814B5861BDB5DFB2EDE /* NSString+FCYStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FCYStringAdditions.m"; sourceTree = "<group>"; };
 		B3D048A8E51D5E86E12C2B7F /* FCYLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYLayoutConstraint.m; sourceTree = "<group>"; };
 		B3D048A8F2861D2EBF4A276D /* UIColor+FCYColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FCYColorAdditions.h"; sourceTree = "<group>"; };
 		B3D04A74D52683B70FD59051 /* UIView+FCYLayoutConstraintAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FCYLayoutConstraintAdditions.m"; sourceTree = "<group>"; };
+		B3D04B44220159EC1186B11F /* FCYCubicBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYCubicBezier.h; sourceTree = "<group>"; };
 		B3D04B74B1847445AC2CC8A5 /* UIImage+FCYImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FCYImageAdditions.h"; sourceTree = "<group>"; };
+		B3D04E286DD4625BA8CD492F /* FCYCubicBezier+CAMediaTimingFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FCYCubicBezier+CAMediaTimingFunction.h"; sourceTree = "<group>"; };
+		B3D04E3DD3ACAA9DA0168BA9 /* FCYCubicBezierSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCYCubicBezierSpec.m; sourceTree = "<group>"; };
 		B3D04E5DE306EE477247F6F1 /* UIView+FCYLayoutConstraintAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FCYLayoutConstraintAdditions.h"; sourceTree = "<group>"; };
 		B3D04F358D280F8E0F9B3F6A /* NSString+FCYStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FCYStringAdditions.h"; sourceTree = "<group>"; };
 		B3D04F931B8B893D137BA7B3 /* FCYGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCYGeometry.h; sourceTree = "<group>"; };
+		B3D04FC552D30963E3792191 /* FCYCubicBezier+CAMediaTiming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FCYCubicBezier+CAMediaTiming.m"; sourceTree = "<group>"; };
 		BA6D120ABA983A2703DDCC54 /* NSArrayFCYArrayAdditionsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayFCYArrayAdditionsSpec.m; sourceTree = "<group>"; };
 		BA6D150B22B5F968ED01294D /* NSArray+FCYArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FCYArrayAdditions.m"; sourceTree = "<group>"; };
 		BA6D16717046F3242E3169F8 /* NSArray+FCYArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FCYArrayAdditions.h"; sourceTree = "<group>"; };
@@ -116,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5591AE8917E0FB86007E247E /* QuartzCore.framework in Frameworks */,
 				D44FA13B17AD660A0083B15D /* CoreGraphics.framework in Frameworks */,
 				D44FA0F917AD62E30083B15D /* Foundation.framework in Frameworks */,
 			);
@@ -125,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5591AE8A17E0FBBE007E247E /* QuartzCore.framework in Frameworks */,
 				D44FA13A17AD66020083B15D /* CoreGraphics.framework in Frameworks */,
 				D44FA13717AD65530083B15D /* libFancy-iOS.a in Frameworks */,
 				D44FA10B17AD638A0083B15D /* SenTestingKit.framework in Frameworks */,
@@ -164,6 +181,7 @@
 		5501F142157697F800303930 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5591AE8817E0FB86007E247E /* QuartzCore.framework */,
 				5501F18715769FDA00303930 /* CoreGraphics.framework */,
 				5501F16115769A7F00303930 /* UIKit.framework */,
 				5501F143157697F800303930 /* Foundation.framework */,
@@ -177,8 +195,9 @@
 			isa = PBXGroup;
 			children = (
 				5501F150157698D300303930 /* core */,
-				5501F15A157698D300303930 /* ui */,
 				5501F159157698D300303930 /* FancyPrefix.pch */,
+				B3D046B381094A55382D2ADA /* quartz-core */,
+				5501F15A157698D300303930 /* ui */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -195,6 +214,8 @@
 				BA6D150B22B5F968ED01294D /* NSArray+FCYArrayAdditions.m */,
 				B3D04F358D280F8E0F9B3F6A /* NSString+FCYStringAdditions.h */,
 				B3D04814B5861BDB5DFB2EDE /* NSString+FCYStringAdditions.m */,
+				B3D0451CB91B05A6B0181464 /* FCYCubicBezier.m */,
+				B3D04B44220159EC1186B11F /* FCYCubicBezier.h */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -229,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				5501F17B15769B5A00303930 /* core */,
+				B3D0409A8CA5AB6504E44340 /* quartz-core */,
 				5501F17D15769B5A00303930 /* ui */,
 			);
 			path = tests;
@@ -240,6 +262,7 @@
 				B3D046CFBBC76BAEB6A29650 /* NSStringFCYTrimSpec.m */,
 				BA6D170A60BD05E62A83F064 /* FCYDictionaryFilterSpec.m */,
 				BA6D120ABA983A2703DDCC54 /* NSArrayFCYArrayAdditionsSpec.m */,
+				B3D04E3DD3ACAA9DA0168BA9 /* FCYCubicBezierSpec.m */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -261,6 +284,14 @@
 			path = "range-slider";
 			sourceTree = "<group>";
 		};
+		B3D0409A8CA5AB6504E44340 /* quartz-core */ = {
+			isa = PBXGroup;
+			children = (
+				B3D044C7625D9AB69DEE2D49 /* FCYCubicBezierCAMediaTimingFunctionSpec.m */,
+			);
+			path = "quartz-core";
+			sourceTree = "<group>";
+		};
 		B3D04441BAF3340A7812744E /* auto-layout */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +301,15 @@
 				B3D04A74D52683B70FD59051 /* UIView+FCYLayoutConstraintAdditions.m */,
 			);
 			path = "auto-layout";
+			sourceTree = "<group>";
+		};
+		B3D046B381094A55382D2ADA /* quartz-core */ = {
+			isa = PBXGroup;
+			children = (
+				B3D04FC552D30963E3792191 /* FCYCubicBezier+CAMediaTiming.m */,
+				B3D04E286DD4625BA8CD492F /* FCYCubicBezier+CAMediaTimingFunction.h */,
+			);
+			path = "quartz-core";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +331,8 @@
 				D44FA13017AD643E0083B15D /* FCYThumbView.h in Headers */,
 				D44FA13117AD643E0083B15D /* UIColor+FCYColorAdditions.h in Headers */,
 				D44FA13217AD643E0083B15D /* UIImage+FCYImageAdditions.h in Headers */,
+				B3D04D8351601FB547C8CC16 /* FCYCubicBezier.h in Headers */,
+				B3D04A5023C805993A0DE07B /* FCYCubicBezier+CAMediaTimingFunction.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +476,8 @@
 				D44FA12417AD63FF0083B15D /* FCYLayoutConstraint.m in Sources */,
 				D44FA12517AD63FF0083B15D /* UIView+FCYLayoutConstraintAdditions.m in Sources */,
 				D44FA11D17AD63D10083B15D /* NSArray+FCYArrayAdditions.m in Sources */,
+				B3D04E3D835B2F39840F5548 /* FCYCubicBezier.m in Sources */,
+				B3D04F9A703AC48D5CE6B5C5 /* FCYCubicBezier+CAMediaTiming.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +490,8 @@
 				D44FA13517AD648B0083B15D /* FCYRangeSliderSpec.m in Sources */,
 				D44FA13617AD648B0083B15D /* FCYGeometrySpec.m in Sources */,
 				D44FA13E17ADA1580083B15D /* NSArrayFCYArrayAdditionsSpec.m in Sources */,
+				5591AE8717E0F077007E247E /* FCYCubicBezierSpec.m in Sources */,
+				B3D042EB20E4C5082B12BBA1 /* FCYCubicBezierCAMediaTimingFunctionSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

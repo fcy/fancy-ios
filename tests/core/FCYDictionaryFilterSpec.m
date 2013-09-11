@@ -65,6 +65,12 @@ describe(@"FCYDictionaryFilter", ^{
             [_mutableDictionary[@"key"] shouldBeNil];
         });
 
+        it(@"removes a key if nil is set to it", ^{
+            _mutableDictionary[@"nonNilKey"] = @"1";
+            _filter[@"nonNilKey"] = nil;
+            [_mutableDictionary[@"nonNilKey"] shouldBeNil];
+        });
+
         context(@"convertNilToNSNull setted to YES", ^{
             it(@"sets a NSNull object if passed nil", ^{
                 _filter.convertNilToNSNullOnSet = YES;

@@ -44,6 +44,8 @@
             if (self.convertNilToNSNullOnSet) {
                 object = [NSNull null];
                 [mdic setObject:object forKey:key];
+            } else {
+                [mdic removeObjectForKey:key];
             }
         } else {
             [mdic setObject:object forKey:key];

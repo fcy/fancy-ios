@@ -22,8 +22,12 @@ Pod::Spec.new do |s|
   
   s.subspec 'UI' do |ui|
     ui.dependency 'Fancy-iOS/Core'
-    ui.frameworks = 'CoreGraphics'
-    ui.source_files = 'src/ui/*.{h,m}'
+    ui.dependency 'Fancy-iOS/UI/Core'
+
+    ui.subspec 'Core' do |core|
+      core.frameworks = 'CoreGraphics'
+      core.source_files = 'src/ui/*.{h,m}'
+    end
 
     ui.subspec 'AutoLayout' do |autolayout|
       autolayout.source_files = 'src/ui/auto-layout/*.{h,m}'

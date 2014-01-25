@@ -15,6 +15,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'QuartzCore' do |qc|
+    qc.dependency 'Fancy-iOS/Core'
     qc.frameworks = 'QuartzCore'
     qc.source_files = 'src/quartz-core/*.{h,m}'
   end

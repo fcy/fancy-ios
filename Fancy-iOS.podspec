@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Fancy-iOS'
-  s.version = '0.7.1'
+  s.version = '0.7.2'
   s.license = { :type => 'MIT', :file => 'LICENSE.txt' }
   s.homepage = 'https://github.com/fcy/fancy-ios'
   s.authors = { 'Felipe Cypriano' => 'felipe@cypriano.me' }

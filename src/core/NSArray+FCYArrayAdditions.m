@@ -16,7 +16,7 @@
         NSMutableArray *alreadyChoosenIndexes = [[NSMutableArray alloc] init];
         NSUInteger i = 0;
         do {
-            uint32_t randomIndex = arc4random_uniform(count);
+            uint32_t randomIndex = arc4random_uniform((uint32_t) count);
             NSNumber *index = @(randomIndex);
             if (![alreadyChoosenIndexes containsObject:index]) {
                 id randomObject = [self objectAtIndex:randomIndex];
